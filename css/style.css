@@ -1,0 +1,64 @@
+/* tables */
+table.tablesorter {
+	font-family:arial;
+	background-image:url(../cabecera_tabla.gif);
+	margin:10px 0pt 15px;
+	font-size: 9pt;
+	margin:auto;	
+	text-align: left;
+	border-left: 1px solid #A0A6AB;
+	border-top: 1px solid #A0A6AB;
+	border-right: 1px solid #A0A6AB;
+	border-collapse: collapse;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	color: #FF3535;
+	border: 1px solid #A0A6AB;	
+	font-size:8pt;
+	padding: 4px;
+	text-align:center;
+}
+table.tablesorter thead tr .header {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+	padding-right: 15px;
+	padding-left: 15px;
+	
+}
+
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	border-bottom: 1px solid #A0A6AB;
+	text-align:center;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+
+table.tablesorter tbody tr.oddclick td {
+	background-color: #FF0;
+	color:#06F;
+}
+
+table.tablesorter tbody tr.oddmouseover td {
+	color:#FF3535;
+	background-color:#F5FA8A
+}
+
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../flecha_arriba.gif);
+	background-color: #8dbdd8;
+
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../flecha_abajo.gif);
+
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .Headersortup {
+	background-color: #8dbdd8;
+
+}

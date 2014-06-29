@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jugadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<item item_id="0">
+	<jugador>Urko</jugador>
+	<partidos>17</partidos>
+	<goles>3</goles>
+	<asistencias>0</asistencias>
+	<amarillas>1</amarillas>
+	<rojas>0</rojas>
+	<foto>img/urko.jpg</foto>
+	<ausencias>Jornada 1: Ausente, Jornada 4: Ausente, Jornada 6: Ausente</ausencias>
+</item>
+<item item_id="1">
+	<jugador>Peke</jugador>
+	<partidos>13</partidos>
+	<goles>5</goles>
+	<asistencias>0</asistencias>
+	<amarillas>1</amarillas>
+	<rojas>0</rojas>
+	<foto>img/peke.jpg</foto>
+	<ausencias>Jornada 2: Ausente, Jornada 4: Ausente, Jornada 9: Ausente, Jornada 10: Ausente, Jornada 11: Ausente, Jornada 16: Hockey, Jornada 19: Ausente</ausencias>
+</item>
+<item item_id="2">
+	<jugador>Pacheco</jugador>
+	<partidos>16</partidos>
+	<goles>10</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/paxeco.jpg</foto>
+	<ausencias>Jornada 7: Trabajo, Jornada 9: Trabajo, Jornada 10: Trabajo, Jornada 13: Trabajo</ausencias>
+</item>
+<item item_id="3">
+	<jugador>Moro</jugador>
+	<partidos>20</partidos>
+	<goles>4</goles>
+	<asistencias>0</asistencias>
+	<amarillas>2</amarillas>
+	<rojas>0</rojas>
+	<foto>img/moro.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="4">
+	<jugador>Medu</jugador>
+	<partidos>17</partidos>
+	<goles>16</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/medu.jpg</foto>
+	<ausencias>Jornada 1: Futbol 11, Jornada 19: Futbol 11, Jornada 22: Futbol 11</ausencias>
+</item>
+<item item_id="5">
+	<jugador>Marc</jugador>
+	<partidos>18</partidos>
+	<goles>1</goles>
+	<asistencias>0</asistencias>
+	<amarillas>2</amarillas>
+	<rojas>0</rojas>
+	<foto>img/marc.jpg</foto>
+	<ausencias>Jornada 9: Ausente, Jornada 21: Huevazos</ausencias>
+</item>
+<item item_id="6">
+	<jugador>Kike</jugador>
+	<partidos>18</partidos>
+	<goles>1</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/kike.JPG</foto>
+	<ausencias>Jornada 19: Huevazos</ausencias>
+</item>
+<item item_id="7">
+	<jugador>Keko</jugador>
+	<partidos>20</partidos>
+	<goles>25</goles>
+	<asistencias>0</asistencias>
+	<amarillas>2</amarillas>
+	<rojas>0</rojas>
+	<foto>img/keko.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="8">
+	<jugador>Javi</jugador>
+	<partidos>14</partidos>
+	<goles>1</goles>
+	<asistencias>0</asistencias>
+	<amarillas>2</amarillas>
+	<rojas>0</rojas>
+	<foto>img/javi.jpg</foto>
+	<ausencias>Jornada 11: Lesionado, Jornada 12: Lesionado, Jornada 13: Lesionado, Jornada 14: Lesionado, Jornada 15: Lesionado, Jornada 16: Lesionado</ausencias>
+</item>
+<item item_id="9">
+	<jugador>Ivan</jugador>
+	<partidos>19</partidos>
+	<goles>3</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/ivan.jpg</foto>
+	<ausencias>Jornada 9: Ausente</ausencias>
+</item>
+<item item_id="10">
+	<jugador>Diego</jugador>
+	<partidos>14</partidos>
+	<goles>4</goles>
+	<asistencias>0</asistencias>
+	<amarillas>1</amarillas>
+	<rojas>0</rojas>
+	<foto>img/diego.jpg</foto>
+	<ausencias>Jornada 5: Trabajo, Jornada 7: Trabajo, Jornada 8: Trabajo, Jornada 9: Trabajo, Jornada 13: Trabajo, Jornada 15: Trabajo</ausencias>
+</item>
+<item item_id="11">
+	<jugador>Bardi</jugador>
+	<partidos>9</partidos>
+	<goles>5</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/bardi.jpg</foto>
+	<ausencias>Jornada 1: Futbol 11, Jornada 7: Futbol 11, Jornada 12: Lesionado, Jornada 13: Lesionado, Jornada 14: Lesionado, Jornada 15: Lesionado, Jornada 16: Lesionado, Jornada 18: Lesionado, Jornada 19: Lesionado, Jornada 21: Lesionado, Jornada 22: Lesionado</ausencias>
+</item>
+<item item_id="12">
+	<jugador>Bambino</jugador>
+	<partidos>20</partidos>
+	<goles>4</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/bambino.jpg</foto>
+	<ausencias></ausencias>
+</item>
+</jugadores>

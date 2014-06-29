@@ -1,0 +1,472 @@
+@charset "utf-8";
+.noticias {
+	background: url(../fondonoticias.gif);
+	width: 800px;
+	margin: auto;
+	text-align: center;
+	color: #000;
+	font-size: 15px;
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.textonoticias {
+	color: #000;
+	font-size: 16px;
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: left;
+}
+
+
+div#Contenedora {
+	text-align:center;
+	width: 100%;
+	margin-left: -8px;
+}
+div#CentradaHS {
+	margin: auto;
+	width: 1024px;
+	
+}
+div#cabecera {
+	width:1024px;
+	text-align:center;
+	height: 224px;
+	background-image: url(../cabecera.gif);
+}
+div#menu {
+	width:1024px;
+	height: 45px;
+	background-image: url(../barramenu.png);
+}
+div#inicio {
+	width:112px;
+	height: 40px;
+	margin-left: 170px;
+	margin-top: 2px;
+	
+}
+.fondo {
+	width: 1024px;
+	margin: auto;
+}
+div#fondos {
+	width: 1024px;
+	height: 25px;
+	background-image: url(../fondos.gif);
+	
+}
+div#fondoi {
+	width: 1024px;
+	height: 25px;
+	background-image: url(../fondoi.gif);
+	position: fixed;
+	
+}
+div#jugadores {
+	width:125px;
+	height: 45px;
+	margin-left: 302px;
+	margin-top: 2px;
+	
+}
+div#estadisticas {
+	width:164px;
+	height: 45px;
+	margin-left: 447px;
+	margin-top: -45px;
+	
+}
+div#foro {
+	width:60px;
+	height: 45px;
+	margin-left: 631px;
+	margin-top: -45px;
+	
+}
+div#calendario {
+	width:138px;
+	height: 45px;
+	margin-left: 711px;
+	margin-top: -45px;
+	
+}
+div#titulo {
+	width:800px;
+	margin-left: 100px;
+	background-image: url(../fondonoticias.gif);
+	overflow: hidden;
+	
+}
+.fondonoticiasi {
+	background: url(../fondonoticiasi.png);
+	height: 40px;
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+	margin: auto;
+	width: 800px;
+	
+}
+.fondonoticiass {
+	background: url(../fondonoticiass.png);
+	height: 40px;
+	color: #006;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Verdana, Geneva, sans-serif;
+	margin: auto;
+	width: 800px;
+}
+.fondos{
+	width:1024px;
+	height: 25px;
+	background-image: url(../fondos.png);
+}
+.fondom{
+	width:1024px;
+	background-image: url(../fondo.gif);
+	min-height: 457px;
+}
+.fondoi{
+	width:1024px;
+	background-image: url(../fondoi.png);
+	height: 24px;
+}
+
+
+#contenido {
+              width: 612px;
+
+}
+
+#izq {
+              float: left;
+              width: 400px;
+}
+.derecha {
+	text-align: center;
+	width: 800px;
+	margin: auto;
+}
+
+.top {
+	height: 40px;
+	background: url(../fondonoticiass.gif) no-repeat;
+	color: #0456C5;
+	font-weight: bold;
+	font-size: 24px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: italic;
+
+}
+
+.contenido {
+	background: url(../fondonoticias.gif) repeat-y;
+	color: #000;
+	font-size: 16px;
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: left;
+	padding: 5px;
+}
+
+.contenido p {
+              margin: 2px 29px 2px 29px;
+}
+.bottom {
+	background: url(../fondonoticiasi.gif) no-repeat;
+	height: 43px;
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+
+}
+.texto{
+	width:550px;
+	margin-left: 240px;
+	margin-top: -260px;
+
+}
+.imagen{
+	background:url(../sello.gif) no-repeat;
+	
+}
+.divfoto{
+	width: 120px;
+	height: 160px;
+
+
+
+
+
+
+	margin.left:4px;
+	margin-top: 4px;
+	margin-left: 4px;
+}
+
+.contenidoficha{
+	width: 400px;
+	height: 228px;
+
+
+
+
+
+	margin.left:140px;
+	margin-top: -160px;
+	margin-left: 142px;
+	text-align: left;
+}
+.tituloficha{
+	text-align: left;
+	font-size: 18px;
+	font-weight: bold;
+	color: #006;
+}
+
+.textoficha{
+	text-align: left;
+	font-size: 16px;
+}
+.foto{
+	width: 120px;
+	height: 160px;
+
+}
+.tablaest{
+	border-collapse: collapse;
+	margin: auto;
+
+}
+.tablapartidos{
+	width: 980px;
+	margin: auto;
+
+}
+.tablapartidosoculto{
+	width: 980px;
+	margin: auto;
+	margin-top: 10px;
+	height: 0px;
+	overflow:hidden;
+
+}
+.celdaest{
+	border: 1px solid #8E8D92;
+	background-color: #FFF;
+
+}
+.cabeceraest{
+	border: 1px solid #8E8D92;
+	background-image: url(../cabeceraest.png);
+
+}
+.tablajugadores{
+	margin: auto;
+}
+.thjugadores{
+	cursor: pointer;
+	border: 1px solid #8E8D92;
+	background-image: url(../cabeceraest.png);
+}
+.resaltado{
+	border: 1px solid #8E8D92;
+	background-color: red;
+
+}
+.body {
+
+}
+
+.acabecera {
+	font-size: 20px;
+	font-weight: bold;
+	color: #006;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.acabecera:hover {
+	color: #3366FF;
+}
+
+.fotonoticia{
+	max-width:600px;
+	max-height:600px;
+}
+
+.centradaadmin {
+	margin: auto;
+	margin-top: 10%;
+}
+
+.opcionmenu{
+	color:#F90;
+	font-size: 20px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-family: "Arial,Helvetica,sans-serif";
+	padding:1px 5px 10px;
+	border-right: 1px solid #7B7C7D;
+}
+.opcionmenuizq{
+	color:#F90;
+	font-size: 20px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-family: "Comic Sans MS", cursive;
+	padding:1px 5px 8px;
+	border-right: 1px solid #7B7C7D;
+	border-left: 1px solid #7B7C7D;
+	font-family: "Arial,Helvetica,sans-serif";
+}
+.tablamenu{
+	Padding-top:3px;
+}
+
+.apaginaresaltado{
+	font-size: 18px;
+	font-weight: bold;
+	color: #006;
+}
+.apagina{
+	font-size: 16px;
+}
+.botonExcel{
+	cursor:pointer;
+}
+
+div#publicidad{
+	height: 90 px;
+	width: 1024 px;
+	text-align: center;
+}
+.goaldivision{
+	height: 90 px;
+	width: 278 px;
+	background-image: url(img/goaldivison.JPG);
+	display: block;
+}
+.aexcel {
+	font-size: 20px;
+	font-weight: bold;
+	color: #339900;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.aexcel:hover {
+	color: #33CC00;
+}
+div#marquee{
+	background-image: url(../marquee.png);
+	font-weight: bold;
+	width:1024px;
+	height:35px;
+	font-size: 18px;
+	color: #C1151E;
+	padding-top:10px;
+}
+.textomarquee{
+	padding-right:50px;
+	
+}
+
+.boton{
+	margin:auto;
+	color: #000066;
+	border: 1px solid #8E8D92;
+	background-color: #FFF;
+	font-weight: bold;
+	padding:2px;
+	cursor:pointer;
+		
+}
+.resultado{
+	color: #FF3300;
+	font-weight: bold;
+	padding-top: 10px;
+	font-size: 18px;
+}
+div#login{
+	color: #FF3300;
+	font-size: 14px;
+	font-weight: bold;
+	width: 300px;
+	text-align: right;
+}
+.input{
+	background-color: #FFF;
+	font-size: 12px;
+}
+
+.usuario{
+	text-transform: uppercase;
+	font-size: 14px;
+	text-decoration:underline;
+	padding-right: 5px;
+	
+}
+.entrar_salir{	
+	cursor: pointer;
+}
+.regcomentarios{	
+	border-bottom: 1px solid #A4A4A4;
+}
+.comentarios{	
+	background-color: #FAF8F8;
+	border: 1px solid #A4A4A4;
+	width:700px;
+	margin:auto;
+}
+.fichacom{
+	width:100px;
+	float:left;
+	padding:10px;
+}
+.textocom{
+	min-height:120px;
+	text-align: left;
+	padding-left: 140px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.divtexto{
+	text-align: left;
+	padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        width:765px;
+}
+.autor{
+	color: #FF3300;
+	font-weight: bold;	
+}
+.fecha{
+	
+	font-size: 12px;
+	color: #A4A4A4
+}
+.pag{
+	
+	font-size: 14px;
+	background-color: #FAF8F8;
+	border: 1px solid #A4A4A4;
+	padding-left: 5px;
+	padding-right: 5px; 
+	cursor:pointer;
+}
+.pagsel{
+	font-size: 14px;
+        background-color: #FF3300;
+	color:#FFF;
+	border: 1px solid #A4A4A4;
+	padding-left: 5px;
+	padding-right: 5px; 
+	cursor:pointer;
+}
+.textarea{
+        background-color: #FAFA55;
+}
+div#divgraficas{
+	padding-top:40px;
+}

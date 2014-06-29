@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jugadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<item item_id="0">
+	<jugador>Urko</jugador>
+	<partidos>22</partidos>
+	<goles>1</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/urko.jpg</foto>
+	<ausencias>Jornada 4: Viaje, Jornada 18: Enfermo</ausencias>
+</item>
+<item item_id="1">
+	<jugador>Peke</jugador>
+	<partidos>17</partidos>
+	<goles>7</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/peke.jpg</foto>
+	<ausencias>Jornada 4: Hockey, Jornada 8: Lesionado, Jornada 14: Hockey, Jornada 17: Hockey, Jornada 18: Hockey, Jornada 24: Hockey, Jornada 25: Hockey</ausencias>
+</item>
+<item item_id="2">
+	<jugador>Pacheco</jugador>
+	<partidos>24</partidos>
+	<goles>10</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/paxeco.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="3">
+	<jugador>Moro</jugador>
+	<partidos>24</partidos>
+	<goles>0</goles>
+	<asistencias>0</asistencias>
+	<amarillas>1</amarillas>
+	<rojas>0</rojas>
+	<foto>img/moro.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="4">
+	<jugador>Medu</jugador>
+	<partidos>24</partidos>
+	<goles>25</goles>
+	<asistencias>0</asistencias>
+	<amarillas>2</amarillas>
+	<rojas>0</rojas>
+	<foto>img/medu.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="5">
+	<jugador>Marc</jugador>
+	<partidos>21</partidos>
+	<goles>0</goles>
+	<asistencias>0</asistencias>
+	<amarillas>1</amarillas>
+	<rojas>0</rojas>
+	<foto>img/marc.jpg</foto>
+	<ausencias>Jornada 2: Gripe, Jornada 13: Viaje, Jornada 20: Viaje</ausencias>
+</item>
+<item item_id="6">
+	<jugador>Kike</jugador>
+	<partidos>19</partidos>
+	<goles>3</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/kike.JPG</foto>
+	<ausencias>Jornada 7: Huevazos, Jornada 8: Lesionado, Jornada 21: Huevazos, Jornada 25: Huevazos, Jornada 26: Huevazos</ausencias>
+</item>
+<item item_id="7">
+	<jugador>Keko</jugador>
+	<partidos>21</partidos>
+	<goles>15</goles>
+	<asistencias>0</asistencias>
+	<amarillas>3</amarillas>
+	<rojas>1</rojas>
+	<foto>img/keko.jpg</foto>
+	<ausencias>Jornada 3: Ausente, Jornada 8: Huevazos, Jornada 26: Sancionado</ausencias>
+</item>
+<item item_id="8">
+	<jugador>Javi</jugador>
+	<partidos>19</partidos>
+	<goles>0</goles>
+	<asistencias>0</asistencias>
+	<amarillas>5</amarillas>
+	<rojas>0</rojas>
+	<foto>img/javi.jpg</foto>
+	<ausencias>Jornada 10: Esquiando, Jornada 14: Lesionado, Jornada 15: Lesionado, Jornada 19: Enfermo, Jornada 20: Huevazos</ausencias>
+</item>
+<item item_id="9">
+	<jugador>Ivan</jugador>
+	<partidos>23</partidos>
+	<goles>4</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/ivan.jpg</foto>
+	<ausencias>Jornada 20: Viaje</ausencias>
+</item>
+<item item_id="10">
+	<jugador>Diego</jugador>
+	<partidos>18</partidos>
+	<goles>5</goles>
+	<asistencias>0</asistencias>
+	<amarillas>3</amarillas>
+	<rojas>0</rojas>
+	<foto>img/diego.jpg</foto>
+	<ausencias>Jornada 4: Ausente, Jornada 5: Ausente, Jornada 16: Ausente, Jornada 17: Ausente, Jornada 20: Lesionado, Jornada 22: Lesionado</ausencias>
+</item>
+<item item_id="11">
+	<jugador>Bardi</jugador>
+	<partidos>17</partidos>
+	<goles>12</goles>
+	<asistencias>0</asistencias>
+	<amarillas>4</amarillas>
+	<rojas>0</rojas>
+	<foto>img/bardi.jpg</foto>
+	<ausencias>Jornada 1: Ausente, Jornada 2: Ausente, Jornada 3: Ausente, Jornada 4: Contractura, Jornada 5: Contractura, Jornada 7: Contractura, Jornada 9: Huevazos</ausencias>
+</item>
+<item item_id="12">
+	<jugador>Bambino</jugador>
+	<partidos>22</partidos>
+	<goles>0</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/bambino.jpg</foto>
+	<ausencias>Jornada 24: Ausente, Jornada 25: Ausente</ausencias>
+</item>
+</jugadores>

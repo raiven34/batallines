@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:spry="http://ns.adobe.com/spry">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Batallines</title>
+<link href="css/estilosweb_new.css" rel="stylesheet" type="text/css" />
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+<script src="SpryAssets/xpath.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryData.js" type="text/javascript"></script>
+<script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="js/jquery.backstretch.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+function MM_changeProp(objId,x,theProp,theValue) { //v9.0
+  var obj = null; with (document){ if (getElementById)
+  obj = getElementById(objId); }
+  if (obj){
+    if (theValue == true || theValue == false)
+      eval("obj.style."+theProp+"="+theValue);
+    else eval("obj.style."+theProp+"='"+theValue+"'");
+  }
+}
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+
+$(document).ready(function(){
+	$("#login").load("compruebaloginrapido.php");
+	$("#noticias").addClass("nivel1select");
+});
+
+$.backstretch("batfon.jpg");
+//-->
+</script>
+</head>
+
+<body  class="body">
+
+<div id="Contenedora">
+<div id="CentradaHS">
+      <div id="cabecera">
+      <div id="menu">
+                    <ul>
+                      <li id="noticias" class="nivel1"><a href="index.php">Noticias</a>
+                      </li>
+                      <li id="puntuar" class="nivel1"><a href="votacion.php">Puntuar</a></li>
+                      <li id="jugadores" class="nivel1"><a href="jugadores.php">Plantilla</a>
+                      </li>
+                      <li id="estadisiticas" class="nivel1"><a href="estadisticas.php">Estad&iacute;sticas</a></li>
+                      <li id="partidos" class="nivel1"><a href="partidos.php">Partidos</a></li>
+                      <li id="clasificacion" class="nivel1"><a href="http://gestdeportes.lasrozas.es/CampeonatosWeb/index1.aspx" target="_blank">Clasificación</a></li>
+                      <li id="videos" class="nivel1"><a href="videos.php">Videos</a></li>
+                      <li id="admin" class="nivel1"><a href="http://batallines.es/adminbatallines.php" target="_blank">Admin</a></li>
+                    </ul>
+                    <div id="login"></div>  
+      </div>          
+      </div>
+
+
+      <div id="marquee"><marquee scrolldelay="200"><a class="textomarquee">Próximo Partido: BATALLINES FC - PERCEBEIROS 01/12/2013 17:15 F7 B Dehesa</a><a class="textomarquee">Goles: <img  width="19" height="19" src="img/bardi.jpg"/>Bardi 3 <img  width="19" height="19" src="img/medu.jpg"/>Medu 2 <img  width="19" height="19" src="img/anonimo.JPG"/>Miguel 0 </a><a class="textomarquee">Asistencias: <img  width="19" height="19" src="img/paxeco.jpg"/>Pacheco 2 <img  width="19" height="19" src="img/anonimo.JPG"/>Miguel 0 <img  width="19" height="19" src="img/motero.jpg"/>Motero 0 </a><a class="textomarquee">Amarillas: <img  width="19" height="19" src="img/medu.jpg"/>Medu 2 <img  width="19" height="19" src="img/11838_213896740734_7819976_n.jpg"/>willy 2 <img  width="19" height="19" src="img/javi.jpg"/>Javi 1 </a><a class="textomarquee">Rojas: <img  width="19" height="19" src="img/11838_213896740734_7819976_n.jpg"/>willy 1 <img  width="19" height="19" src="img/anonimo.JPG"/>Miguel 0 <img  width="19" height="19" src="img/paxeco.jpg"/>Pacheco 0 </a><a class="textomarquee">Valoración: <img  width="19" height="19" src="img/bambino.jpg"/>Bambino 6.87 <img  width="19" height="19" src="img/andres.jpg"/>Andres 6.70 <img  width="19" height="19" src="img/bardi.jpg"/>Bardi 6.59 </a></marquee></div>
+<div class="fondo">
+		<div class="fondos"></div>
+		<div class="fondom">
+           &nbsp;
+           <br /><div class="fondonoticiass">Temporada 2013/2014
+	           	</div>
+	          	<div class="noticias"><br /><img class="fotonoticia" src='img/keko_ibiza.jpg'/><div class="divtexto">Un año más el Batallines comienza una nueva temporada con muchas novedades en lo que a la plantilla se refiere, tras unas últimas horas frenéticas de trabajo en las oficinas cerrando 3 nuevas incorporaciones cuando se acercaba el fin de plazo.</div><a href="leernoticia.php?comienzo=0" class="enlacever">Leer noticia completa</a><br /><br /></div>
+	           	<div class="fondonoticiasi">Escrito por: medu el 2013-10-16 22:13:40</div><br /><div class="fondonoticiass">Nuevo servidor y dominio .es
+	           	</div>
+	          	<div class="noticias"><br /><img class="fotonoticia" src='img/Escudo.jpg'/><div class="divtexto">Hemos subido la web a un nuevo servidor además de cambiar el dominio, ahora tenéis que entrar a la web en la dirección:<br /><br /><a href="http:batallines.es">batallines.es</a><br /><br />No entréis por el dominio tk, en breve dejará de funcionar.<br /><br />El cambio de servidor debería hacer que la web vaya más rápido, pero también puede ser que haya dejado de funcionar algo, si veis algo me decís.<br /></div><a href="leernoticia.php?comienzo=1" class="enlacever">Leer noticia completa</a><br /><br /></div>
+	           	<div class="fondonoticiasi">Escrito por: medu el 2013-01-18 14:20:57</div><br /><div class="fondonoticiass">CIVICCAN UBICCA 2-3 BATALLINES F.C(pach)
+	           	</div>
+	          	<div class="noticias"><br /><img class="fotonoticia" src='img/bombs.jpg'/><div class="divtexto">Madrugón de infarto en la primera jornada!!!  A alguno se le pegaron las sabanas ,otros todavía no sabíamos ni en donde jugábamos, mientras otros mañaneaban para calentar y estar un ratito antes en el campo…Día fresco, pero soleado; aparentemente perfecto para empezar con ilusión la Liga, parecía encajar todo puesto que se presentó todo el mundo y había muchas ganas….hasta que el partido empezó.<br /><br /><br /><br />Se notaron cosas como la falta de rodaje, pases precipitados, controles raros y el conjunto de tirar como un equipo intranquilo, y que no hace su juego….nos vimos superados por un contrario que demostró en la primera parte, que no hay que ser un atleta o jugar muy bien al futbol….pero apunto, que porque nosotros quisimos!!! Este equipo ya ha demostrado que cuando todos vamos a una jugamos DEBUTY!!!</div><a href="leernoticia.php?comienzo=2" class="enlacever">Leer noticia completa</a><br /><br /></div>
+	           	<div class="fondonoticiasi">Escrito por: pacheco el 2012-10-22 18:09:02</div><br /><div class="fondonoticiass">CIVICCAN UBICCA 2-3 BATALLINES F.C(moro)
+	           	</div>
+	          	<div class="noticias"><br /><img class="fotonoticia" src='img/IMG_20121022_023942.jpg'/><div class="divtexto">Y todo sigue igual como diria el mismisimo actor que no me acuerdo de su nombre en el dia de la marmota.Mañana humeda tanto en cuerpo como en alma,el equipo batallo salio al terreno juego con mas ganas que piernas despues del gran paron veraniego.El partido comenzo algo espeso por parte de los dos equipos ninguno de ellos queria la bola,pum patadon para arriba pum patadon para abajo no habia mas de tres pases seguidos en uno de esos patadones hubo una caranbola en el area del urban y aparecio el funambulista para meterla con la derecha, a los pocos minutos un error garrafal de la defensa supuso el empate y para colmo en el siguiente acercamiento un remate fortuito acabo siendo el 2-1 y para el descanso.<br /><br />La segunda parte fue totalmente diferente el equipo salio con el espiritu del cholo desde el primer minuto edu y juan se echaron el equipo a las espaldas y en unas de esas llego el empate.Como dice el dicho despues de la calma llego la tempestad en forma de lesion del bombas al que le</div><a href="leernoticia.php?comienzo=3" class="enlacever">Leer noticia completa</a><br /><br /></div>
+	           	<div class="fondonoticiasi">Escrito por: moro el 2012-10-22 01:56:12</div><br /><div class="fondonoticiass">Animo bombas
+	           	</div>
+	          	<div class="noticias"><br /><img class="fotonoticia" src='img/35369_10150214502680541_6755680_n.jpg'/><div class="divtexto"></div><a href="leernoticia.php?comienzo=4" class="enlacever">Leer noticia completa</a><br /><br /></div>
+	           	<div class="fondonoticiasi">Escrito por: moro el 2012-10-22 00:17:49</div><br /><div class="fondonoticiass">Nueva temporada..nueva web!
+	           	</div>
+	          	<div class="noticias"><br /><img class="fotonoticia" src='img/Escudo.jpg'/><div class="divtexto">Buenas batallos,<br /><br />Estrenamos nueva web esta temporada con las siguientes novedades:<br /><br /></div><a href="leernoticia.php?comienzo=5" class="enlacever">Leer noticia completa</a><br /><br /></div>
+	           	<div class="fondonoticiasi">Escrito por: medu el 2012-10-21 23:26:47</div><br /><div class="fondonoticiass">Sancion injusta habla paxentino
+	           	</div>
+	          	<div class="noticias"><br /><img class="fotonoticia" src='img/adul.png'/><div class="divtexto">Despues del finde pasado donde el equipo consiguio un importante empate a tres contra los mismos, a salido hoy a la palestra que el TAS a decidido sancinar al equipo con dos puntos menos y el partido por perdido. Despues de leer el acta del arbitro ecuatoriano Federico Osvaldo Ramirez Iturraspe el cual decia que habia jugadores sin ficha.<br />Al parecer el equipo jugo con dos jugadores que no tenian ficha del primer equipo y ellos pensaban que no hacia falta lo que le a acarreado la sancion.<br />Hemos de recordar que el equipo tenia numerosas bajas como las de medusa al que le baila la rodilla al son de la macarena,el irlandes enrrikeane al que se le fue el tobillo en una de esas fiestas de descontrol que nos tiene acostumbrados ultimamente,la del morosecomioaronaldo que tiene el brazo en lugo y la mano en vigo se va acercando,tampoco estuvo josebombas que se tuvo que ir a apagar el fuego de su churri a asturias y por ultimo el portero que se fue a jugar con su seleccion el campeonato paulista</div><a href="leernoticia.php?comienzo=6" class="enlacever">Leer noticia completa</a><br /><br /></div>
+	           	<div class="fondonoticiasi">Escrito por: moro el 2012-03-08 03:12:16</div><br /><div class="fondonoticiass">MORO QUIERE JUGAR YA
+	           	</div>
+	          	<div class="noticias"><br /><img class="fotonoticia" src='img/LOLA.png'/><div class="divtexto"></div><a href="leernoticia.php?comienzo=7" class="enlacever">Leer noticia completa</a><br /><br /></div>
+	           	<div class="fondonoticiasi">Escrito por: moro el 2012-03-07 04:40:50</div><br /><div class="fondonoticiass">¿Pozarrines? 8 vs Litle garden 4
+	           	</div>
+	          	<div class="noticias"><br /><img class="fotonoticia" src='img/PACO.jpg'/><div class="divtexto">Buenas y soleadas tardes amigos batalleros, esta humilde crónica la escribe un servidor desde el confort del parque de bomberos, sito en la avda de monforte de lemos s/n, dejo esto claro para que nadie se lleve a equivocaciones y que quede claro cristalino, que los bomberos también curran. Una vez hecha la aclaración y sin más preambulos, me dispongo a relatar lo acaecido en las instalaciones deportivas del recinto ferial de  las rozas, en la mañana del domingo a eso de las 12.30 a.m de la mañana.</div><a href="leernoticia.php?comienzo=8" class="enlacever">Leer noticia completa</a><br /><br /></div>
+	           	<div class="fondonoticiasi">Escrito por: bombero el 2012-02-29 22:09:46</div><br /><div class="fondonoticiass">Vendaval y tres de Bardi!!!
+	           	</div>
+	          	<div class="noticias"><br /><img class="fotonoticia" src='img/Dibujo2.jpg'/><div class="divtexto">Contra aire y sobre todo frío, el BATALLINES se enfrenta cada vez mejor a todo lo que se ponga por delante. El domingo por la tarde era hora de enfrentarse al Sintrafinance.com, que está unos puntos por encima en la clasificación. Excelente respuesta del equipo batallo ante este importante choque, que se saldó con un contundente 5-3, todo un golpe de autoridad..<br /><br />Pulsa en "Comentar Noticia" para seguir leyendo.</div><a href="leernoticia.php?comienzo=9" class="enlacever">Leer noticia completa</a><br /><br /></div>
+	           	<div class="fondonoticiasi">Escrito por: marc el 2012-02-15 00:32:48</div>		<br />
+        <table align="center"><tr>
+        	<td><a class="apagina" href="index.php?comienzo=0">Primera</a></td><td><a class="apaginaresaltado" href="index.php?comienzo=0">1</a></td><td><a class="apagina" href="index.php?comienzo=10">2</a></td><td><a class="apagina" href="index.php?comienzo=20">3</a></td><td><a class="apagina" href="index.php?comienzo=30">4</a></td><td><a class="apagina" href="index.php?comienzo=40">5</a></td><td><a class="apagina" href="index.php?comienzo=50">6</a></td><td><a class="apagina" href="index.php?comienzo=60">7</a></td><td><a class="apagina" href="index.php?comienzo=70">8</a></td><td><a class="apagina" href="index.php?comienzo=70">&Uacute;ltima</a></td>        	</tr></table>   
+		</div>
+
+</div>
+    
+    </div>
+    
+</div>
+</body>
+</html>

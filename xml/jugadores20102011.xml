@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jugadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<item item_id="0">
+	<jugador>Urko</jugador>
+	<partidos>18</partidos>
+	<goles>3</goles>
+	<asistencias>0</asistencias>
+	<amarillas>1</amarillas>
+	<rojas>0</rojas>
+	<foto>img/urko.jpg</foto>
+	<ausencias>Jornada 9: Enfermo, Jornada 10: Enfermo, Jornada 15: Huevazos, Jornada 24: Huevazos, Jornada 26: Huevazos</ausencias>
+</item>
+<item item_id="1">
+	<jugador>Peke</jugador>
+	<partidos>12</partidos>
+	<goles>10</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/peke.jpg</foto>
+	<ausencias>Jornada 2: Hockey, Jornada 4: Hockey, Jornada 5: Lesionado, Jornada 6: Lesionado, Jornada 11: Hockey, Jornada 13: Trabajo, Jornada 17: Hockey, Jornada 18: Hockey, Jornada 20: Hockey, Jornada 24: En Barcelona, Jornada 26: Ausente</ausencias>
+</item>
+<item item_id="2">
+	<jugador>Pacheco</jugador>
+	<partidos>22</partidos>
+	<goles>6</goles>
+	<asistencias>0</asistencias>
+	<amarillas>2</amarillas>
+	<rojas>0</rojas>
+	<foto>img/paxeco.jpg</foto>
+	<ausencias>Jornada 21: Decisión propia</ausencias>
+</item>
+<item item_id="3">
+	<jugador>Moro</jugador>
+	<partidos>23</partidos>
+	<goles>3</goles>
+	<asistencias>0</asistencias>
+	<amarillas>2</amarillas>
+	<rojas>0</rojas>
+	<foto>img/moro.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="4">
+	<jugador>Medu</jugador>
+	<partidos>22</partidos>
+	<goles>26</goles>
+	<asistencias>0</asistencias>
+	<amarillas>1</amarillas>
+	<rojas>1</rojas>
+	<foto>img/medu.jpg</foto>
+	<ausencias>Jornada 16: Futbol 11</ausencias>
+</item>
+<item item_id="5">
+	<jugador>Marc</jugador>
+	<partidos>21</partidos>
+	<goles>2</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/marc.jpg</foto>
+	<ausencias>Jornada 3: Puente, Jornada 19: Esquiando</ausencias>
+</item>
+<item item_id="6">
+	<jugador>Keko</jugador>
+	<partidos>19</partidos>
+	<goles>12</goles>
+	<asistencias>0</asistencias>
+	<amarillas>1</amarillas>
+	<rojas>0</rojas>
+	<foto>img/keko.jpg</foto>
+	<ausencias>Jornada 1: Lesionado, Jornada 4: Asuntos familiares, Jornada 8: En Cuenca, Jornada 15: Indispuesto</ausencias>
+</item>
+<item item_id="7">
+	<jugador>Jose</jugador>
+	<partidos>20</partidos>
+	<goles>0</goles>
+	<asistencias>0</asistencias>
+	<amarillas>2</amarillas>
+	<rojas>0</rojas>
+	<foto>img/jose.jpg</foto>
+	<ausencias>Jornada 8: Trabajo, Jornada 20: Hockey, Jornada 24: Problema de última hora</ausencias>
+</item>
+<item item_id="8">
+	<jugador>Javi</jugador>
+	<partidos>20</partidos>
+	<goles>0</goles>
+	<asistencias>0</asistencias>
+	<amarillas>6</amarillas>
+	<rojas>1</rojas>
+	<foto>img/javi.jpg</foto>
+	<ausencias>Jornada 4: Lesionado, Jornada 8: Huevazos, Jornada 13: Lesionado</ausencias>
+</item>
+<item item_id="9">
+	<jugador>Ivan</jugador>
+	<partidos>11</partidos>
+	<goles>0</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/ivan.jpg</foto>
+	<ausencias>Jornada 4: Ausente, Jornada 9: Ausente, Jornada 14: Lesionado, Jornada 15: Lesionado, Jornada 16: Lesionado, Jornada 17: Lesionado, Jornada 18: Lesionado, Jornada 19: Lesionado, Jornada 20: Lesionado, Jornada 21: Lesionado, Jornada 23: Lesionado, Jornada 24: Ausente</ausencias>
+</item>
+<item item_id="10">
+	<jugador>Diego</jugador>
+	<partidos>11</partidos>
+	<goles>3</goles>
+	<asistencias>0</asistencias>
+	<amarillas>2</amarillas>
+	<rojas>0</rojas>
+	<foto>img/diego.jpg</foto>
+	<ausencias>Jornada 6: Calzonazos, Jornada 9: Huevazos, Jornada 11: Trabajo, Jornada 13: Trabajo, Jornada 14: Ausente, Jornada 15: Ausente, Jornada 16: Ausente, Jornada 17: Ausente, Jornada 21: Francia, Jornada 23: Ausente, Jornada 24: Trabajo, Jornada 26: Huevazos</ausencias>
+</item>
+<item item_id="11">
+	<jugador>Bombero</jugador>
+	<partidos>16</partidos>
+	<goles>10</goles>
+	<asistencias>0</asistencias>
+	<amarillas>3</amarillas>
+	<rojas>0</rojas>
+	<foto>img/bombero.jpg</foto>
+	<ausencias>Jornada 3: Cuba, Jornada 4: Cuba, Jornada 10: Trabajo, Jornada 16: Trabajo, Jornada 19: Fallas, Jornada 23: Lesionado, Jornada 26: Mesa electoral</ausencias>
+</item>
+<item item_id="12">
+	<jugador>Bardi</jugador>
+	<partidos>15</partidos>
+	<goles>7</goles>
+	<asistencias>0</asistencias>
+	<amarillas>3</amarillas>
+	<rojas>0</rojas>
+	<foto>img/bardi.jpg</foto>
+	<ausencias>Jornada 1: Londres, Jornada 2: Londres, Jornada 3: Londres, Jornada 5: Lesionado, Jornada 7: Perdió el DNI, Jornada 9: Perdió el DNI, Jornada 16: Futbol 11, Jornada 17: Trabajo</ausencias>
+</item>
+<item item_id="13">
+	<jugador>Bambino</jugador>
+	<partidos>9</partidos>
+	<goles>2</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/bambino.jpg</foto>
+	<ausencias>Jornada 5: Trabajo, Jornada 6: Trabajo, Jornada 7: Trabajo, Jornada 10: Trabajo, Jornada 11: Trabajo, Jornada 13: Trabajo, Jornada 14: Trabajo, Jornada 15: Trabajo, Jornada 18: Trabajo, Jornada 19: Trabajo, Jornada 21: Trabajo, Jornada 23: Trabajo, Jornada 24: Trabajo, Jornada 26: Trabajo</ausencias>
+</item>
+</jugadores>

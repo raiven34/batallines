@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jugadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<item item_id="0">
+	<jugador>Urko</jugador>
+	<partidos>17</partidos>
+	<goles>3</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/urko.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="1">
+	<jugador>Pacheco</jugador>
+	<partidos>17</partidos>
+	<goles>15</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/paxeco.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="2">
+	<jugador>Moro</jugador>
+	<partidos>17</partidos>
+	<goles>4</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/moro.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="3">
+	<jugador>Medu</jugador>
+	<partidos>17</partidos>
+	<goles>20</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/medu.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="4">
+	<jugador>Marc</jugador>
+	<partidos>17</partidos>
+	<goles>1</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/marc.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="5">
+	<jugador>Keko</jugador>
+	<partidos>17</partidos>
+	<goles>11</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/keko.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="6">
+	<jugador>Javi</jugador>
+	<partidos>17</partidos>
+	<goles>1</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/javi.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="7">
+	<jugador>Ivan</jugador>
+	<partidos>17</partidos>
+	<goles>7</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/ivan.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="8">
+	<jugador>Diego</jugador>
+	<partidos>17</partidos>
+	<goles>2</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/diego.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="9">
+	<jugador>Bombero</jugador>
+	<partidos>7</partidos>
+	<goles>5</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/bombero.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="10">
+	<jugador>Bardi</jugador>
+	<partidos>17</partidos>
+	<goles>9</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/bardi.jpg</foto>
+	<ausencias></ausencias>
+</item>
+<item item_id="11">
+	<jugador>Bambino</jugador>
+	<partidos>17</partidos>
+	<goles>1</goles>
+	<asistencias>0</asistencias>
+	<amarillas>0</amarillas>
+	<rojas>0</rojas>
+	<foto>img/bambino.jpg</foto>
+	<ausencias></ausencias>
+</item>
+</jugadores>
