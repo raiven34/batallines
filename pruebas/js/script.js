@@ -16,56 +16,64 @@ function clienteCtrl($scope, $http) {
                 text:'Foto',
                 orden : '',
                 sentido : "",
-                temporada : ""
+                temporada : "",
+                clase : ""
             },
             {
                 id : 2,
                 text:'Apodo',
                 orden : 'apodo',
                 sentido : "",
-                temporada : ""
+                temporada : "",
+                clase : ""
             },
             {
                 id : 1,
                 text:'Partidos',
                 orden : 'partidos',
                 sentido : "",
-                temporada : ""
+                temporada : "",
+                clase : ""
             },
             {
                 id : 1,
                 text:'Goles',
                 orden : 'goles',
                 sentido : "",
-                temporada : ""
+                temporada : "",
+                clase : ""
             },                        
             {
                 id : 2,
                 text:'Asistencias',
                 orden : 'asistencias',
                 sentido : "",
-                temporada : ""
+                temporada : "",
+                clase : ""
             },
             {
                 id : 2,
                 text:'Amarillas',
                 orden : 'amarillas',
                 sentido : "",
-                temporada : ""
+                temporada : "",
+                clase : ""
             },
             {
                 id : 2,
                 text:'Rojas',
                 orden : 'rojas',
                 sentido : "",
-                temporada : ""
+                temporada : "",
+                clase : ""
             },
             {
                 id : 2,
                 text:'Valoración',
                 orden : 'puntos',
                 sentido : "",
-                temporada : ""
+                temporada : "",
+                clase : ""
             }                        
         ];
 
@@ -126,7 +134,7 @@ function clienteCtrl($scope, $http) {
                     }
                     for(i=0;i<$scope.cabeceras.length;i++){
                         if($scope.cabeceras[i]["orden"]==orden){
-                            
+                            $scope.cabeceras[i]["clase"]="color: red;background-image: url(../flecha_abajo.gif);background-repeat: no-repeat;background-position: center left;padding-left : 14px;";
                             if($scope.cabeceras[i]["sentido"]=="desc"){
                                 //console.log('wwww');
                                 orden= orden + "";
@@ -135,6 +143,8 @@ function clienteCtrl($scope, $http) {
                                 $scope.cabeceras[i]["sentido"]="desc";
                                 orden= orden + " desc";
                             }    
+                        }else{
+                            $scope.cabeceras[i]["clase"]="";
                         }
                         $scope.cabeceras[i]["temporada"]=temp;
                     }

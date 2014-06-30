@@ -85,7 +85,7 @@
             <table ng-init="cargaCliente('','apodo')" class="table table-striped">
               <thead>
                 <tr>
-                  <th ng-repeat='cabecera in cabeceras' ng-click='cargaCliente(cabecera.temporada , cabecera.orden)'>{{cabecera.text}}</th>
+                    <th style="{{cabecera.clase}}" ng-repeat='cabecera in cabeceras' ng-click='cargaCliente(cabecera.temporada , cabecera.orden)'>{{cabecera.text}}</th>
                   
                 </tr>
               </thead>
