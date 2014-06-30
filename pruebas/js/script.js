@@ -10,28 +10,88 @@ var clienteApp = angular.module('clienteApp', []);
 */
 
 function clienteCtrl($scope, $http) {
-	//$scope.myColor = "todas";
+        $scope.cabeceras = [
+            {
+                id : 1,
+                text:'Foto',
+                orden : '',
+                sentido : "",
+                temporada : ""
+            },
+            {
+                id : 2,
+                text:'Apodo',
+                orden : 'apodo',
+                sentido : "",
+                temporada : ""
+            },
+            {
+                id : 1,
+                text:'Partidos',
+                orden : 'partidos',
+                sentido : "",
+                temporada : ""
+            },
+            {
+                id : 1,
+                text:'Goles',
+                orden : 'goles',
+                sentido : "",
+                temporada : ""
+            },                        
+            {
+                id : 2,
+                text:'Asistencias',
+                orden : 'asistencias',
+                sentido : "",
+                temporada : ""
+            },
+            {
+                id : 2,
+                text:'Amarillas',
+                orden : 'amarillas',
+                sentido : "",
+                temporada : ""
+            },
+            {
+                id : 2,
+                text:'Rojas',
+                orden : 'rojas',
+                sentido : "",
+                temporada : ""
+            },
+            {
+                id : 2,
+                text:'Valoración',
+                orden : 'puntos',
+                sentido : "",
+                temporada : ""
+            }                        
+        ];
+
+        //$scope.temp = "Todas";
         $scope.cargaTemporadas = function() {
             $scope.temporadas =[];
             $http.get("../json/json_temporadas.php").success(function(data){
                     data.push({"temporada":"Todas"});
-                    console.log(data);
+                    //console.log(data);
                     $scope.temporadas = data;
                     //console.log($scope.myColor['temporada']);
-                    $scope.myColor = $scope.temporadas[0];                    
+                    $scope.myColor = $scope.temporadas[$scope.temporadas.length - 1];                    
                     //console.log($scope.myColor.temporada);
                     
             });
         }
-        $scope.cargaCliente = function(temp) {
+        $scope.cargaCliente = function(temp,orden) {
 		
                 console.log(temp)
+                console.log(orden)
                 $scope.currPage = 0;
 		$scope.pageSize = 10;
 		$scope.clientes = [];
                 $scope.resumenes =[];
                 
-                $scope.predicate = '-apodo';
+                //$scope.predicate = '-apodo';
                 $scope.totgoles = 0 ;
                 $scope.maxgoles = "" ;
                 $scope.imggoles = "";
@@ -62,9 +122,26 @@ function clienteCtrl($scope, $http) {
                 
                 
                     if(temp==''){
-                        temp='2013/2014';
+                        temp='Todas';
                     }
-                    $http.get("http://batallines.es/json/json_recupera_estadisticas.php?temporada=" + temp + "&jornada=1").success(function(data){
+                    for(i=0;i<$scope.cabeceras.length;i++){
+                        if($scope.cabeceras[i]["orden"]==orden){
+                            
+                            if($scope.cabeceras[i]["sentido"]=="desc"){
+                                //console.log('wwww');
+                                orden= orden + "";
+                                $scope.cabeceras[i]["sentido"]="";
+                            }else{
+                                $scope.cabeceras[i]["sentido"]="desc";
+                                orden= orden + " desc";
+                            }    
+                        }
+                        $scope.cabeceras[i]["temporada"]=temp;
+                    }
+                    console.log($scope.cabeceras);
+                    
+                    
+                    $http.get("http://batallines.es/json/json_recupera_estadisticas.php?temporada=" + temp + "&jornada=1&orden=" + orden).success(function(data){
                     $scope.clientes = data;
                     for(i=0;i<$scope.clientes.length;i++){    
                         
@@ -100,7 +177,7 @@ function clienteCtrl($scope, $http) {
                 
                     
                 });
-                console.log("aaaa");
+                //console.log("fin");
                 
                 
                 
