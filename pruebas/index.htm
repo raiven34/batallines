@@ -93,12 +93,12 @@
                 <tr ng-repeat="cliente in clientes | startFrom:currPage*pageSize | limitTo:pageSize">
                   <td><img class="img-rounded" ng-src="../{{ cliente.foto }}" style="width: 50px; height: 50px;" /></td>
                   <td>{{cliente.apodo}}</td>
-                  <td>{{cliente.partidos | number}}</td>
-                  <td>{{cliente.goles | number}}</td>
-                  <td>{{cliente.asistencias | number}}</td>
-                  <td>{{cliente.amarillas | number}}</td>
-                  <td>{{cliente.rojas | number}}</td>
-                  <td>{{cliente.puntos | number}}</td>
+                  <td>{{cliente.partidos}}</td>
+                  <td>{{cliente.goles}}</td>
+                  <td>{{cliente.asistencias}}</td>
+                  <td>{{cliente.amarillas}}</td>
+                  <td>{{cliente.rojas}}</td>
+                  <td>{{cliente.puntos}}</td>
                 </tr>
                 
               </tbody>

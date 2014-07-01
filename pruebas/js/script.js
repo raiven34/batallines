@@ -10,6 +10,8 @@ var clienteApp = angular.module('clienteApp', []);
 */
 
 function clienteCtrl($scope, $http) {
+        $scope.clientes = [];
+        $scope.resumenes =[];
         $scope.cabeceras = [
             {
                 id : 1,
@@ -96,8 +98,7 @@ function clienteCtrl($scope, $http) {
                 console.log(orden)
                 $scope.currPage = 0;
 		$scope.pageSize = 10;
-		$scope.clientes = [];
-                $scope.resumenes =[];
+
                 
                 //$scope.predicate = '-apodo';
                 $scope.totgoles = 0 ;
@@ -114,6 +115,20 @@ function clienteCtrl($scope, $http) {
                 $scope.imgrojas = "";
                 
                 //$scope.myColor = "";
+                
+                for(i=0;i<$scope.clientes.length;i++){                    
+                    $scope.clientes[i]["foto"] = "-";
+                    $scope.clientes[i]["apodo"] = "-";
+                    $scope.clientes[i]["partidos"] = "-";
+                    $scope.clientes[i]["goles"] = "-";
+                    $scope.clientes[i]["asistencias"] = "-";
+                    $scope.clientes[i]["amarillas"] = "-";
+                    $scope.clientes[i]["rojas"] = "-";
+                    $scope.clientes[i]["puntos"] = "-";
+                    
+                }
+                console.log($scope.clientes);
+                
 		/* 
 			con esta scope function estamos contando el total de registros
 			para indicar en cual pagina estamos de cuanta existentes
@@ -151,7 +166,7 @@ function clienteCtrl($scope, $http) {
                     console.log($scope.cabeceras);
                     
                     
-                    $http.get("http://batallines.es/json/json_recupera_estadisticas.php?temporada=" + temp + "&jornada=1&orden=" + orden).success(function(data){
+                    $http.get("http://batallines.es/json/json_recupera_estadisticas.php?temporada=" + temp + "&jornada=1&orden=" + orden,{ cache: true}).success(function(data){
                     $scope.clientes = data;
                     for(i=0;i<$scope.clientes.length;i++){    
                         
@@ -179,10 +194,10 @@ function clienteCtrl($scope, $http) {
                         }
                     }
                     //console.log($scope.maxgoles + " " + $scope.totgoles);
-                    $scope.resumenes.push({"apodo" :$scope.maxgoles , "total" :$scope.totgoles , "foto" : $scope.imggoles , "tipo" : "Máximo Goleador"});
-                    $scope.resumenes.push({"apodo" :$scope.maxasistencias , "total" :$scope.totasistencias , "foto" : $scope.imgasistencias , "tipo" : "Máximo Asistente"});
-                    $scope.resumenes.push({"apodo" :$scope.maxamarillas , "total" :$scope.totamarillas , "foto" : $scope.imgamarillas , "tipo" : "Jugador Con Más Amarillas"});
-                    $scope.resumenes.push({"apodo" :$scope.maxrojas , "total" :$scope.totrojas , "foto" : $scope.imgrojas , "tipo" : "Jugador Con Más Rojas"});
+                    $scope.resumenes[0] = ({"apodo" :$scope.maxgoles , "total" :$scope.totgoles , "foto" : $scope.imggoles , "tipo" : "Máximo Goleador"});
+                    $scope.resumenes[1] = ({"apodo" :$scope.maxasistencias , "total" :$scope.totasistencias , "foto" : $scope.imgasistencias , "tipo" : "Máximo Asistente"});
+                    $scope.resumenes[2] = ({"apodo" :$scope.maxamarillas , "total" :$scope.totamarillas , "foto" : $scope.imgamarillas , "tipo" : "Jugador Con Más Amarillas"});
+                    $scope.resumenes[3] = ({"apodo" :$scope.maxrojas , "total" :$scope.totrojas , "foto" : $scope.imgrojas , "tipo" : "Jugador Con Más Rojas"});
                     //console.log($scope.resumenes[1]["foto"]);
                 
                     
