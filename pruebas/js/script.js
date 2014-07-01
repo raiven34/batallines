@@ -14,15 +14,7 @@ function clienteCtrl($scope, $http) {
         $scope.resumenes =[];
         $scope.cabeceras = [
             {
-                id : 1,
-                text:'Foto',
-                orden : '',
-                sentido : "",
-                temporada : "",
-                clase : ""
-            },
-            {
-                id : 2,
+                id : 0,
                 text:'Apodo',
                 orden : 'apodo',
                 sentido : "",
@@ -38,7 +30,7 @@ function clienteCtrl($scope, $http) {
                 clase : ""
             },
             {
-                id : 1,
+                id : 2,
                 text:'Goles',
                 orden : 'goles',
                 sentido : "",
@@ -46,7 +38,7 @@ function clienteCtrl($scope, $http) {
                 clase : ""
             },                        
             {
-                id : 2,
+                id : 3,
                 text:'Asistencias',
                 orden : 'asistencias',
                 sentido : "",
@@ -54,7 +46,7 @@ function clienteCtrl($scope, $http) {
                 clase : ""
             },
             {
-                id : 2,
+                id : 4,
                 text:'Amarillas',
                 orden : 'amarillas',
                 sentido : "",
@@ -62,7 +54,7 @@ function clienteCtrl($scope, $http) {
                 clase : ""
             },
             {
-                id : 2,
+                id : 5,
                 text:'Rojas',
                 orden : 'rojas',
                 sentido : "",
@@ -70,7 +62,7 @@ function clienteCtrl($scope, $http) {
                 clase : ""
             },
             {
-                id : 2,
+                id : 6,
                 text:'Valoración',
                 orden : 'puntos',
                 sentido : "",
@@ -113,7 +105,9 @@ function clienteCtrl($scope, $http) {
                 $scope.totrojas = 0 ;
                 $scope.maxrojas = "" ;
                 $scope.imgrojas = "";
-                
+                $scope.totpuntos="";
+                $scope.maxpuntos="";
+                $scope.imgpuntos="";
                 //$scope.myColor = "";
                 
                 for(i=0;i<$scope.clientes.length;i++){                    
@@ -149,17 +143,20 @@ function clienteCtrl($scope, $http) {
                     }
                     for(i=0;i<$scope.cabeceras.length;i++){
                         if($scope.cabeceras[i]["orden"]==orden){
-                            $scope.cabeceras[i]["clase"]="color: red;background-image: url(../flecha_abajo.gif);background-repeat: no-repeat;background-position: center left;padding-left : 14px;";
+                            
                             if($scope.cabeceras[i]["sentido"]=="desc"){
                                 //console.log('wwww');
+                                $scope.cabeceras[i]["clase"]="color: red;background-image: url(../flecha_abajo.gif);background-repeat: no-repeat;background-position: center left;padding-left : 14px;";
                                 orden= orden + "";
                                 $scope.cabeceras[i]["sentido"]="";
                             }else{
+                                $scope.cabeceras[i]["clase"]="color: red;background-image: url(../flecha_arriba.gif);background-repeat: no-repeat;background-position: center left;padding-left : 14px;";
                                 $scope.cabeceras[i]["sentido"]="desc";
                                 orden= orden + " desc";
                             }    
                         }else{
                             $scope.cabeceras[i]["clase"]="";
+                            $scope.cabeceras[i]["sentido"]="";
                         }
                         $scope.cabeceras[i]["temporada"]=temp;
                     }
@@ -176,28 +173,23 @@ function clienteCtrl($scope, $http) {
                             $scope.totgoles = $scope.clientes[i]["goles"];
                             $scope.imggoles = $scope.clientes[i]["foto"];
                         }
-                        if(parseInt($scope.clientes[i]["amarillas"]) >= $scope.totamarillas){
+                        if(parseInt($scope.clientes[i]["puntos"]) >= $scope.totpuntos){
                             //console.log($scope.clientes[i]["apodo"] + " " + $scope.clientes[i]["goles"]);
-                            $scope.maxamarillas = $scope.clientes[i]["apodo"];
-                            $scope.totamarillas = $scope.clientes[i]["amarillas"];
-                            $scope.imgamarillas = $scope.clientes[i]["foto"];
+                            $scope.maxpuntos = $scope.clientes[i]["apodo"];
+                            $scope.totpuntos = $scope.clientes[i]["puntos"];
+                            $scope.imgpuntos = $scope.clientes[i]["foto"];
                         }if(parseInt($scope.clientes[i]["asistencias"]) >= $scope.totasistencias){
                             //console.log($scope.clientes[i]["apodo"] + " " + $scope.clientes[i]["asistencias"]);
                             $scope.maxasistencias = $scope.clientes[i]["apodo"];
                             $scope.totasistencias = $scope.clientes[i]["asistencias"];
                             $scope.imgasistencias = $scope.clientes[i]["foto"];
-                        }if(parseInt($scope.clientes[i]["rojas"]) >= $scope.totrojas){
-                            //console.log($scope.clientes[i]["apodo"] + " " + $scope.clientes[i]["rojas"]);
-                            $scope.maxrojas = $scope.clientes[i]["apodo"];
-                            $scope.totrojas = $scope.clientes[i]["rojas"];
-                            $scope.imgrojas = $scope.clientes[i]["foto"];
                         }
                     }
                     //console.log($scope.maxgoles + " " + $scope.totgoles);
                     $scope.resumenes[0] = ({"apodo" :$scope.maxgoles , "total" :$scope.totgoles , "foto" : $scope.imggoles , "tipo" : "Máximo Goleador"});
                     $scope.resumenes[1] = ({"apodo" :$scope.maxasistencias , "total" :$scope.totasistencias , "foto" : $scope.imgasistencias , "tipo" : "Máximo Asistente"});
-                    $scope.resumenes[2] = ({"apodo" :$scope.maxamarillas , "total" :$scope.totamarillas , "foto" : $scope.imgamarillas , "tipo" : "Jugador Con Más Amarillas"});
-                    $scope.resumenes[3] = ({"apodo" :$scope.maxrojas , "total" :$scope.totrojas , "foto" : $scope.imgrojas , "tipo" : "Jugador Con Más Rojas"});
+                    $scope.resumenes[2] = ({"apodo" :$scope.maxpuntos , "total" :$scope.totpuntos , "foto" : $scope.imgpuntos , "tipo" : "Mejor Valorado"});
+                    
                     //console.log($scope.resumenes[1]["foto"]);
                 
                     
