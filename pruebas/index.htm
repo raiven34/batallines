@@ -65,11 +65,11 @@
 
         <div class="col-sm-12 col-md-12 main" ng-controller="clienteCtrl" ng-init="cargaTemporadas()">
             <div class="row placeholders"  >
-                <select id="combotemp" class="form-horizontal" ng-model="myColor" ng-options="temporada.temporada for temporada in temporadas" ng-change="cargaCliente(myColor.temporada , 'apodo')">
+                <select id="combotemp" class="form-horizontal" ng-model="myColor" ng-options="temporada.temporada for temporada in temporadas" ng-change="precargaResumenes();cargaCliente(myColor.temporada , 'apodo')">
                     
                 </select>
             </div>
-          <h1 class="page-header">Resumen {{myColor.temporada}}</h1>
+          <h2 class="sub-header">Resumen {{myColor.temporada}}</h2>
 
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-4 placeholder" ng-repeat="resumen in resumenes">
@@ -85,8 +85,8 @@
             <table ng-init="cargaCliente('','apodo')" class="table table-striped">
               <thead>
                   <tr class="cabecera_tabla">
-                    <th>Foto</th>
-                    <th style="{{cabecera.clase}}" ng-repeat='cabecera in cabeceras' ng-click='cargaCliente(cabecera.temporada , cabecera.orden)'>{{cabecera.text}}</th>
+                      <th style="padding : 14px">Foto</th>
+                    <th ng-style="cargaEstilo(cabecera.clase)" ng-repeat='cabecera in cabeceras' ng-click='cargaCliente(cabecera.temporada , cabecera.orden)'>{{cabecera.text}}</th>
                   
                 </tr>
               </thead>

@@ -71,7 +71,20 @@ function clienteCtrl($scope, $http) {
             }                        
         ];
 
+        $scope.precargaResumenes = function() {
+            for(i=0;i<$scope.resumenes.length;i++){  
+                $scope.resumenes[i]['foto']="../img/cargando.gif";
+            }
+        }
         //$scope.temp = "Todas";
+        $scope.cargaEstilo = function(cab) {
+            //console.log("asdsadasd" + cab);
+            if(cab==""){
+                return  { padding : '14px'};
+            }else{
+                return  {color: 'red' , background: 'url(../flecha_' + cab + '.gif) no-repeat center left' , padding : '14px'};
+            }
+        }
         $scope.cargaTemporadas = function() {
             $scope.temporadas =[];
             $http.get("../json/json_temporadas.php").success(function(data){
@@ -111,7 +124,7 @@ function clienteCtrl($scope, $http) {
                 //$scope.myColor = "";
                 
                 for(i=0;i<$scope.clientes.length;i++){                    
-                    $scope.clientes[i]["foto"] = "-";
+                    $scope.clientes[i]["foto"] = "../img/cargando.gif";
                     $scope.clientes[i]["apodo"] = "-";
                     $scope.clientes[i]["partidos"] = "-";
                     $scope.clientes[i]["goles"] = "-";
@@ -146,11 +159,11 @@ function clienteCtrl($scope, $http) {
                             
                             if($scope.cabeceras[i]["sentido"]=="desc"){
                                 //console.log('wwww');
-                                $scope.cabeceras[i]["clase"]="color: red;background-image: url(../flecha_abajo.gif);background-repeat: no-repeat;background-position: center left;padding-left : 14px;";
+                                $scope.cabeceras[i]["clase"]="abajo";
                                 orden= orden + "";
                                 $scope.cabeceras[i]["sentido"]="";
                             }else{
-                                $scope.cabeceras[i]["clase"]="color: red;background-image: url(../flecha_arriba.gif);background-repeat: no-repeat;background-position: center left;padding-left : 14px;";
+                                $scope.cabeceras[i]["clase"]="arriba";
                                 $scope.cabeceras[i]["sentido"]="desc";
                                 orden= orden + " desc";
                             }    
@@ -173,7 +186,7 @@ function clienteCtrl($scope, $http) {
                             $scope.totgoles = $scope.clientes[i]["goles"];
                             $scope.imggoles = $scope.clientes[i]["foto"];
                         }
-                        if(parseInt($scope.clientes[i]["puntos"]) >= $scope.totpuntos){
+                        if(parseFloat($scope.clientes[i]["puntos"]) >= $scope.totpuntos){
                             //console.log($scope.clientes[i]["apodo"] + " " + $scope.clientes[i]["goles"]);
                             $scope.maxpuntos = $scope.clientes[i]["apodo"];
                             $scope.totpuntos = $scope.clientes[i]["puntos"];
