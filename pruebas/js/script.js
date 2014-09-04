@@ -82,7 +82,7 @@ function clienteCtrl($scope, $http) {
             if(cab==""){
                 return  { padding : '14px'};
             }else{
-                return  {color: 'red' , background: 'url(../flecha_' + cab + '.gif) no-repeat center left' , padding : '14px'};
+                return  {color: 'rgb(41, 255, 0)' , background: 'url(../flecha_' + cab + '.gif) no-repeat center left' , padding : '14px'};
             }
         }
         $scope.cargaTemporadas = function() {
