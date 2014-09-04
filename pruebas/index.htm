@@ -48,10 +48,12 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Dashboard</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Settings</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Profile</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Help</a></li>
+            <li><a href="http://getbootstrap.com/examples/dashboard/#">Noticias</a></li>
+            <li><a href="http://getbootstrap.com/examples/dashboard/#">Plantilla</a></li>
+            <li><a href="http://getbootstrap.com/examples/dashboard/#">Estadísticas</a></li>
+            <li><a href="http://getbootstrap.com/examples/dashboard/#">Videos</a></li>
+            <li><a href="http://getbootstrap.com/examples/dashboard/#">Aplicación Android</a></li>
+            <li><a href="http://getbootstrap.com/examples/dashboard/#">Admin</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -65,7 +67,7 @@
 
         <div class="col-sm-12 col-md-12 main" ng-controller="clienteCtrl" ng-init="cargaTemporadas()">
             <div class="row placeholders"  >
-                <select id="combotemp" class="form-horizontal" ng-model="myColor" ng-options="temporada.temporada for temporada in temporadas" ng-change="precargaResumenes();cargaCliente(myColor.temporada , 'apodo')">
+                <select id="combotemp" class="form-horizontal" ng-model="myColor" ng-options="temporada.temporada for temporada in temporadas" ng-change="precargaResumenes();cargaCliente(myColor.temporada , 'apodo',true)">
                     
                 </select>
             </div>
@@ -82,11 +84,11 @@
 
           <h2 class="sub-header">Estadísticas  {{myColor.temporada}}</h2>
           <div class="table-responsive" >
-            <table ng-init="cargaCliente('','apodo')" class="table table-striped">
+            <table ng-init="cargaCliente('','apodo',true)" class="table table-striped">
               <thead>
                   <tr class="cabecera_tabla">
                       <th style="padding : 14px">Foto</th>
-                    <th ng-style="cargaEstilo(cabecera.clase)" ng-repeat='cabecera in cabeceras' ng-click='cargaCliente(cabecera.temporada , cabecera.orden)'>{{cabecera.text}}</th>
+                    <th ng-style="cargaEstilo(cabecera.clase)" ng-repeat='cabecera in cabeceras' ng-click='cargaCliente(cabecera.temporada , cabecera.orden,false)'>{{cabecera.text}}</th>
                   
                 </tr>
               </thead>
