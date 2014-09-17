@@ -238,6 +238,232 @@ function clienteCtrl($scope, $http) {
 	}
 
 }
+//partidos
+
+function partidoCtrl($scope, $http) {
+        $scope.partidos = [];
+        $scope.resumenes =[];
+        $scope.cabeceras = [
+            {
+                id : 0,
+                text:'Temporada',
+                orden : 'temporda',
+                sentido : "",
+                temporada : "",
+                clase : ""
+            },            {
+                id : 1,
+                text:'Jornada',
+                orden : 'jornada',
+                sentido : "",
+                temporada : "",
+                clase : ""
+            },            {
+                id : 2,
+                text:'Local',
+                orden : 'local',
+                sentido : "",
+                temporada : "",
+                clase : ""
+            },
+            {
+                id : 3,
+                text:'Visitante',
+                orden : 'visitante',
+                sentido : "",
+                temporada : "",
+                clase : ""
+            },
+            {
+                id : 4,
+                text:'Resultado',
+                orden : 'resultado',
+                sentido : "",
+                temporada : "",
+                clase : ""
+            },             
+            {
+                id : 6,
+                text:'Fecha',
+                orden : 'fecha',
+                sentido : "",
+                temporada : "",
+                clase : ""
+            },
+            {
+                id : 7,
+                text:'Hora',
+                orden : 'hora',
+                sentido : "",
+                temporada : "",
+                clase : ""
+            }
+            
+        ];
+
+        $scope.precargaResumenes = function() {
+            for(i=0;i<$scope.resumenes.length;i++){  
+                $scope.resumenes[i]['foto']="../img/cargando.gif";
+            }
+        }
+        //$scope.temp = "Todas";
+        $scope.cargaEstilo = function(cab) {
+            //console.log("asdsadasd" + cab);
+            if(cab==""){
+                return  { padding : '14px'};
+            }else{
+                return  {color: 'rgb(41, 255, 0)' , background: 'url(../flecha_' + cab + '.gif) no-repeat center left' , padding : '14px'};
+            }
+        }
+        $scope.cargaTemporadas = function() {
+            $scope.temporadas =[];
+            $http.get("../json/json_temporadas.php").success(function(data){
+                    data.push({"temporada":"Todas"});
+                    //console.log(data);
+                    $scope.temporadas = data;
+                    //console.log($scope.myColor['temporada']);
+                    $scope.myColor = $scope.temporadas[$scope.temporadas.length - 1];                    
+                    //console.log($scope.myColor.temporada);
+                    
+            });
+        }
+        $scope.cargaPartido = function(temp,orden,res) {
+		
+                //console.log(temp)
+                //console.log(orden)
+                $scope.currPage = 0;
+		$scope.pageSize = 10;
+
+                
+                //$scope.predicate = '-apodo';
+                $scope.totganados = 0 ;
+                $scope.totempatados = 0 ;
+                $scope.totperdidos = 0 ;
+                //$scope.myColor = "";
+                
+                for(i=0;i<$scope.partidos.length;i++){                    
+                    $scope.partidos[i]["temporada"] = "-";
+                    $scope.partidos[i]["jornada"] = "-";
+                    $scope.partidos[i]["local"] = "-";
+                    $scope.partidos[i]["visitante"] = "-";
+                    $scope.partidos[i]["resultado"] = "-";
+                    $scope.partidos[i]["fecha"] = "-";
+                    $scope.partidos[i]["hora"] = "-";
+                    
+                }
+                //console.log($scope.partidos);
+                
+		/* 
+			con esta scope function estamos contando el total de registros
+			para indicar en cual pagina estamos de cuanta existentes
+			el math.ceil es para rendodear el resultado
+		*/
+		$scope.totalPartido = function() {
+			return Math.ceil($scope.partidos.length / $scope.pageSize);
+		}
+
+		/*
+			Hacemos una llamada AJAX por medio de getJSON ya que desde
+			PHP le mandaremos un JSON 
+	    */
+                
+                
+                    if(temp==''){
+                        temp='Todas';
+                    }
+                    for(i=0;i<$scope.cabeceras.length;i++){
+                        if($scope.cabeceras[i]["orden"]==orden){
+                            
+                            if($scope.cabeceras[i]["sentido"]=="desc"){
+                                //console.log('wwww');
+                                $scope.cabeceras[i]["clase"]="abajo";
+                                orden= orden + "";
+                                $scope.cabeceras[i]["sentido"]="";
+                            }else{
+                                $scope.cabeceras[i]["clase"]="arriba";
+                                $scope.cabeceras[i]["sentido"]="desc";
+                                orden= orden + " desc";
+                            }    
+                        }else{
+                            $scope.cabeceras[i]["clase"]="";
+                            $scope.cabeceras[i]["sentido"]="";
+                        }
+                        $scope.cabeceras[i]["temporada"]=temp;
+                    }
+                    //console.log($scope.cabeceras);
+                    
+                    
+                    
+                    $http.get("http://batallines.es/json/json_recupera_partidos.php?temporada=" + temp + "&orden=" + orden,{ cache: true}).success(function(data){
+                    $scope.partidos = data;
+                    if(res){
+                        for(i=0;i<$scope.partidos.length;i++){    
+                            
+                            if($scope.partidos[i]["local"] == "BATALLINES FC"){
+                                //console.log(parseInt($scope.partidos[i]["goleslocal"]));
+                                if(parseInt($scope.partidos[i]["goleslocal"]) > parseInt($scope.partidos[i]["golesvisitante"])){
+                                    $scope.totganados = $scope.totganados + 1 ;
+                                    
+                                }else if(parseInt($scope.partidos[i]["goleslocal"]) < parseInt($scope.partidos[i]["golesvisitante"])){
+                                    $scope.totperdidos = $scope.totperdidos + 1 ;
+                                }else{
+                                    $scope.totempatados = $scope.totempatados + 1 ;
+                                }
+
+                            }else{
+                                if(parseInt($scope.partidos[i]["goleslocal"]) > parseInt($scope.partidos[i]["golesvisitante"])){
+                                    $scope.totperdidos = $scope.totperdidos + 1 ;
+                                    
+                                }else if(parseInt($scope.partidos[i]["goleslocal"]) < parseInt($scope.partidos[i]["golesvisitante"])){
+                                    
+                                    $scope.totganados = $scope.totganados + 1 ;
+                                }else{
+                                    $scope.totempatados = $scope.totempatados + 1 ;
+                                }                                
+                            }
+                        }
+                        //console.log($scope.maxgoles + " " + $scope.totgoles);
+                        $scope.resumenes[0] = ({"total" :$scope.totganados , "foto" : $scope.imggoles , "tipo" : "Partidos Ganados"});
+                        $scope.resumenes[1] = ({"total" :$scope.totempatados , "foto" : $scope.imggoles , "tipo" : "Partidos Empatados"});
+                        $scope.resumenes[2] = ({"total" :$scope.totperdidos , "foto" : $scope.imggoles , "tipo" : "Partidos Perdidos"});
+                     }
+                    console.log($scope.resumenes);
+                
+                    
+                });
+                //console.log("fin");
+                
+                
+                
+                
+//                $.ajax({
+//                        url: "http://batallines.es/json/json_recupera_estadisticas.php",
+//                        type: "POST",
+//                        crossDomain: true,
+//                        data: { temporada: "2013/2014", jornada: "1" },
+//                        success: function (data) {
+//                                    console.log(data);	
+//                                    $scope.$apply(function() { /* Este seria el resultado devuelto desde PHP */
+//                                        console.log("json");
+//                                        $scope.clientes = data;
+//                                    });
+//                        },
+//                        error: function (xhr, ajaxOptions, thrownError) {
+//                        }
+//                 });
+    
+//                $.getJSON('json_recupera_estadisticas.php?jornada=1&temporada=2013/2014', function(data) {
+//		    console.log(data);	
+//                    $scope.$apply(function() { /* Este seria el resultado devuelto desde PHP */
+//				$scope.clientes = data;
+//			});
+//		});
+	}
+
+}
+
+
+
 function resumen($scope) {
     $scope.resumenes = [];
     
