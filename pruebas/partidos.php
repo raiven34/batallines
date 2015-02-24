@@ -5,9 +5,9 @@
 
       <div class="row">
 
-        <div class="col-sm-12 col-md-12 main" ng-controller="clienteCtrl" ng-init="cargaTemporadas()">
+        <div class="col-sm-12 col-md-12 main" ng-controller="partidoCtrl" ng-init="cargaTemporadas()">
             <div class="row placeholders"  >
-                <select id="combotemp" class="form-horizontal" ng-model="myColor" ng-options="temporada.temporada for temporada in temporadas" ng-change="precargaResumenes();cargaCliente(myColor.temporada , 'apodo',true)">
+                <select id="combotemp" class="form-horizontal" ng-model="myColor" ng-options="temporada.temporada for temporada in temporadas" ng-change="precargaResumenes();cargaPartido(myColor.temporada , 'jornada',true)">
                     
                 </select>
             </div>
@@ -15,7 +15,6 @@
 
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-4 placeholder" ng-repeat="resumen in resumenes">
-              <img class="img-circle" alt="200x200" ng-src="../{{ resumen.foto }}" style="width: 120px; height: 120px;">
               <h4>{{resumen.tipo}}</h4>
               <span class="text-muted lead">{{resumen.total}}</span>
             </div>
@@ -24,25 +23,23 @@
 
           <h2 class="sub-header">Estadísticas  {{myColor.temporada}}</h2>
           <div class="table-responsive" >
-            <table ng-init="cargaCliente('','apodo',true)" class="table table-striped">
+            <table ng-init="cargaPartido('','jornada',true)" class="table table-striped">
               <thead>
                   <tr class="cabecera_tabla">
-                      <th style="padding : 14px">Foto</th>
-                    <th ng-style="cargaEstilo(cabecera.clase)" ng-repeat='cabecera in cabeceras' ng-click='cargaCliente(cabecera.temporada , cabecera.orden,false)'>{{cabecera.text}}</th>
+                    <th ng-style="cargaEstilo(cabecera.clase)" ng-repeat='cabecera in cabeceras' ng-click='cargaPartido(cabecera.temporada , cabecera.orden,true)'>{{cabecera.text}}</th>
                   
                 </tr>
               </thead>
               <tbody >
                 <!--<tr ng-repeat="cliente in clientes | startFrom:currPage*pageSize | limitTo:pageSize">-->
-                <tr ng-repeat="cliente in clientes">
-                  <td class="paddingimg"><img class="img-rounded" ng-src="../{{ cliente.foto }}" style="width: 40px; height: 40px;" /></td>
-                  <td>{{cliente.apodo}}</td>
-                  <td>{{cliente.partidos}}</td>
-                  <td>{{cliente.goles}}</td>
-                  <td>{{cliente.asistencias}}</td>
-                  <td>{{cliente.amarillas}}</td>
-                  <td>{{cliente.rojas}}</td>
-                  <td>{{cliente.puntos}}</td>
+                  <tr ng-repeat="partido in partidos" ng-class="partido.res">
+                  <td>{{partido.temporada}}</td>
+                  <td>{{partido.jornada}}</td>
+                  <td>{{partido.local}}</td>
+                  <td>{{partido.visitante}}</td>
+                  <td>{{partido.goleslocal}} - {{partido.golesvisitante}}</td>
+                  <td>{{partido.fecha}}</td>
+                  <td>{{partido.hora}}</td>
                 </tr>
                 
               </tbody>

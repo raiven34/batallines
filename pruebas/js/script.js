@@ -82,7 +82,7 @@ function clienteCtrl($scope, $http) {
             if(cab==""){
                 return  { padding : '14px'};
             }else{
-                return  {color: 'rgb(41, 255, 0)' , background: 'url(../flecha_' + cab + '.gif) no-repeat center left' , padding : '14px'};
+                return  {color: 'rgb(255, 242, 0)' , background: 'url(../flecha_' + cab + '.gif) no-repeat center left' , padding : '14px'};
             }
         }
         $scope.cargaTemporadas = function() {
@@ -155,6 +155,7 @@ function clienteCtrl($scope, $http) {
                         temp='Todas';
                     }
                     for(i=0;i<$scope.cabeceras.length;i++){
+                        
                         if($scope.cabeceras[i]["orden"]==orden){
                             
                             if($scope.cabeceras[i]["sentido"]=="desc"){
@@ -277,7 +278,7 @@ function partidoCtrl($scope, $http) {
             {
                 id : 4,
                 text:'Resultado',
-                orden : 'resultado',
+                orden : 'jornada',
                 sentido : "",
                 temporada : "",
                 clase : ""
@@ -312,7 +313,7 @@ function partidoCtrl($scope, $http) {
             if(cab==""){
                 return  { padding : '14px'};
             }else{
-                return  {color: 'rgb(41, 255, 0)' , background: 'url(../flecha_' + cab + '.gif) no-repeat center left' , padding : '14px'};
+                return  {color: 'rgb(255, 242, 0)' , background: 'url(../flecha_' + cab + '.gif) no-repeat center left' , padding : '14px'};
             }
         }
         $scope.cargaTemporadas = function() {
@@ -398,28 +399,34 @@ function partidoCtrl($scope, $http) {
                     $scope.partidos = data;
                     if(res){
                         for(i=0;i<$scope.partidos.length;i++){    
-                            
-                            if($scope.partidos[i]["local"] == "BATALLINES FC"){
-                                //console.log(parseInt($scope.partidos[i]["goleslocal"]));
-                                if(parseInt($scope.partidos[i]["goleslocal"]) > parseInt($scope.partidos[i]["golesvisitante"])){
-                                    $scope.totganados = $scope.totganados + 1 ;
-                                    
-                                }else if(parseInt($scope.partidos[i]["goleslocal"]) < parseInt($scope.partidos[i]["golesvisitante"])){
-                                    $scope.totperdidos = $scope.totperdidos + 1 ;
-                                }else{
-                                    $scope.totempatados = $scope.totempatados + 1 ;
-                                }
+                            $scope.partidos[i] == new Object();
+                            if($scope.partidos[i]["jugado"]=="S"){
+                                if($scope.partidos[i]["local"] == "BATALLINES FC"){
+                                    //console.log(parseInt($scope.partidos[i]["goleslocal"]));
+                                    if(parseInt($scope.partidos[i]["goleslocal"]) > parseInt($scope.partidos[i]["golesvisitante"])){
+                                        $scope.totganados = $scope.totganados + 1 ;
+                                        $scope.partidos[i].res = "success";
 
-                            }else{
-                                if(parseInt($scope.partidos[i]["goleslocal"]) > parseInt($scope.partidos[i]["golesvisitante"])){
-                                    $scope.totperdidos = $scope.totperdidos + 1 ;
-                                    
-                                }else if(parseInt($scope.partidos[i]["goleslocal"]) < parseInt($scope.partidos[i]["golesvisitante"])){
-                                    
-                                    $scope.totganados = $scope.totganados + 1 ;
+                                    }else if(parseInt($scope.partidos[i]["goleslocal"]) < parseInt($scope.partidos[i]["golesvisitante"])){
+                                        $scope.totperdidos = $scope.totperdidos + 1 ;
+                                        $scope.partidos[i].res = "danger";
+                                    }else{
+                                        $scope.totempatados = $scope.totempatados + 1 ;
+                                        $scope.partidos[i].res = "warning";
+                                    }
+
                                 }else{
-                                    $scope.totempatados = $scope.totempatados + 1 ;
-                                }                                
+                                    if(parseInt($scope.partidos[i]["goleslocal"]) > parseInt($scope.partidos[i]["golesvisitante"])){
+                                        $scope.totperdidos = $scope.totperdidos + 1 ;
+                                        $scope.partidos[i].res = "danger";
+                                    }else if(parseInt($scope.partidos[i]["goleslocal"]) < parseInt($scope.partidos[i]["golesvisitante"])){                                    
+                                        $scope.totganados = $scope.totganados + 1 ;
+                                        $scope.partidos[i].res = "success";
+                                    }else{
+                                        $scope.totempatados = $scope.totempatados + 1 ;
+                                        $scope.partidos[i].res = "warning";
+                                    }                                
+                                }
                             }
                         }
                         //console.log($scope.maxgoles + " " + $scope.totgoles);
@@ -427,7 +434,7 @@ function partidoCtrl($scope, $http) {
                         $scope.resumenes[1] = ({"total" :$scope.totempatados , "foto" : $scope.imggoles , "tipo" : "Partidos Empatados"});
                         $scope.resumenes[2] = ({"total" :$scope.totperdidos , "foto" : $scope.imggoles , "tipo" : "Partidos Perdidos"});
                      }
-                    console.log($scope.resumenes);
+                    console.log($scope.partidos);
                 
                     
                 });
@@ -458,6 +465,52 @@ function partidoCtrl($scope, $http) {
 //				$scope.clientes = data;
 //			});
 //		});
+	}
+
+}
+function noticiasCtrl($scope, $http) {
+        $scope.noticias = [];
+        $scope.cargaNoticias = function() {
+		
+                //console.log(temp)
+                //console.log(orden)
+                $scope.currPage = 0;
+		$scope.pageSize = 10;
+
+                
+                
+
+                //console.log($scope.partidos);
+                
+		/* 
+			con esta scope function estamos contando el total de registros
+			para indicar en cual pagina estamos de cuanta existentes
+			el math.ceil es para rendodear el resultado
+		*/
+		$scope.totalPartido = function() {
+			return Math.ceil($scope.partidos.length / $scope.pageSize);
+		}
+
+		/*
+			Hacemos una llamada AJAX por medio de getJSON ya que desde
+			PHP le mandaremos un JSON 
+	    */
+                
+
+                    
+                    
+                    $http.get("http://batallines.es/json/json_recupera_noticias.php?",{ cache: false}).success(function(data){
+                    $scope.noticias = data;
+                    console.log($scope.noticias);
+                
+                    
+                });
+                //console.log("fin");
+                
+                
+                
+                
+
 	}
 
 }

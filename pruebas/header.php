@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="shortcut icon" href="../img/ic_launcher_mini.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>Batallines</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,10 +50,10 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="noticias.php">Noticias</a></li>
             <li><a href="http://getbootstrap.com/examples/dashboard/#">Plantilla</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Partidos</a></li>
+            <li><a href="partidos.php">Partidos</a></li>
             <li><a href="estadisticas.php">Estadísticas</a></li>
             <li><a href="http://getbootstrap.com/examples/dashboard/#">Videos</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Aplicación Android</a></li>
+            <li><a href="../batallines_app/Batallines.apk">Aplicación Android</a></li>
             <li><a href="http://getbootstrap.com/examples/dashboard/#">Admin</a></li>
           </ul>
           <form class="navbar-form navbar-right">

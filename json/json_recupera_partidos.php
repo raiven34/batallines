@@ -10,8 +10,12 @@ if(isset($_REQUEST['temporada'])){
 }else{
 	$temp=$ulttemp;
 }
-
-	$sql="SELECT * from partidos WHERE temporada =  '". $temp ."' order by jornada";
+if(isset($_REQUEST['orden'])){
+	$orden=$_REQUEST['orden'];
+}else{
+	$orden="jornada";
+}
+	$sql="SELECT * from partidos WHERE temporada =  '". $temp ."' order by " . $orden;
 if($temp=='Todas'){
 	$sql="SELECT * from partidos order by temporada desc, jornada desc";
 }

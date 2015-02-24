@@ -73,7 +73,7 @@ include("menu.php");
 	  
 include('conexion.php');
 
-   // Calcular última jornada y comprobar si ha votado
+   // Calcular ï¿½ltima jornada y comprobar si ha votado
 			   if (isset($_REQUEST['jornada']) && isset($_REQUEST['temporada']) && $_REQUEST['jornada']!=''){
 				  $jornada = $_REQUEST['jornada'];
 				  $temporada = $_REQUEST['temporada'];
@@ -105,14 +105,14 @@ include('conexion.php');
 
 			   // Calcular el n?mero de jornadas
 				  
-				  $quejornadas = "select distinct(jornada) from partidos where temporada='2013/2014' and jugado='S' order by jornada";
+				  $quejornadas = "select distinct(jornada) from partidos where temporada='2014/2015' and jugado='S' order by jornada";
 				  $rejornadas = mysql_query ($quejornadas, $conexion)
 					 or die ("Fallo en la consulta");
 				  $njornadas = mysql_num_rows ($rejornadas);
 				  
-			  // Última jornada
+			  // ï¿½ltima jornada
 			  
-			  	  $queultimajornada = "select * from partidos where jugado='S' and temporada='2013/2014' order by temporada desc, jornada desc limit 1";
+			  	  $queultimajornada = "select * from partidos where jugado='S' and temporada='2014/2015' order by temporada desc, jornada desc limit 1";
 				  $conultimajornada = mysql_query ($queultimajornada, $conexion)
 					 or die ("Fallo en la consulta");
 				  $resultimajornada = mysql_fetch_array ($conultimajornada);
@@ -137,7 +137,7 @@ include('conexion.php');
 			print('			<option value="'. $resultjornada['jornada'] . '">' . $resultjornada['jornada'] . '</option>');	
 		}
 	   }		
-	   print('		</select> de la temporada ' . $temporada . '<input name="temporada" type="hidden" value="2013/2014"></input>
+	   print('		</select> de la temporada ' . $temporada . '<input name="temporada" type="hidden" value="2014/2015"></input>
 	           	</div>
 	          	<div class="noticias"></br>' . "\n");
 	   
@@ -147,8 +147,8 @@ include('conexion.php');
                         <tr>
 	   		  <th class="thjugadores"><a>Jugador</a></th>
 			  <th class="thjugadores"><a>Media</a></th>
-			  <th class="thjugadores"><a>Valoración Máxima</a></th>
-			  <th class="thjugadores"><a>Valoración Mínima</a></th>
+			  <th class="thjugadores"><a>Valoracion Maxima</a></th>
+			  <th class="thjugadores"><a>Valoracion Minima</a></th>
 			</tr></thead><tbody>');
 	   for ($i=0; $i<$nfilas; $i++) {
 	   	$resultado = mysql_fetch_array ($consulta);

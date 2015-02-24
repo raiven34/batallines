@@ -1,5 +1,5 @@
 <?php
-$version_actual="2.0";
+$version_actual="2.1";
 if ($_REQUEST["version"]!=$version_actual){
 	
 	header('Location: http://batallines.es/batallines_app/Batallines.apk');
