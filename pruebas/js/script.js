@@ -1,5 +1,5 @@
 //Creamos el modulo de nuestra aplicación
-var clienteApp = angular.module('clienteApp', []);
+var clienteApp = angular.module('clienteApp', ['ngSanitize']);
 
 
 /*
@@ -275,14 +275,7 @@ function partidoCtrl($scope, $http) {
                 temporada : "",
                 clase : ""
             },
-            {
-                id : 4,
-                text:'Resultado',
-                orden : 'jornada',
-                sentido : "",
-                temporada : "",
-                clase : ""
-            },             
+             
             {
                 id : 6,
                 text:'Fecha',
@@ -298,8 +291,8 @@ function partidoCtrl($scope, $http) {
                 sentido : "",
                 temporada : "",
                 clase : ""
-            }
-            
+            },
+      
         ];
 
         $scope.precargaResumenes = function() {

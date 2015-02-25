@@ -27,7 +27,7 @@
               <thead>
                   <tr class="cabecera_tabla">
                     <th ng-style="cargaEstilo(cabecera.clase)" ng-repeat='cabecera in cabeceras' ng-click='cargaPartido(cabecera.temporada , cabecera.orden,true)'>{{cabecera.text}}</th>
-                  
+                    <th style="padding : 14px">Resultado</th>
                 </tr>
               </thead>
               <tbody >
@@ -37,9 +37,9 @@
                   <td>{{partido.jornada}}</td>
                   <td>{{partido.local}}</td>
                   <td>{{partido.visitante}}</td>
-                  <td>{{partido.goleslocal}} - {{partido.golesvisitante}}</td>
                   <td>{{partido.fecha}}</td>
                   <td>{{partido.hora}}</td>
+                  <td>{{partido.goleslocal}} - {{partido.golesvisitante}}</td>
                 </tr>
                 
               </tbody>

@@ -19,6 +19,7 @@
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-sanitize.js"></script>
     <script src="js/script.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="../js/jquery.backstretch.min.js" type="text/javascript"></script>
