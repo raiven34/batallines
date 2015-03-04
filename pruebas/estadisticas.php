@@ -14,8 +14,8 @@
           
 
           <div class="row placeholders">
-            <div class="col-xs-6 col-sm-4 placeholder" ng-repeat="resumen in resumenes">
-              <img class="img-circle" alt="200x200" ng-src="../{{ resumen.foto }}" style="width: 120px; height: 120px;">
+            <div class="col-xs-4 col-sm-4 placeholder" ng-repeat="resumen in resumenes">
+              <img class="img-circle img-responsive" alt="200x200" ng-src="../{{ resumen.foto }}" style="width: 120px; height: 120px;">
               <h4>{{resumen.tipo}}</h4>
               <span class="text-muted lead">{{resumen.total}}</span>
             </div>

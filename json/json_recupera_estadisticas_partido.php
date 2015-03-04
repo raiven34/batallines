@@ -26,7 +26,7 @@ $existe=mysql_affected_rows();
 //echo ($sqlpart);
 $row = mysql_fetch_array($respart);
 
-$datos []= array("jornada" => $row["jornada"], "temporada" => $row["temporada"],"local" => utf8_encode($row["local"]),"visitante" => utf8_encode($row["visitante"]),"goleslocal" => $row["goleslocal"],"golesvisitante" => $row["golesvisitante"],"lugar" => $row["lugar"],"fecha" => $row["fecha"],"hora" => $row["hora"],"jugado" => $row["jugado"],"mvp" => $mvp) ;
+$datos []= array("jornada" => $row["jornada"], "temporada" => $row["temporada"],"local" => utf8_encode($row["local"]),"visitante" => utf8_encode($row["visitante"]),"goleslocal" => $row["goleslocal"],"golesvisitante" => $row["golesvisitante"],"lugar" => utf8_encode($row["lugar"]),"fecha" => $row["fecha"],"hora" => $row["hora"],"jugado" => $row["jugado"],"mvp" => $mvp) ;
 
 if(isset($temporada) && isset($jornada) && $existe>0){
 	$temporada = $_REQUEST['temporada'];

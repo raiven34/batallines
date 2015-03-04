@@ -10,16 +10,17 @@ if(isset($_REQUEST['temporada'])){
 }else{
 	$temp=$ulttemp;
 }
-if(isset($_REQUEST['orden'])){
+if(isset($_REQUEST['orden']) && $_REQUEST['orden']!='' ){
 	$orden=$_REQUEST['orden'];
+        
 }else{
-	$orden="jornada";
+	$orden="temporada desc,jornada desc";
 }
 	$sql="SELECT * from partidos WHERE temporada =  '". $temp ."' order by " . $orden;
 if($temp=='Todas'){
-	$sql="SELECT * from partidos order by temporada desc, jornada desc";
+	$sql="SELECT * from partidos order by " . $orden;
 }
-	//echo $sql;
+//echo ($sql);
 	$res = mysql_query ($sql, $conexion);
 	if(mysql_affected_rows()>0){
 		while($row = mysql_fetch_array($res)){

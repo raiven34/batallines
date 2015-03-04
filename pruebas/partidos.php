@@ -3,18 +3,42 @@
 ?>
 
 
-      <div class="row">
-
-        <div class="col-sm-12 col-md-12 main" ng-controller="partidoCtrl" ng-init="cargaTemporadas()">
+      <div class="row" ng-controller="partidoCtrl">
+        
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog" style="margin: 80px auto;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+                    <h4 class="modal-title text-center" id="myModalLabel">{{detallepart[0].local}} {{detallepart[0].goleslocal}} - {{detallepart[0].golesvisitante}} {{detallepart[0].visitante}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Fecha: {{detallepart[0].fecha}}</h5>
+                        <h5>Hora: {{detallepart[0].hora}}</h5>
+                        <h5>Lugar: {{detallepart[0].lugar}}</h5>
+                        <h5>MVP: {{detallepart[0].mvp}}</h5>
+                        <img class="img-rounded img-responsive" ng-src="../{{detallepart[0].mvp}}" style="width: 50px; height: 60px;" />
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+          </div>
+        </div>
+          
+          
+        <div class="col-sm-12 col-md-12 main"  ng-init="cargaTemporadas()">
             <div class="row placeholders"  >
-                <select id="combotemp" class="form-horizontal" ng-model="myColor" ng-options="temporada.temporada for temporada in temporadas" ng-change="precargaResumenes();cargaPartido(myColor.temporada , 'jornada',true)">
+                <select id="combotemp" class="form-horizontal" ng-model="myColor" ng-options="temporada.temporada for temporada in temporadas" ng-change="precargaResumenes();cargaPartido(myColor.temporada , '',true)">
                     
                 </select>
             </div>
           
 
           <div class="row placeholders">
-            <div class="col-xs-6 col-sm-4 placeholder" ng-repeat="resumen in resumenes">
+            <div class="col-xs-4 col-sm-4 placeholder" ng-repeat="resumen in resumenes">
               <h4>{{resumen.tipo}}</h4>
               <span class="text-muted lead">{{resumen.total}}</span>
             </div>
@@ -23,7 +47,7 @@
 
           <h2 class="sub-header">Estadísticas  {{myColor.temporada}}</h2>
           <div class="table-responsive" >
-            <table ng-init="cargaPartido('','jornada',true)" class="table table-striped">
+            <table ng-init="cargaPartido('','',true)" class="table table-striped">
               <thead>
                   <tr class="cabecera_tabla">
                     <th ng-style="cargaEstilo(cabecera.clase)" ng-repeat='cabecera in cabeceras' ng-click='cargaPartido(cabecera.temporada , cabecera.orden,true)'>{{cabecera.text}}</th>
@@ -32,7 +56,7 @@
               </thead>
               <tbody >
                 <!--<tr ng-repeat="cliente in clientes | startFrom:currPage*pageSize | limitTo:pageSize">-->
-                  <tr ng-repeat="partido in partidos" ng-class="partido.res">
+                  <tr ng-repeat="partido in partidos" ng-class="partido.res" data-toggle="modal" data-target="#basicModal" style="cursor: pointer;" ng-click="cargaModal(partido.temporada,partido.jornada)">
                   <td>{{partido.temporada}}</td>
                   <td>{{partido.jornada}}</td>
                   <td>{{partido.local}}</td>

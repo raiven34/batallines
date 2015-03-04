@@ -21,6 +21,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-sanitize.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/factorias.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="../js/jquery.backstretch.min.js" type="text/javascript"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -57,11 +58,11 @@
             <li><a href="../batallines_app/Batallines.apk">Aplicación Android</a></li>
             <li><a href="http://getbootstrap.com/examples/dashboard/#">Admin</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
+<!--          <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
-          </form>
+          </form>-->
         </div>
       </div>
     </div>
 
-    <div class="container theme-showcase fondo-container" role="main">
+    <div  id="principal" class="container theme-showcase fondo-container" role="main">

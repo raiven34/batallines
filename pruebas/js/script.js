@@ -1,5 +1,5 @@
 //Creamos el modulo de nuestra aplicación
-var clienteApp = angular.module('clienteApp', ['ngSanitize']);
+var clienteApp = angular.module('clienteApp', ['ngSanitize','factoryModule']);
 
 
 /*
@@ -9,7 +9,7 @@ var clienteApp = angular.module('clienteApp', ['ngSanitize']);
 	as la prueba para que veas de lo que estamos hablando
 */
 
-function clienteCtrl($scope, $http) {
+function clienteCtrl($scope, $http,serviciotemporadas) {
         $scope.clientes = [];
         $scope.resumenes =[];
         $scope.cabeceras = [
@@ -85,18 +85,26 @@ function clienteCtrl($scope, $http) {
                 return  {color: 'rgb(255, 242, 0)' , background: 'url(../flecha_' + cab + '.gif) no-repeat center left' , padding : '14px'};
             }
         }
-        $scope.cargaTemporadas = function() {
-            $scope.temporadas =[];
-            $http.get("../json/json_temporadas.php").success(function(data){
-                    data.push({"temporada":"Todas"});
-                    //console.log(data);
-                    $scope.temporadas = data;
-                    //console.log($scope.myColor['temporada']);
-                    $scope.myColor = $scope.temporadas[$scope.temporadas.length - 1];                    
-                    //console.log($scope.myColor.temporada);
-                    
-            });
-        }
+//        $scope.cargaTemporadas = function() {
+//            $scope.temporadas =[];
+//            $http.get("../json/json_temporadas.php").success(function(data){
+//                    data.push({"temporada":"Todas"});
+//                    //console.log(data);
+//                    $scope.temporadas = data;
+//                    //console.log($scope.myColor['temporada']);
+//                    $scope.myColor = $scope.temporadas[$scope.temporadas.length - 1];                    
+//                    //console.log($scope.myColor.temporada);
+//                    
+//            });
+//        }
+        $scope.temporadas=[];
+        serviciotemporadas.recuperatemp().success(function(data){
+            data.push({"temporada":"Todas"});
+            $scope.temporadas=data;
+            $scope.myColor = $scope.temporadas[$scope.temporadas.length - 1]; 
+        });  
+    
+        
         $scope.cargaCliente = function(temp,orden,res) {
 		
                 //console.log(temp)
@@ -241,14 +249,50 @@ function clienteCtrl($scope, $http) {
 }
 //partidos
 
-function partidoCtrl($scope, $http) {
+function partidoCtrl($scope, $http,serviciotemporadas) {
         $scope.partidos = [];
         $scope.resumenes =[];
+        $scope.detallepart = [
+            {
+                id : 0,
+                text:'local',
+                valor : 'Local',
+            },            {
+                id : 1,
+                text:'Jornada',
+                valor : '-',
+
+            },            {
+                id : 2,
+                text:'Local',
+                valor : '-',
+
+            },
+            {
+                id : 3,
+                text:'Visitante',
+                valor : '-',
+
+            },
+            {
+                id : 4,
+                text:'goleslocal',
+                valor : '-',
+
+            }, 
+            {
+                id : 5,
+                text:'golesvisitante',
+                valor : '-',
+
+            }
+        
+        ];        
         $scope.cabeceras = [
             {
                 id : 0,
                 text:'Temporada',
-                orden : 'temporda',
+                orden : 'temporada',
                 sentido : "",
                 temporada : "",
                 clase : ""
@@ -301,6 +345,13 @@ function partidoCtrl($scope, $http) {
             }
         }
         //$scope.temp = "Todas";
+        $scope.cargaModal = function(temp,jor) {
+            //console.log("asdsadasd" + cab);
+            serviciotemporadas.recuperadetallepart(temp,jor).success(function(data){
+                $scope.detallepart = data;
+                console.log($scope.detallepart[0]);
+            });
+        }        
         $scope.cargaEstilo = function(cab) {
             //console.log("asdsadasd" + cab);
             if(cab==""){
@@ -309,18 +360,12 @@ function partidoCtrl($scope, $http) {
                 return  {color: 'rgb(255, 242, 0)' , background: 'url(../flecha_' + cab + '.gif) no-repeat center left' , padding : '14px'};
             }
         }
-        $scope.cargaTemporadas = function() {
-            $scope.temporadas =[];
-            $http.get("../json/json_temporadas.php").success(function(data){
-                    data.push({"temporada":"Todas"});
-                    //console.log(data);
-                    $scope.temporadas = data;
-                    //console.log($scope.myColor['temporada']);
-                    $scope.myColor = $scope.temporadas[$scope.temporadas.length - 1];                    
-                    //console.log($scope.myColor.temporada);
-                    
-            });
-        }
+        $scope.temporadas=[];
+        serviciotemporadas.recuperatemp().success(function(data){
+            data.push({"temporada":"Todas"});
+            $scope.temporadas=data;
+            $scope.myColor = $scope.temporadas[$scope.temporadas.length - 1]; 
+        });  
         $scope.cargaPartido = function(temp,orden,res) {
 		
                 //console.log(temp)
@@ -367,7 +412,6 @@ function partidoCtrl($scope, $http) {
                     }
                     for(i=0;i<$scope.cabeceras.length;i++){
                         if($scope.cabeceras[i]["orden"]==orden){
-                            
                             if($scope.cabeceras[i]["sentido"]=="desc"){
                                 //console.log('wwww');
                                 $scope.cabeceras[i]["clase"]="abajo";
@@ -383,6 +427,10 @@ function partidoCtrl($scope, $http) {
                             $scope.cabeceras[i]["sentido"]="";
                         }
                         $scope.cabeceras[i]["temporada"]=temp;
+                    }
+                    if(orden==''){
+                        $scope.cabeceras[0]["clase"]="arriba";
+                        $scope.cabeceras[1]["clase"]="arriba";
                     }
                     //console.log($scope.cabeceras);
                     
@@ -468,7 +516,7 @@ function noticiasCtrl($scope, $http) {
                 //console.log(temp)
                 //console.log(orden)
                 $scope.currPage = 0;
-		$scope.pageSize = 10;
+		$scope.pageSize = 5;
 
                 
                 
@@ -480,8 +528,8 @@ function noticiasCtrl($scope, $http) {
 			para indicar en cual pagina estamos de cuanta existentes
 			el math.ceil es para rendodear el resultado
 		*/
-		$scope.totalPartido = function() {
-			return Math.ceil($scope.partidos.length / $scope.pageSize);
+		$scope.totalNoticias = function() {
+			return Math.ceil($scope.noticias.length / $scope.pageSize);
 		}
 
 		/*
