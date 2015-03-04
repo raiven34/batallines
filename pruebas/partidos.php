@@ -9,16 +9,21 @@
             <div class="modal-dialog" style="margin: 80px auto;">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>-->
                     <h4 class="modal-title text-center" id="myModalLabel">{{detallepart[0].local}} {{detallepart[0].goleslocal}} - {{detallepart[0].golesvisitante}} {{detallepart[0].visitante}}</h4>
                     </div>
                     <div class="modal-body">
-                        <h5>Fecha: {{detallepart[0].fecha}}</h5>
-                        <h5>Hora: {{detallepart[0].hora}}</h5>
-                        <h5>Lugar: {{detallepart[0].lugar}}</h5>
-                        <h5>MVP: {{detallepart[0].mvp}}</h5>
-                        <img class="img-rounded img-responsive" ng-src="../{{detallepart[0].mvp}}" style="width: 50px; height: 60px;" />
-                        
+                        <div class="text-center">
+                            <h5>Fecha: {{detallepart[0].fecha}}</h5>
+                            <h5>Hora: {{detallepart[0].hora}}</h5>
+                            <h5>Lugar: {{detallepart[0].lugar}}</h5>
+                            <h5>MVP: {{detallepart[0].mvp}}</h5>
+                            <img class="img-rounded" ng-src="../{{detallepart[0].mvp}}" style="width: 50px; height: 60px;" />
+                            <h5>Incidencias: </h5>
+                            <h5 ng-repeat="detallein in detallepart[1]">{{detallein.jugador}}</h5>
+                            
+                        </div>
+                        <div class=""></div>    
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -349,7 +349,9 @@ function partidoCtrl($scope, $http,serviciotemporadas) {
             //console.log("asdsadasd" + cab);
             serviciotemporadas.recuperadetallepart(temp,jor).success(function(data){
                 $scope.detallepart = data;
-                console.log($scope.detallepart[0]);
+                
+                //console.log($scope.detalleinci);
+                
             });
         }        
         $scope.cargaEstilo = function(cab) {
