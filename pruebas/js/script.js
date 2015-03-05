@@ -349,11 +349,34 @@ function partidoCtrl($scope, $http,serviciotemporadas) {
             //console.log("asdsadasd" + cab);
             serviciotemporadas.recuperadetallepart(temp,jor).success(function(data){
                 $scope.detallepart = data;
-                
                 //console.log($scope.detalleinci);
                 
             });
-        }        
+        }
+//        $scope.cargaIncidencias = function(goles,asistencias,rojas,amarillas) {
+//            total=parseInt(goles) + parseInt(asistencias) + parseInt(rojas) + parseInt(amarillas);
+//            for(i=0;i<total;i++){ 
+//                $scope.incidencias=[];
+//                for(a=0;a<parseInt(goles);a++){
+//                    $scope.incidencias.push({"valor":"../balon.png"})
+//                }
+//                for(a=0;a<parseInt(asistencias);a++){
+//                    $scope.incidencias.push({"valor":"../asistencias.gif"})
+//                }
+//                for(a=0;a<parseInt(amarillas);a++){
+//                    $scope.incidencias.push({"valor":"../amarillas.png"})
+//                }
+//                for(a=0;a<parseInt(rojas);a++){
+//                    $scope.incidencias.push({"valor":"../rojas.png"})
+//                }                
+//               
+//            }
+//            $scope.detallepart[1].push($scope.incidencias);
+//            console.log($scope.detallepart);
+//        }
+        $scope.getNumber = function(num) {
+            return new Array(num);   
+        }
         $scope.cargaEstilo = function(cab) {
             //console.log("asdsadasd" + cab);
             if(cab==""){

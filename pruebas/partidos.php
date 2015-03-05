@@ -20,8 +20,10 @@
                             <h5>MVP: {{detallepart[0].mvp}}</h5>
                             <img class="img-rounded" ng-src="../{{detallepart[0].mvp}}" style="width: 50px; height: 60px;" />
                             <h5>Incidencias: </h5>
-                            <h5 ng-repeat="detallein in detallepart[1]">{{detallein.jugador}}</h5>
-                            
+                            <div ng-repeat="detallein in detallepart[1]" ng-init="cargaIncidencias(detallein.goles,detallein.asistencias,detallein.rojas,detallein.amarillas)">                            
+                                <span>{{detallein.jugador}}</span>
+                                
+                            </div>
                         </div>
                         <div class=""></div>    
                     </div>
