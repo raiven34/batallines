@@ -346,12 +346,17 @@ function partidoCtrl($scope, $http,serviciotemporadas) {
         }
         //$scope.temp = "Todas";
         $scope.cargaModal = function(temp,jor) {
+            $scope.incidencias=[];
             //console.log("asdsadasd" + cab);
             serviciotemporadas.recuperadetallepart(temp,jor).success(function(data){
                 $scope.detallepart = data;
-                //console.log($scope.detalleinci);
+                for(i=0;i<parseInt($scope.detallepart[1]["goles"]);i++){
+                    console.log("aaaaaaaaa");
+                }
+
                 
             });
+            
         }
 //        $scope.cargaIncidencias = function(goles,asistencias,rojas,amarillas) {
 //            total=parseInt(goles) + parseInt(asistencias) + parseInt(rojas) + parseInt(amarillas);
