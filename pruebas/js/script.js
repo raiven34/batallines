@@ -346,15 +346,32 @@ function partidoCtrl($scope, $http,serviciotemporadas) {
         }
         //$scope.temp = "Todas";
         $scope.cargaModal = function(temp,jor) {
-            $scope.incidencias=[];
+            
             //console.log("asdsadasd" + cab);
             serviciotemporadas.recuperadetallepart(temp,jor).success(function(data){
                 $scope.detallepart = data;
-                for(i=0;i<parseInt($scope.detallepart[1]["goles"]);i++){
-                    console.log("aaaaaaaaa");
+                for(i=0;i<$scope.detallepart[1].length;i++){
+                    $scope.incidencias=[];
+                    //console.log($scope.detallepart[1]);
+                    for(a=0;a<parseInt($scope.detallepart[1][i]["goles"]);a++){
+                        
+                        $scope.incidencias.push("../balon.png");
+                        //console.log("aaaaaaaaa");
+                    }
+                    for(a=0;a<parseInt($scope.detallepart[1][i]["asistencias"]);a++){
+                        $scope.incidencias.push("../img/asistencias.gif");
+                    }
+                    for(a=0;a<parseInt($scope.detallepart[1][i]["amarillas"]);a++){
+                        $scope.incidencias.push("../amarillas.png");
+                    }
+                    for(a=0;a<parseInt($scope.detallepart[1][i]["rojas"]);a++){
+                        $scope.incidencias.push("../rojas.png");
+                    } 
+                    //console.log($scope.detallepart[1][i]);
+                    $scope.detallepart[1][i].incidencias = $scope.incidencias;
+                    
                 }
-
-                
+                //console.log($scope.detallepart[1]);
             });
             
         }

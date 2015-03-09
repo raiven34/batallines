@@ -22,14 +22,14 @@
                             <h5>Incidencias: </h5>
                             <div ng-repeat="detallein in detallepart[1]">                            
                                 <span>{{detallein.jugador}}</span>
-                                
+                                <img ng-repeat="i in detallein.incidencias track by $index" src="{{i}}"></span>
                             </div>
                         </div>
                         <div class=""></div>    
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+<!--                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>-->
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
           </div>
