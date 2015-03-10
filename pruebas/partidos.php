@@ -5,7 +5,7 @@
 
       <div class="row" ng-controller="partidoCtrl">
         
-        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" style="background-color: rgb(87, 89, 83)">
             <div class="modal-dialog" style="margin: 80px auto;">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -52,7 +52,7 @@
             
           </div>
 
-          <h2 class="sub-header">Estadísticas  {{myColor.temporada}}</h2>
+          <h2 class="sub-header">Temporada  {{myColor.temporada}}</h2>
           <div class="table-responsive" >
             <table ng-init="cargaPartido('','',true)" class="table table-striped">
               <thead>
