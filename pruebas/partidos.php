@@ -19,7 +19,7 @@
                                 <h5>Hora: {{detallepart[0].hora}}</h5>
                                 <h5>Campo: {{detallepart[0].lugar}}</h5>
                                 <h5>MVP: {{detallepart[0].mvp}}</h5>
-                                <img class="img-rounded" ng-src="../{{detallepart[0].fotomvp}}" style="width: 50px; height: 60px;" />
+                                <img class="img-rounded" ng-src="../{{detallepart[0].fotomvp}}" style="width: 60px; height: 80px;" />
                                 <h5>Incidencias: </h5>
                             </div>
                             <div ng-repeat="detallein in detallepart[1]">                            
