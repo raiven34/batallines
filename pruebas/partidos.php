@@ -14,12 +14,14 @@
                     </div>
                     <div class="modal-body">
                         <div class="text-center">
-                            <h5>Fecha: {{detallepart[0].fecha}}</h5>
-                            <h5>Hora: {{detallepart[0].hora}}</h5>
-                            <h5>Lugar: {{detallepart[0].lugar}}</h5>
-                            <h5>MVP: {{detallepart[0].mvp}}</h5>
-                            <img class="img-rounded" ng-src="../{{detallepart[0].mvp}}" style="width: 50px; height: 60px;" />
-                            <h5>Incidencias: </h5>
+                            <div class="">
+                                <h5>Fecha: {{detallepart[0].fecha}}</h5>
+                                <h5>Hora: {{detallepart[0].hora}}</h5>
+                                <h5>Campo: {{detallepart[0].lugar}}</h5>
+                                <h5>MVP: {{detallepart[0].mvp}}</h5>
+                                <img class="img-rounded" ng-src="../{{detallepart[0].fotomvp}}" style="width: 50px; height: 60px;" />
+                                <h5>Incidencias: </h5>
+                            </div>
                             <div ng-repeat="detallein in detallepart[1]">                            
                                 <span>{{detallein.jugador}}</span>
                                 <img ng-repeat="i in detallein.incidencias track by $index" src="{{i}}"></span>

@@ -11,14 +11,16 @@ if($_REQUEST['jornada']=="" || $_REQUEST['jornada']==""){
 	$temporada = $_REQUEST['temporada'];
 	$jornada = $_REQUEST['jornada'];
 }
-$sql="select jugador from puntuaciones where jornada=" . $jornada . " and temporada='" . $temporada . "' group by jugador order by avg(puntos) desc limit 0,1";
+$sql="select p.jugador,j.foto from puntuaciones p , jugadores j where p.jugador=j.apodo and jornada=" . $jornada . " and temporada='" . $temporada . "' group by jugador order by avg(puntos) desc limit 0,1";
 $res = mysql_query ($sql, $conexion);
 $existepunt=mysql_affected_rows();
 if($existepunt>0){
 	$rowpunt = mysql_fetch_array($res);
 	$mvp=$rowpunt["jugador"];
+        $fotomvp=$rowpunt["foto"];
 }else{
 	$mvp="null";
+        $fotomvp="img/anonimo.JPG";
 }
 $sqlpart="select * from partidos where jornada='" . $jornada . "' and temporada='" . $temporada . "'";
 $respart = mysql_query ($sqlpart, $conexion);
@@ -26,7 +28,7 @@ $existe=mysql_affected_rows();
 //echo ($sqlpart);
 $row = mysql_fetch_array($respart);
 
-$datos []= array("jornada" => $row["jornada"], "temporada" => $row["temporada"],"local" => utf8_encode($row["local"]),"visitante" => utf8_encode($row["visitante"]),"goleslocal" => $row["goleslocal"],"golesvisitante" => $row["golesvisitante"],"lugar" => utf8_encode($row["lugar"]),"fecha" => $row["fecha"],"hora" => $row["hora"],"jugado" => $row["jugado"],"mvp" => $mvp) ;
+$datos []= array("jornada" => $row["jornada"], "temporada" => $row["temporada"],"local" => utf8_encode($row["local"]),"visitante" => utf8_encode($row["visitante"]),"goleslocal" => $row["goleslocal"],"golesvisitante" => $row["golesvisitante"],"lugar" => utf8_encode($row["lugar"]),"fecha" => $row["fecha"],"hora" => $row["hora"],"jugado" => $row["jugado"],"mvp" => $mvp,"fotomvp" => $fotomvp) ;
 
 if(isset($temporada) && isset($jornada) && $existe>0){
 	$temporada = $_REQUEST['temporada'];
