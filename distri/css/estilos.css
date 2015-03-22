@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29-jun-2014, 17:06:18
+    Author     : medussd
+*/
+
+/*html { 
+  background: url(../fondotoy.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+@font-face {
+
+font-family: PoplarStd;
+
+src: url("../fuentes/poplar_std_black.woff");
+
+}
+@font-face {
+
+font-family: Kalinga;
+
+src: url("../fuentes/Kalinga.woff");
+
+}
+body {
+    background-color:  #000;
+}
+
+.containerfix{
+    max-width: 730px !important;
+}
+.destacado{
+    border: 2px solid #fff;
+
+}
+.textoMA{
+    font-family: Kalinga;
+    font-size: 13px;
+    color: rgb(187, 186, 186);
+    padding: 2%;
+}
+.cabeceraMA{
+    font-size: 14px;
+    color: whitesmoke;    
+}
+.imgdestacado{
+    padding: 0px;
+    border: 2px solid #fff;
+}
+.imgdestacado:hover{
+    -webkit-filter: grayscale(100%);
+    cursor: pointer;
+    box-shadow: 0 0 2px 2px #fe3;
+}
+.menu>li>a{
+    font-family: PoplarStd;
+    font-size: 25px;
+    color: whitesmoke;
+    padding: 0px 15px;
+}
+.menu>li>a:hover {
+    background-color: transparent;
+    color: wheat;
+}
+@media (max-width: 1200px) {
+  .menu>li>a { font-size: 23px; }
+  .textoMA{ font-size: 12px; }
+}
+
+@media (max-width: 670px) {
+  .menu>li>a { font-size: 16px; }
+  .textoMA{ font-size: 11px; }
+}  
+@media (max-width: 500px) {
+  .menu>li>a { font-size: 13px; }
+  .textoMA{ font-size: 7px; }
+}  
+.marginbot{
+    margin-bottom: 15%;
+}
+.marginbotlow{
+    margin-bottom: 2%;
+}
+.nav-pills>li.active>a:hover{color:black; background-color:transparent}
