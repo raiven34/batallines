@@ -29,6 +29,13 @@ font-family: Kalinga;
 src: url("../fuentes/Kalinga.woff");
 
 }
+@font-face {
+
+font-family: Impact;
+
+src: url("../fuentes/impact.woff");
+
+}
 body {
     background-color:  #000;
 }
@@ -46,6 +53,12 @@ body {
     color: rgb(187, 186, 186);
     padding: 2%;
 }
+.textoContacto{
+    font-family: Impact;
+    font-size: 18px;
+    color: whitesmoke;
+    padding: 2%;
+}
 .cabeceraMA{
     font-size: 14px;
     color: whitesmoke;    
@@ -53,6 +66,9 @@ body {
 .imgdestacado{
     padding: 0px;
     border: 2px solid #fff;
+}
+.sinpadding{
+    padding: 0px;
 }
 .imgdestacado:hover{
     -webkit-filter: grayscale(100%);
@@ -72,18 +88,21 @@ body {
 @media (max-width: 1200px) {
   .menu>li>a { font-size: 23px; }
   .textoMA{ font-size: 12px; }
+  .textoContacto{ font-size: 16px; }
 }
 
 @media (max-width: 670px) {
   .menu>li>a { font-size: 16px; }
   .textoMA{ font-size: 11px; }
+  .textoContacto{ font-size: 12px; }
 }  
 @media (max-width: 500px) {
   .menu>li>a { font-size: 13px; }
   .textoMA{ font-size: 7px; }
+  .textoContacto{ font-size: 9px; }
 }  
 .marginbot{
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
 .marginbotlow{
     margin-bottom: 2%;
