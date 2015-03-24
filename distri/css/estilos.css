@@ -95,7 +95,7 @@ body {
   .menu>li>a { font-size: 23px; }
   .textoMA{ font-size: 12px; }
 /*  .textoFamiliares{ font-size: 12px; }*/
-  .imgcartel{ height: 140px; }
+    .imgcartel{ height: 110px; }
 /*  .textoContacto{ font-size: 16px; }*/
 }
 
@@ -104,14 +104,14 @@ body {
   .textoMA{ font-size: 11px; }
   .textoFamiliares{ font-size: 11px; }
   .textoContacto{ font-size: 16.1px; }
-  .imgcartel{ height: 120px; }
+  .imgcartel{ height: 100px; }
 }  
 @media (max-width: 500px) {
   .menu>li>a { font-size: 13px; }
   .textoMA{ font-size: 7px; }
   .textoFamiliares{ font-size: 9px; }
   .textoContacto{ font-size: 7px; }
-  .imgcartel{ max-height: 100px; }
+  .imgcartel{ max-height: 90px; }
 }  
 .marginbot{
     margin-bottom: 10%;
