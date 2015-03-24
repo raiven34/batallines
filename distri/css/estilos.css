@@ -53,6 +53,12 @@ body {
     color: rgb(187, 186, 186);
     padding: 2%;
 }
+.textoFamiliares{
+    font-family: Kalinga;
+    font-size: 13px;
+    color: rgb(187, 186, 186);
+    padding: 2%;
+}
 .textoContacto{
     font-family: Impact;
     font-size: 18px;
@@ -88,18 +94,24 @@ body {
 @media (max-width: 1200px) {
   .menu>li>a { font-size: 23px; }
   .textoMA{ font-size: 12px; }
+/*  .textoFamiliares{ font-size: 12px; }*/
+  .imgcartel{ height: 140px; }
 /*  .textoContacto{ font-size: 16px; }*/
 }
 
 @media (max-width: 670px) {
   .menu>li>a { font-size: 16px; }
   .textoMA{ font-size: 11px; }
+  .textoFamiliares{ font-size: 11px; }
   .textoContacto{ font-size: 16.1px; }
+  .imgcartel{ height: 120px; }
 }  
 @media (max-width: 500px) {
   .menu>li>a { font-size: 13px; }
   .textoMA{ font-size: 7px; }
+  .textoFamiliares{ font-size: 9px; }
   .textoContacto{ font-size: 7px; }
+  .imgcartel{ max-height: 100px; }
 }  
 .marginbot{
     margin-bottom: 10%;
@@ -117,4 +129,7 @@ body {
 .backcontacto{
     background: url(../img/DS.JPG) no-repeat;
     background-size: 50% 100%;
+}
+.imgcartel{
+    height: 150px;
 }
