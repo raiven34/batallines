@@ -88,18 +88,18 @@ body {
 @media (max-width: 1200px) {
   .menu>li>a { font-size: 23px; }
   .textoMA{ font-size: 12px; }
-  .textoContacto{ font-size: 16px; }
+/*  .textoContacto{ font-size: 16px; }*/
 }
 
 @media (max-width: 670px) {
   .menu>li>a { font-size: 16px; }
   .textoMA{ font-size: 11px; }
-  .textoContacto{ font-size: 12px; }
+  .textoContacto{ font-size: 16.1px; }
 }  
 @media (max-width: 500px) {
   .menu>li>a { font-size: 13px; }
   .textoMA{ font-size: 7px; }
-  .textoContacto{ font-size: 9px; }
+  .textoContacto{ font-size: 7px; }
 }  
 .marginbot{
     margin-bottom: 10%;
@@ -107,4 +107,14 @@ body {
 .marginbotlow{
     margin-bottom: 2%;
 }
+.margintop{
+    margin-top: 10%;
+}
+.margintoplow{
+    margin-top: 2%;
+}
 .nav-pills>li.active>a:hover{color:black; background-color:transparent}
+.backcontacto{
+    background: url(../img/DS.JPG) no-repeat;
+    background-size: 50% 100%;
+}
