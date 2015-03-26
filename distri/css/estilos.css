@@ -109,7 +109,7 @@ body {
 @media (max-width: 500px) {
   .menu>li>a { font-size: 13px; }
   .textoMA{ font-size: 7px; }
-  .textoFamiliares{ font-size: 9px; }
+  .textoFamiliares{ font-size: 8px; }
   .textoContacto{ font-size: 7px; }
   .imgcartel{ max-height: 90px; }
 }  
@@ -132,4 +132,14 @@ body {
 }
 .imgcartel{
     height: 150px;
+}
+.linkdossier{
+    color: rgb(197, 185, 60);
+}
+.linkdossier:hover{
+    color: rgb(197, 185, 60);
+}
+.fondocontainer{
+    background: url(../img/parte1limpia.png) no-repeat;
+    background-size: 100% 100%; 
 }
