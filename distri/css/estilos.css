@@ -105,6 +105,7 @@ body {
   .textoFamiliares{ font-size: 11px; }
   .textoContacto{ font-size: 16.1px; }
   .imgcartel{ height: 100px; }
+  .videopromoma{ max-height: 250px; }
 }  
 @media (max-width: 500px) {
   .menu>li>a { font-size: 13px; }
@@ -112,6 +113,7 @@ body {
   .textoFamiliares{ font-size: 8px; }
   .textoContacto{ font-size: 7px; }
   .imgcartel{ max-height: 90px; }
+  .videopromoma{ max-height: 200px; }
 }  
 .marginbot{
     margin-bottom: 10%;
@@ -142,4 +144,14 @@ body {
 .fondocontainer{
     background: url(../img/parte1limpia.png) no-repeat;
     background-size: 100% 100%; 
+}
+.fondovideosma{
+    background: url(../img/parte3.png) no-repeat;
+    background-size: 100% 100%; 
+}
+.itemcarousel{
+    height: 600px !important;
+}
+.videopromoma{
+    height: 300px;
 }
