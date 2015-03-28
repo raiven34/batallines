@@ -74,7 +74,7 @@ body {
     border: 2px solid #fff;
 }
 .sinpadding{
-    padding: 0px;
+    padding: 0px  !important;
 }
 .imgdestacado:hover{
     -webkit-filter: grayscale(100%);
@@ -91,30 +91,64 @@ body {
     background-color: transparent;
     color: wheat;
 }
+.menu2{
+    margin-top: 35%;
+}
+.menu2>li>a{
+    font-family: Kalinga;
+    font-size: 14px;
+    color: whitesmoke;
+    padding: 0px 15px;
+    border-bottom: 1px solid #666;
+}
+.menu2>li>a:hover {
+    background-color: transparent;
+    color: wheat;
+}
 @media (max-width: 1200px) {
+    .menu2{ margin-top: 38%; }
   .menu>li>a { font-size: 23px; }
+  .menu2>li>a { font-size: 13px; }
   .textoMA{ font-size: 12px; }
+  .cabeceraMA{ font-size: 13px; }
 /*  .textoFamiliares{ font-size: 12px; }*/
     .imgcartel{ height: 110px; }
 /*  .textoContacto{ font-size: 16px; }*/
 }
 
 @media (max-width: 670px) {
+  .menu2{ margin-top: 45%; }  
   .menu>li>a { font-size: 16px; }
+  .menu2>li>a { font-size: 11px; }
   .textoMA{ font-size: 11px; }
+  .cabeceraMA{ font-size: 12px; }
   .textoFamiliares{ font-size: 11px; }
   .textoContacto{ font-size: 16.1px; }
   .imgcartel{ height: 100px; }
   .videopromoma{ max-height: 250px; }
 }  
 @media (max-width: 500px) {
-  .menu>li>a { font-size: 13px; }
+  .menu2{ margin-top: 35%; } 
+  .menu>li>a { font-size: 12px; }
+  .menu2>li>a { font-size: 10px; }
   .textoMA{ font-size: 7px; }
+  .cabeceraMA{ font-size: 8px; }
   .textoFamiliares{ font-size: 8px; }
   .textoContacto{ font-size: 7px; }
   .imgcartel{ max-height: 90px; }
   .videopromoma{ max-height: 200px; }
-}  
+}
+@media (max-width: 450px) {
+  .menu2{ margin-top: 36%; } 
+  .menu>li>a { font-size: 9px; }
+  .menu2>li>a { font-size: 7px; }
+  .textoMA{ font-size: 6px; }
+  .cabeceraMA{ font-size: 7px; }
+  .textoFamiliares{ font-size: 7px; }
+  .textoContacto{ font-size: 7px; }
+  .imgcartel{ max-height: 70px; }
+  .videopromoma{ max-height: 150px; }
+}
 .marginbot{
     margin-bottom: 10%;
 }
@@ -127,10 +161,18 @@ body {
 .margintoplow{
     margin-top: 2%;
 }
+.margintophigh{
+    margin-top: 35%;
+}
 .nav-pills>li.active>a:hover{color:black; background-color:transparent}
 .backcontacto{
     background: url(../img/DS.JPG) no-repeat;
     background-size: 50% 100%;
+}
+.backinicioma{
+    background: url(../img/MAInicio.png) no-repeat;
+    background-size: 50% 100%;
+    background-position: 100% 0%;
 }
 .imgcartel{
     height: 150px;
