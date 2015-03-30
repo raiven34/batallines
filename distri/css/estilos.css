@@ -191,9 +191,19 @@ body {
     background: url(../img/parte3.png) no-repeat;
     background-size: 100% 100%; 
 }
+.fondovideosfotosma{
+    background: url(../img/fondovideosfotosma.png) no-repeat;
+    background-size: 100% 100%; 
+}
 .itemcarousel{
     height: 600px !important;
 }
 .videopromoma{
     height: 300px;
+}
+.videosma{
+    height: 200px;
+}
+.selected img {
+	opacity:0.5;
 }
