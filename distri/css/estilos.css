@@ -207,3 +207,9 @@ body {
 .selected img {
 	opacity:0.5;
 }
+.miniimg{
+    height: 80px;
+}
+.navlateral{
+    font-size: 50px;
+}
