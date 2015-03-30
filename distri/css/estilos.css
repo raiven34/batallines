@@ -45,6 +45,7 @@ body {
 }
 .destacado{
     border: 2px solid #fff;
+    background-color: black;
 
 }
 .textoMA{
@@ -202,7 +203,7 @@ body {
     height: 300px;
 }
 .videosma{
-    height: 200px;
+    height: 300px;
 }
 .selected img {
 	opacity:0.5;
