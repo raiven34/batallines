@@ -36,28 +36,27 @@
 
     <div class="container containerfix">
 
-        <div class="row text-right"><a><img class="" width="50" height="50" src="../img/google-plus-logo-white.png"/></a><a><img class="" width="50" height="50" src="../img/facebook1.png"/></a></div>
-            <div class="row marginbotlow backcontacto">
-                
-                    
-
-                
-                
-                    <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-6 col-lg-offset-6 col-sm-offset-6 col-md-offset-6 sinpadding destacado img-rounded">
-                        <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbot">
-                            <h4 class="textoContacto">CONTACTO:</h3>
-                            <h4 class="textoContacto">Departamento de comunicación</h4>
-                            <h4 class="textoContacto">Tel: 910.235.399</h4>
-                            <h4 class="textoContacto">Móv: 669.001.760</h4>
-                            <h4 class="textoContacto">Mail: comunicacion.distrishow@gmail.com</h4>
-                        </div>
-                        <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbot" src="../img/logodsblanco.png"/>
-                    </div>
-  
-                
+<?php require_once '../librerias/header.php';?>
+        
+        <div class="row marginbotlow">   
+            <img class="col-xs-3 col-lg-3 col-md-3 col-sm-3 col-lg-offset-1 col-xs-offset-1 col-md-offset-1 col-sm-offset-1   destacado sinpadding img-rounded imgcartel"  src="../img/Abba.jpg"/>
+            <div class="col-xs-8 col-lg-8 col-md-8 col-sm-8 textoFamiliares">
+                <p>Adaptación libre del cuento de L.Frank.Baum. 4 temporadas en cartel. Más de 400.000 espectadores y 800 funciones. Premio de Rojas 2012 Mejor Espectáculo Familiar. El espectáculo más valorado durante 2010/2011 según Entradas.com. ¡La historia de siempre, contada somo nunca!</p>
+                <a class="linkdossier center-block text-center" href="../Dossieres/Dossier Mago de Oz.pdf">VER DOSSIER - DESCARGA DOSSIER</a>
             </div>
+        </div> 
+        
+        <div class="row marginbotlow destacado img-rounded">
+            
+            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><iframe class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel" src="https://www.youtube.com/embed/KYnA61CS8SA" frameborder="0" allowfullscreen></iframe></div>
+            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../img/mago.jpg"/></div>
+            
+        </div>
 
 
+
+ 
+     
     </div><!-- /.container -->
 
 

@@ -36,7 +36,7 @@
 
     <div class="container containerfix">
 
-        <div class="row text-right"><a><img class="" width="50" height="50" src="img/google-plus-logo-white.png"/></a><a><img class="" width="50" height="50" src="img/facebook1.png"/></a></div>
+<?php require_once 'librerias/header.php';?>
             <div class="row marginbotlow">
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
                     <img class="img-responsive" src="img/LogoDistri.png"/>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
                     <img class="img-rounded imgdestacado col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbot"  src="img/Finale.JPG"/>
-                    <img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5"  src="img/toy.jpg"/>
+                    <a href="TOYMUSICAL"><img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5"  src="img/toy.jpg"/></a>
                     <img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5 col-xs-offset-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2"  src="img/Abba.jpg"/>
                 </div>
             </div>

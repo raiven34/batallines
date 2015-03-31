@@ -36,9 +36,9 @@
 
     <div class="container">
 
-        <div class="row text-right"><a><img class="" width="50" height="50" src="../../img/google-plus-logo-white.png"/></a><a><img class="" width="50" height="50" src="../../img/facebook1.png"/></a></div>
+<?php require_once '../../librerias/header.php';?>
         
-        <div class="row marginbotlow fondovideosfotosma">
+        <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow fondovideosfotosma">
                 <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../../img/logomablanco.png" />
                 <iframe class="destacado sinpadding img-rounded marginbotlow col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-3 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 videosma" src="https://www.youtube.com/embed/r2EGcGlFFPU" frameborder="0" allowfullscreen></iframe>
                 <iframe class="destacado sinpadding img-rounded marginbotlow col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-3 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 videosma" src="https://www.youtube.com/embed/ZlaaBx3lxH8" frameborder="0" allowfullscreen></iframe>

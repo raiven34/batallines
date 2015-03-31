@@ -36,7 +36,7 @@
 
 
     <div class="container">
-        <div class="row text-right"><a><img class="" width="50" height="50" src="../img/google-plus-logo-white.png"/></a><a><img class="" width="50" height="50" src="../img/facebook1.png"/></a></div>        
+<?php require_once '../librerias/header.php';?>
         <div id="myCarousel" class="carousel slide col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding" data-ride="carousel" data-interval="false">
 
           <!-- Carousel items -->

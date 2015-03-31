@@ -36,7 +36,7 @@
 
     <div class="container containerfix">
 
-        <div class="row text-right"><a><img class="" width="50" height="50" src="../img/google-plus-logo-white.png"/></a><a><img class="" width="50" height="50" src="../img/facebook1.png"/></a></div>
+<?php require_once '../librerias/header.php';?>
         
         <div class="row marginbotlow">   
             <img class="col-xs-3 col-lg-3 col-md-3 col-sm-3 col-lg-offset-1 col-xs-offset-1 col-md-offset-1 col-sm-offset-1   destacado sinpadding img-rounded imgcartel"  src="../img/mago.jpg"/>

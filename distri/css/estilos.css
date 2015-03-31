@@ -127,6 +127,7 @@ body {
   .textoContacto{ font-size: 16.1px; }
   .imgcartel{ height: 100px; }
   .videopromoma{ max-height: 250px; }
+  .iconolink{ max-height: 45px; }
 }  
 @media (max-width: 500px) {
   .menu2{ margin-top: 35%; } 
@@ -138,6 +139,7 @@ body {
   .textoContacto{ font-size: 7px; }
   .imgcartel{ max-height: 90px; }
   .videopromoma{ max-height: 200px; }
+  .iconolink{ max-height: 40px; }
 }
 @media (max-width: 450px) {
   .menu2{ margin-top: 36%; } 
@@ -149,6 +151,7 @@ body {
   .textoContacto{ font-size: 7px; }
   .imgcartel{ max-height: 70px; }
   .videopromoma{ max-height: 150px; }
+  .iconolink{ max-height: 40px; }
 }
 .marginbot{
     margin-bottom: 10%;
@@ -213,4 +216,10 @@ body {
 }
 .navlateral{
     font-size: 50px;
+}
+.iconolink{
+    height: 50px;
+}
+.iconolinkizq{
+    padding-left: 1.5%;
 }
