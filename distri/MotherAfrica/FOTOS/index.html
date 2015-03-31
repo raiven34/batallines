@@ -74,6 +74,18 @@
                                 <div class="item" data-slide-number="8">
                                     <img src="../../img/MAfotos/8.JPG" class="itemcarousel">
                                 </div>
+                                <div class="item" data-slide-number="9">
+                                    <img src="../../img/MAfotos/9.JPG" class="itemcarousel">
+                                </div>
+                                <div class="item" data-slide-number="10">
+                                    <img src="../../img/MAfotos/10.JPG" class="itemcarousel">
+                                </div> 
+                                <div class="item" data-slide-number="11">
+                                    <img src="../../img/MAfotos/11.JPG" class="itemcarousel">
+                                </div> 
+                                <div class="item" data-slide-number="12">
+                                    <img src="../../img/MAfotos/12.JPG" class="itemcarousel">
+                                </div>                                 
                             </div>
                             <!-- main slider carousel nav controls --> <a class="carousel-control left navlateral" href="#myCarousel" data-slide="prev">‹</a>
 
@@ -113,6 +125,18 @@
               <li class="col-xs-2 col-lg-2 col-md-2 col-sm-2 sinpadding"> <a id="carousel-selector-7">
                 <img src="../../img/MAfotos/8.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
               </a></li>
+              <li class="col-xs-2 col-lg-2 col-md-2 col-sm-2 sinpadding"> <a id="carousel-selector-8">
+                <img src="../../img/MAfotos/9.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+              </a></li>  
+              <li class="col-xs-2 col-lg-2 col-md-2 col-sm-2 sinpadding"> <a id="carousel-selector-9">
+                <img src="../../img/MAfotos/10.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+              </a></li>
+              <li class="col-xs-2 col-lg-2 col-md-2 col-sm-2 sinpadding"> <a id="carousel-selector-10">
+                <img src="../../img/MAfotos/11.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+              </a></li>  
+              <li class="col-xs-2 col-lg-2 col-md-2 col-sm-2 sinpadding"> <a id="carousel-selector-11">
+                <img src="../../img/MAfotos/12.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+              </a></li>                
                 </ul>
 
         </div>
@@ -132,7 +156,7 @@
        // handles the carousel thumbnails
        $('[id^=carousel-selector-]').click( function(){
          var id_selector = $(this).attr("id");
-         var id = id_selector.substr(id_selector.length -1);
+         var id = id_selector.substr(18,2);
          id = parseInt(id);
          $('#myCarousel').carousel(id);
          $('[id^=carousel-selector-]').removeClass('selected');
@@ -147,7 +171,7 @@
          $('[id^=carousel-selector-]').removeClass('selected');
          $('[id=carousel-selector-'+id+']').addClass('selected');
          console.log(id); 
-         if(id > 7){
+         if(id > 11){
              $('[id=carousel-selector-0]').addClass('selected');
          }
        });
