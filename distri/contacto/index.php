@@ -34,10 +34,10 @@
 
 
 
-    <div class="container containerfix">
+    <div class="container">
 
 <?php require_once '../librerias/header.php';?>
-            <div class="row marginbotlow backcontacto">
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow backcontacto">
                 
                     
 
