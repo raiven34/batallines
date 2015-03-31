@@ -66,6 +66,12 @@ body {
     color: whitesmoke;
     padding: 2%;
 }
+.textomayofecha{
+    font-family: Impact;
+    font-size: 18px;
+    color: red;
+    padding: 2%;
+}
 .cabeceraMA{
     font-size: 14px;
     color: whitesmoke;    
@@ -171,6 +177,10 @@ body {
 .nav-pills>li.active>a:hover{color:black; background-color:transparent}
 .backcontacto{
     background: url(../img/DS.JPG) no-repeat;
+    background-size: 50% 100%;
+}
+.backmayo{
+    background: url(../img/cartelmalogoolaboradores.jpg) no-repeat;
     background-size: 50% 100%;
 }
 .backinicioma{

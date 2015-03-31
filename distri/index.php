@@ -41,14 +41,14 @@
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
                     <img class="img-responsive" src="img/LogoDistri.png"/>
                     <ul class="nav nav-pills nav-stacked menu marginbotlow" style="border-bottom: 2px solid #fff">
-                        <li><a href="./MotherAfrica">MOTHER AFRICA</a></li>
-                        <li><a href="#">GIRA MOTHER AFRICA MAYO 2015</a></li>
-                        <li><a href="./familiares">MUSICALES FAMILIARES</a></li>
-                        <li><a href="./HOMENAJES">MUSICALES HOMENAJE</a></li>
+                        <li><a href="MotherAfrica">MOTHER AFRICA</a></li>
+                        <li><a href="MAYO2015">GIRA MOTHER AFRICA MAYO 2015</a></li>
+                        <li><a href="familiares">MUSICALES FAMILIARES</a></li>
+                        <li><a href="HOMENAJES">MUSICALES HOMENAJE</a></li>
                     </ul>
                     <ul class="nav nav-pills nav-stacked menu">
                         <li><a href="#">NUESTROS CLIENTES</a></li>
-                        <li><a href="./contacto">CONTACTO</a></li>
+                        <li><a href="contacto">CONTACTO</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
@@ -63,9 +63,9 @@ del continente africano...</p><p> La pasión y el entusiasmo  de la cultura afri
                         nuestro país a través de "El Circo de los Sentidos" con su espectáculo MOTHER AFRICA.</p></div>
             <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
                     <ul class="nav nav-pills nav-stacked menu2 col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                        <li><a href="./MotherAfrica/VIDEOS/">VIDEOS</a></li>
-                        <li><a href="./MotherAfrica/FOTOS/">FOTOS</a></li>
-                        <li><a href="./Dossieres/Dossier_MotherAfrica_English.pdf">DOSSIER</a></li>
+                        <li><a href="MotherAfrica/VIDEOS/">VIDEOS</a></li>
+                        <li><a href="MotherAfrica/FOTOS/">FOTOS</a></li>
+                        <li><a href="Dossieres/Dossier_MotherAfrica_English.pdf">DOSSIER</a></li>
                     </ul>
 
             </div>
