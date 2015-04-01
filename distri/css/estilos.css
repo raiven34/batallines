@@ -68,9 +68,14 @@ body {
 }
 .textomayofecha{
     font-family: Impact;
-    font-size: 18px;
+    font-size: 16px;
     color: red;
-    padding: 2%;
+    
+}
+.textomayocita{
+    font-family: Impact;
+    font-size: 16px;
+    color: whitesmoke;
 }
 .cabeceraMA{
     font-size: 14px;
@@ -232,4 +237,7 @@ body {
 }
 .iconolinkizq{
     padding-left: 1.5%;
+}
+.logomayo{
+    padding: 60% 0 0 0;
 }

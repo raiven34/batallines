@@ -45,21 +45,49 @@
                 
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-6 col-lg-offset-6 col-sm-offset-6 col-md-offset-6 sinpadding destacado img-rounded">
                     <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding" src="../img/ma_tourdates1.png"/>
-                    <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 sinpadding">
-                        <h5 class="textomayofecha">CONTACTO:</h3>
-                        <h5 class="textomayofecha">Departamento de comunicación</h5>
-                        <h5 class="textomayofecha">Tel: 910.235.399</h5>
-                        <h5 class="textomayofecha">Móv: 669.001.760</h5>
-                        <h5 class="textomayofecha">Mail: comunicacion.distrishow@gmail.com</h5>                        
+                    <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 sinpadding text-center" style="border-right: 1px solid #fff;">
+                        <a href="#" class="textomayofecha col-lg-12">08 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">09 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">10 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">12 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">13 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">14 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">15 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">16 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">17 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">21 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">22 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">23 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">24 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">26 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">28 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">29 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">30 MAY</a>
+                        <a href="#" class="textomayofecha col-lg-12">31 MAY</a>                       
                     </div>
-                    <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 sinpadding">
-                        <h5 class="textoContacto">CONTACTO:</h3>
-                        <h5 class="textoContacto">Departamento de comunicación</h5>
-                        <h5 class="textoContacto">Tel: 910.235.399</h5>
-                        <h5 class="textoContacto">Móv: 669.001.760</h5>
-                        <h5 class="textoContacto">Mail: comunicacion.distrishow@gmail.com</h5>                        
-                    </div>                    
-                    <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding marginbot" src="../img/ma_tourdates2.png"/>
+                    <div class="col-xs-10 col-lg-7 col-md-7 col-sm-10 sinpadding">
+                        <a href="#" class="textomayocita col-lg-12">Teatro Auditorio Buero Vallejo de Guadalajara</a>
+                        <a href="#" class="textomayocita col-lg-12">Teatro Principal de Vitoria</a>
+                        <a href="#" class="textomayocita col-lg-12">Teatro Principal de Vitoria</a>
+                        <a href="#" class="textomayocita col-lg-12">Teatro Campos Elíseos de Bilbao</a>
+                        <a href="#" class="textomayocita col-lg-12">Teatro Campos Elíseos de Bilbao</a>
+                        <a href="#" class="textomayocita col-lg-12">Teatro Principal de Alicante</a>
+                        <a href="#" class="textomayocita col-lg-12">Teatro Principal de Alicante</a>
+                        <a href="#" class="textomayocita col-lg-12">Palacio de Congresos Riojafórum de Logroño</a>
+                        <a href="#" class="textomayocita col-lg-12">Palacio de Congresos de Huesca</a>
+                        <a href="#" class="textomayocita col-lg-12">Auditorio Baluarte de Pamplona</a>
+                        <a href="#" class="textomayocita col-lg-12">Auditorio Baluarte de Pamplona</a>
+                        <a href="#" class="textomayocita col-lg-12">Teatro Municipal Quijano de Ciudad Real</a>
+                        <a href="#" class="textomayocita col-lg-12">Teatro Auditorio de El Ejido</a>
+                        <a href="#" class="textomayocita col-lg-12">Palacio de Congresos de Granada</a>
+                        <a href="#" class="textomayocita col-lg-12">Auditorio de Zaragoza</a>
+                        <a href="#" class="textomayocita col-lg-12">Auditorio de Zaragoza</a>
+                        <a href="#" class="textomayocita col-lg-12">Palacio Festivales de Santander</a>
+                        <a href="#" class="textomayocita col-lg-12">Teatro Jovellanos de Gijón</a>
+                      
+                    </div>
+                    <img class="col-xs-3 col-lg-3 col-md-3 col-sm-3 logomayo  hidden-sm hidden-xs" src="../img/ma_tourdates3.png"/>
+                    <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding marginbotlow" src="../img/ma_tourdates2.png"  style="border-top: 1px solid #fff;" />
                 </div>
   
                 
