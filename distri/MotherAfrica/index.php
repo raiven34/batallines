@@ -17,7 +17,10 @@
 
     <!-- Custom styles for this template -->
     <link href="../css/estilos.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="../js/jquery.layout.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -44,6 +47,24 @@
             <div class="active item"><img class="itemcarousel"  src="../img/parte1.png" alt="banner1" /></div>
             <div class="item"><img class="itemcarousel"  src="../img/parte2.png" alt="banner2" /></div>
             <div class="item"><div class="itemcarousel fondovideosma"><iframe class="videopromoma destacado img-rounded sinpadding marginbotlow margintop col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-3 col-lg-offset-3 col-md-offset-3 col-sm-offset-3" src="https://www.youtube.com/embed/bACG4VZ-3nw" frameborder="0" allowfullscreen></iframe></div></div>
+            <div class="item"><div class="itemcarousel fondoblanco">
+                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12  text-center textocabma margintoplow"><strong>RICO EN RITMO Y POTENTE EN MÚSICA</strong></div>
+                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12  text-center textocabma2 margintoplow marginbotlow">Este magnífico espectáculo combina los talentos de diferentes países africanos, para ofrecer al mundo la alegría, energía y suspense de MOTHER AFRICA.</div>
+                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 textocabma3 margintoplow">El corazón de África palpita con este fantástico espectáculo a través de sus artistas, cantantes y bailarines procedentes de países como Etiopía, Kenia, Tanzania, Sudáfrica, Costa de Marfil, Benin, Zimbabwue y Guinea.</div>
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 textocabma3 margintoplow">con sus increibles acrobacias aereas, contorsionistas y mezclas de ritmos, percusión y bailes tradicionales, sonidos e instrumentos africanos que harán al espectador sentir el poder del continete africano.</div>
+                    </div>
+                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 textocabma3 margintoplow">Más de dos millones de espectadores han podido disfrutar de sus espectaculares números sobre escenarios de todo el mundo. El show es una delicia para los sentidos</div>
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 textocabma3 margintoplow">Máscaras, tambores y un impresionante vestuario que te harán sentir dentro de las autenticas tradicione africanas. Mother Africa no es solo un espectáculo africano tradicional. Tiene esa esencia moderna, fresca y dinámica de la cultura de la nueva África.</div>
+                    </div>
+            </div></div>
+            <div class="item"><div class="itemcarousel fondoblanco">
+                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12  text-center textocabma textocabmaverde margintoplow"><strong>QUE EMPIECE EL ESPECTÁCULO</strong></div>
+                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12  text-center textocabma2 margintoplow marginbotlow">La audiencia se asombrará con la complejidad y versatilidad de este espectáculo de talla mundial.</div>
+                    <img class="destacado img-rounded col-xs-10 col-lg-10 col-md-10 col-sm-10 col-md-offset-1 col-xs-offset-1 col-sm-10-offset-1 col-lg-offset-1 sinpadding"  src="../img/parte4img.png" />
+                    
+            </div></div>            
             <div class="item"><img class="itemcarousel"  src="../img/parte4.png" alt="banner4" /></div>
             <div class="item"><img class="itemcarousel"  src="../img/parte5.png" alt="banner5" /></div>
           </div>
@@ -60,7 +81,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script>
     $(document).ready(function(){
-        $('.myCarousel').carousel()
+        $('.myCarousel').carousel();
+
+<?php require_once '../librerias/logoanimado.php';?>    
+
     });
     </script>
 

@@ -27,7 +27,7 @@
 		},
 		{
 			"id": "294",
-			"title": "This is information class ",
+			"title": "This is information class hola",
 			"url": "http://www.example.com/",
 			"class": "event-info",
 			"start": "1363111200000",

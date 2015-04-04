@@ -3,7 +3,7 @@
 	"use strict";
 
 	var options = {
-		events_source: 'events.json.php',
+		events_source: 'events.json_1.php',
 		view: 'month',
 		tmpl_path: 'tmpls/',
 		tmpl_cache: false,
@@ -69,4 +69,7 @@
 		//e.preventDefault();
 		//e.stopPropagation();
 	});
+//        $('#events-in-modal').click(function(){
+//            
+//        });
 }(jQuery));

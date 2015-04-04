@@ -71,11 +71,44 @@ body {
     font-size: 16px;
     color: red;
     
+    
+}
+.textomayofecha:hover{
+    text-decoration: none;
+    color: red;
 }
 .textomayocita{
     font-family: Impact;
     font-size: 16px;
     color: whitesmoke;
+}
+.textomayocita:hover{
+    color: wheat;
+    text-decoration: none;
+}
+.textocabma{
+    font-size: 65px;
+    color: red;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-family: fantasy;
+    text-shadow: 0 1px 0 #E85E5E, 0 2px 0 #BA3333, 0 3px 0 #BB2F2F, 0 4px 0 #A93333, 0 5px 0 #812929, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+.textocabmaverde{
+    color: #C0D00A;
+    text-shadow: 0 1px 0 #5C8C40, 0 2px 0 #305C2B, 0 3px 0 #161815, 0 4px 0 #131711, 0 5px 0 #298131, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+
+.textocabma2{
+    font-size: 30px;
+    color: rgb(109, 82, 82);
+    font-family: PoplarStd;
+}
+.textocabma3{
+    font-size: 22px;
+/*    text-shadow: 0px -1px 0px rgb(109, 82, 82);*/
+    font-family: PoplarStd;
+    
 }
 .cabeceraMA{
     font-size: 14px;
@@ -104,7 +137,7 @@ body {
     color: wheat;
 }
 .menu2{
-    margin-top: 35%;
+    margin-top: 33%;
 }
 .menu2>li>a{
     font-family: Kalinga;
@@ -118,18 +151,23 @@ body {
     color: wheat;
 }
 @media (max-width: 1200px) {
-    .menu2{ margin-top: 38%; }
+    .menu2{ margin-top: 34%; }
   .menu>li>a { font-size: 23px; }
   .menu2>li>a { font-size: 13px; }
   .textoMA{ font-size: 12px; }
   .cabeceraMA{ font-size: 13px; }
 /*  .textoFamiliares{ font-size: 12px; }*/
-    .imgcartel{ height: 110px; }
+  .imgcartel{ height: 110px; }
 /*  .textoContacto{ font-size: 16px; }*/
+  .textomayocita{ font-size: 10px; }
+  .textomayofecha{ font-size: 10px; }
+  .textocabma{ font-size: 40px; }
+  .textocabma2{ font-size: 25px; }
+  .textocabma3{ font-size: 15px; }
 }
 
 @media (max-width: 670px) {
-  .menu2{ margin-top: 45%; }  
+  .menu2{ margin-top: 40%; }  
   .menu>li>a { font-size: 16px; }
   .menu2>li>a { font-size: 11px; }
   .textoMA{ font-size: 11px; }
@@ -139,9 +177,14 @@ body {
   .imgcartel{ height: 100px; }
   .videopromoma{ max-height: 250px; }
   .iconolink{ max-height: 45px; }
+  .textomayocita{ font-size: 8px; }
+  .textomayofecha{ font-size: 8px; }
+  .textocabma{ font-size: 30px; }
+  .textocabma2{ font-size: 20px; }
+  .textocabma3{ font-size: 10px; }  
 }  
 @media (max-width: 500px) {
-  .menu2{ margin-top: 35%; } 
+  .menu2{ margin-top: 33%; } 
   .menu>li>a { font-size: 12px; }
   .menu2>li>a { font-size: 10px; }
   .textoMA{ font-size: 7px; }
@@ -151,6 +194,11 @@ body {
   .imgcartel{ max-height: 90px; }
   .videopromoma{ max-height: 200px; }
   .iconolink{ max-height: 40px; }
+  .textomayocita{ font-size: 7px; }
+  .textomayofecha{ font-size: 7px; }
+  .textocabma{ font-size: 25px; }
+  .textocabma2{ font-size: 15px; }
+  .textocabma3{ font-size: 8px; }    
 }
 @media (max-width: 450px) {
   .menu2{ margin-top: 36%; } 
@@ -163,6 +211,11 @@ body {
   .imgcartel{ max-height: 70px; }
   .videopromoma{ max-height: 150px; }
   .iconolink{ max-height: 40px; }
+  .textomayocita{ font-size: 5px; }
+  .textomayofecha{ font-size: 5px; }
+  .textocabma{ font-size: 20px; }
+  .textocabma2{ font-size: 10px; }
+  .textocabma3{ font-size: 7px; }   
 }
 .marginbot{
     margin-bottom: 10%;
@@ -240,4 +293,7 @@ body {
 }
 .logomayo{
     padding: 60% 0 0 0;
+}
+.fondoblanco{
+    background-color: white;
 }

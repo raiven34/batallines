@@ -17,7 +17,9 @@
 
     <!-- Custom styles for this template -->
     <link href="../css/estilos.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="../js/jquery.layout.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -59,7 +61,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script>
     $(document).ready(function(){
-        $('.myCarousel').carousel()
+        $('.myCarousel').carousel();
+        <?php require_once '../librerias/logoanimado.php';?>    
     });
     </script>
 
