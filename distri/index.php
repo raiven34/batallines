@@ -48,6 +48,7 @@
                     </ul>
                     <ul class="nav nav-pills nav-stacked menu">
                         <li><a href="#">NUESTROS CLIENTES</a></li>
+                        <li><a href="CALENDARIO">CALENDARIO</a></li>
                         <li><a href="contacto">CONTACTO</a></li>
                     </ul>
                 </div>

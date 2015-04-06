@@ -100,7 +100,7 @@ if(!String.prototype.formatNum) {
 				enable: 1
 			},
 			day:   {
-				enable: 1
+				enable: 0
 			}
 		},
 		merge_holidays:     false,
