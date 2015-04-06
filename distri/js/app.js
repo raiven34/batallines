@@ -15,9 +15,9 @@
         var today = yyyy+'-'+mm+'-'+dd;
         
 	var options = {
-                events_source: 'events.json_1.php',
+                events_source: '/distri/CALENDARIO/events.json_1.php',
 		view: 'month',
-		tmpl_path: 'tmpls/',
+		tmpl_path: '/distri/CALENDARIO/tmpls/',
 		tmpl_cache: false,
 		day: today,
 		onAfterEventsLoad: function(events) {
@@ -68,7 +68,7 @@
                         });
 		},
 		onAfterViewLoad: function(view) {
-			$('.page-header h3').text(this.getTitle());
+			$('h3').text(this.getTitle());
 			$('.btn-group button').removeClass('active');
 			$('button[data-calendar-view="' + view + '"]').addClass('active');
 		},
@@ -78,10 +78,10 @@
 			}
 		}
 	};
-
+        
 	var calendar = $('#calendar').calendar(options);
         calendar.setLanguage("es-ES");
-        calendar.view();
+        calendar.view();      
 	$('.btn-group button[data-calendar-nav]').each(function() {
 		var $this = $(this);
 		$this.click(function() {

@@ -143,7 +143,7 @@
 	<script type="text/javascript" src="js/language/ro-RO.js"></script>
 	<script type="text/javascript" src="js/language/es-CO.js"></script>
 	<script type="text/javascript" src="js/language/es-MX.js"></script>
-	<script type="text/javascript" src="js/language/es-ES.js"></script>
+	<script type="text/javascript" src="../js/es-ES.js"></script>
 	<script type="text/javascript" src="js/language/ru-RU.js"></script>
 	<script type="text/javascript" src="js/language/sk-SR.js"></script>
 	<script type="text/javascript" src="js/language/sv-SE.js"></script>

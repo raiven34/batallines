@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    
+    <link rel="stylesheet" href="css/calendar_home.css">
 
     <title>Starter Template for Bootstrap</title>
 
@@ -52,9 +52,24 @@
                     </ul>
                 </div>
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                    <img class="img-rounded imgdestacado col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbot"  src="img/Finale.JPG"/>
+                    <div class="img-rounded destacado col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbot fondoblanco">
+                        
+                                <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+                                    <h3></h3>
+                                        
+                                </div>
+
+                                <div class="row marginbotlow">
+                                        <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+                                                <div id="calendar"></div>
+                                        </div>
+                                </div>
+
+                                <div class="clearfix"></div>                        
+                        
+                    </div>
                     <a href="TOYMUSICAL"><img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5"  src="img/toy.jpg"/></a>
-                    <img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5 col-xs-offset-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2"  src="img/Abba.jpg"/>
+                    <img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5 col-xs-offset-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2" src="img/Abba.jpg"/>
                 </div>
             </div>
         <div class="row destacado marginbotlow backinicioma">
@@ -78,7 +93,16 @@ del continente africano...</p><p> La pasión y el entusiasmo  de la cultura afri
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/moment.js"></script>
+        <script src="js/bootstrap.min.js"></script> 
+	<script type="text/javascript" src="CALENDARIO/components/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="CALENDARIO/components/jstimezonedetect/jstz.min.js"></script>
+    	<script type="text/javascript" src="js/es-ES.js"></script>
+	<script type="text/javascript" src="js/calendar_home.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+
 
   </body>
 </html>
