@@ -47,7 +47,7 @@ if(!String.prototype.formatNum) {
 		day:                'now',
 		// Day Start time and end time with time intervals. Time split 10, 15 or 30.
 		time_start:         '06:00',
-		time_end:           '22:00',
+		time_end:           '24:00',
 		time_split:         '30',
 		// Source of events data. It can be one of the following:
 		// - URL to return JSON list of events in special format.
@@ -883,9 +883,11 @@ if(!String.prototype.formatNum) {
 							}
 							if(json.result) {
 								events = json.result;
+                                                                
 							}
 						});
-						return events;
+						
+                                                return events;
 					};
 				}
 				break;

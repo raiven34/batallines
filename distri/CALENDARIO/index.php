@@ -10,7 +10,8 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="components/bootstrap2/css/bootstrap-responsive.css">
-	<link rel="stylesheet" href="css/calendar.css">
+	<link rel="stylesheet" href="../css/calendar.css">
+        <link rel="stylesheet" href="../css/estilos.css">
 	<link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" />
 	<style type="text/css">
 		.btn-twitter {
@@ -24,22 +25,22 @@
 	</style>
 </head>
 <body>
-<div class="container">
-
+<div class="container fondoblanco">
+<?php require_once '../librerias/header.php';?>
 
 	<div class="page-header">
 
 		<div class="pull-right form-inline">
 			<div class="btn-group">
 				<button class="btn btn-primary" data-calendar-nav="prev"><< Prev</button>
-				<button class="btn" data-calendar-nav="today">Today</button>
+				<button class="btn" data-calendar-nav="today">HOY</button>
 				<button class="btn btn-primary" data-calendar-nav="next">Next >></button>
 			</div>
 			<div class="btn-group">
-				<button class="btn btn-warning" data-calendar-view="year">Year</button>
-				<button class="btn btn-warning active" data-calendar-view="month">Month</button>
-				<button class="btn btn-warning" data-calendar-view="week">Week</button>
-				<button class="btn btn-warning" data-calendar-view="day">Day</button>
+				<button class="btn btn-warning" data-calendar-view="year">Año</button>
+				<button class="btn btn-warning active" data-calendar-view="month">Mes</button>
+				<button class="btn btn-warning" data-calendar-view="week">Semana</button>
+				<button class="btn btn-warning" data-calendar-view="day">Día</button>
 			</div>
 		</div>
 
@@ -47,47 +48,14 @@
 		<small>To see example with events navigate to march 2013</small>
 	</div>
 
-	<div class="row">
-		<div class="span9">
+	<div class="row marginbotlow">
+		<div class="col-xs-8 col-lg-8 col-md-8 col-sm-8">
 			<div id="calendar"></div>
 		</div>
-		<div class="span3">
-			<div class="row-fluid">
-				<select id="first_day" class="span12">
-					<option value="" selected="selected">First day of week language-dependant</option>
-					<option value="2">First day of week is Sunday</option>
-					<option value="1">First day of week is Monday</option>
-				</select>
-				<select id="language" class="span12">
-					<option value="">Select Language (default: en-US)</option>
-					<option value="bg-BG">Bulgarian</option>
-					<option value="nl-NL">Dutch</option>
-					<option value="fr-FR">French</option>
-					<option value="de-DE">German</option>
-					<option value="el-GR">Greek</option>
-					<option value="hu-HU">Hungarian</option>
-					<option value="id-ID">Bahasa Indonesia</option>
-					<option value="it-IT">Italian</option>
-					<option value="pl-PL">Polish</option>
-					<option value="pt-BR">Portuguese (Brazil)</option>
-					<option value="ro-RO">Romania</option>
-					<option value="es-CO">Spanish (Colombia)</option>
-					<option value="es-MX">Spanish (Mexico)</option>
-					<option value="es-ES">Spanish (Spain)</option>
-					<option value="ru-RU">Russian</option>
-					<option value="sk-SR">Slovak</option>
-					<option value="sv-SE">Swedish</option>
-					<option value="zh-CN">简体中文</option>
-					<option value="zh-TW">繁體中文</option>
-					<option value="ko-KR">한국어</option>
-				</select>
-				<label class="checkbox">
-					<input type="checkbox" value="#events-modal" id="events-in-modal"> Open events in modal window
-				</label>
-			</div>
+		<div class="col-xs-4 col-lg-4 col-md-4 col-sm-4">
 
-			<h4>Events</h4>
-			<small>This list is populated with events dynamically</small>
+			<h4>Eventos</h4>
+			<small>Listado de eventos</small>
 			<ul id="eventlist" class="nav nav-list"></ul>
 		</div>
 	</div>
@@ -96,11 +64,11 @@
 
 
         <div id="disqus_thread">
-
-            <div class="row">
+            <div id="resultado" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 text-center hidden">Correcto</div>
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
             <h1 class="text-center heading">Añadir un nuevo evento</h1><hr>
 
-                <div class="col-sm-8 col-sm-offset-2" style="height:75px;">
+                <div class="col-sm-8 col-sm-offset-2">
                    <div class='col-md-6'>
                         <div class="form-group">
                             <div class='input-group date' id='from'>
@@ -126,7 +94,7 @@
                     <div class="form-group">
                         <label class="col-sm-12 control-label">Tipo de evento</label>
                         <div class="col-sm-12">
-                            <select class="form-control" name="class">
+                            <select class="form-control" name="class" id="class">
                                 <option value="event-info">Info</option>
                                 <option value="event-success">Success</option>
                                 <option value="event-inverse">Inverse</option>
@@ -149,7 +117,7 @@
                         </div>
                     </div>
 
-                     <input style="margin-top: 10px" type="submit" class="pull-right btn btn-success" value="Gurdar evento">
+                    <input id="commit" style="margin-top: 10px" type="submit" class="pull-right btn btn-success marginbotlow" value="Guardar Evento">
                     </div>
                 </div>
         </div>
@@ -193,8 +161,9 @@
 	<script type="text/javascript" src="js/language/ko-KR.js"></script>
 	<script type="text/javascript" src="js/language/zh-TW.js"></script>
 	<script type="text/javascript" src="js/language/id-ID.js"></script>
-	<script type="text/javascript" src="js/calendar.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="../js/calendar.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+
         <script type="text/javascript">
             $(function () {
                 $('#from').datetimepicker({
@@ -207,6 +176,7 @@
                 });
 
             });
+<?php require_once '../librerias/logoanimado.php';?>    
         </script>
 
 
