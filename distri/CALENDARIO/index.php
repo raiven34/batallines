@@ -13,16 +13,7 @@
 	<link rel="stylesheet" href="../css/calendar.css">
         <link rel="stylesheet" href="../css/estilos.css">
 	<link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" />
-	<style type="text/css">
-		.btn-twitter {
-			padding-left: 30px;
-			background: rgba(0, 0, 0, 0) url(https://platform.twitter.com/widgets/images/btn.27237bab4db188ca749164efd38861b0.png) -20px 6px no-repeat;
-			background-position: -20px 11px !important;
-		}
-		.btn-twitter:hover {
-			background-position:  -20px -18px !important;
-		}
-	</style>
+
 </head>
 <body>
 <div class="container fondoblanco">
