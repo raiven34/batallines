@@ -29,9 +29,43 @@
 
 			$.each(events, function(key, val) {
 				$(document.createElement('li'))
-					.html('<a href="' + val.url + '">' + val.title + '<span class="glyphicon glyphicon-remove-circle pull-right"></span></a>')
+					.html('<a class="col-xs-11 col-lg-11 col-md-11 col-sm-11" href="' + val.url + '">' + val.title + '</a><a class="col-xs-1 col-lg-1 col-md-1 col-sm-1"><span id="' + val.id + '" class="glyphicon glyphicon-remove-circle pull-right"></span></a>')
 					.appendTo(list);
 			});
+                        
+                        $('.glyphicon-remove-circle').click(function(){
+                            var id = $(this).attr('id');
+
+                            $.ajax({
+                                    data: {"id": id},
+                                    //Cambiar a type: POST si necesario
+                                    type: "POST",
+                                    dataType: "json",
+                                    url: "../CALENDARIO/events_json_baja.php",
+                                })
+                                 .done(function( data, textStatus, jqXHR ) {
+                                     if ( data.success ) {
+                                         console.log( "La solicitud se ha completado correctamente." );
+                                         $('#resultado').attr("class","col-xs-12 col-lg-12 col-md-12 col-sm-12 text-center label-success");
+                                         $('#resultado').html('Eliminado correctamente.');
+                                     }else{
+                                         console.log( "La solicitud ha fallado." );
+                                         $('#resultado').attr("class","col-xs-12 col-lg-12 col-md-12 col-sm-12 text-center label-danger");
+                                         $('#resultado').html('Se ha producido un error de BBDD.');
+                                     }
+                                 })
+                                 .fail(function( jqXHR, textStatus, errorThrown ) {
+                                     if ( console && console.log ) {
+                                         console.log( "La solicitud ha fallado: " +  textStatus);
+                                         $('#resultado').attr("class","col-xs-12 col-lg-12 col-md-12 col-sm-12 text-center label-danger");
+                                         $('#resultado').html('Se ha producido un error.');
+                                     }
+                                });
+                                var calendar = $('#calendar').calendar(options);
+                                calendar.setLanguage("es-ES");
+                                calendar.view();
+
+                        });
 		},
 		onAfterViewLoad: function(view) {
 			$('.page-header h3').text(this.getTitle());
@@ -85,11 +119,14 @@
 //admin
         $('#commit').click(function(){
             if(!$('#title').val()){
-                $('#title').addClass("has-error");
+                 $('#resultado').attr("class","col-xs-12 col-lg-12 col-md-12 col-sm-12 text-center label-danger");
+                 $('#resultado').html('Titulo Obligatorio.');
             }else if (!$('#from input').val()){
-                $('#from input').addClass("has-error");
+                 $('#resultado').attr("class","col-xs-12 col-lg-12 col-md-12 col-sm-12 text-center label-danger");
+                 $('#resultado').html('Fecha Inicio Obligatorio.');
             }else if (!$('#to input').val()){
-                $('#to input').addClass("has-error");
+                 $('#resultado').attr("class","col-xs-12 col-lg-12 col-md-12 col-sm-12 text-center label-danger");
+                 $('#resultado').html('Fecha Fin Obligatorio.');
             }else{
                 var evento =
                              
@@ -132,4 +169,5 @@
                 
             }
         });
+
 }(jQuery));
