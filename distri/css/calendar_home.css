@@ -119,6 +119,7 @@
   min-height: auto;
   overflow: hidden;
   text-overflow: ellipsis;
+  background-color: rgb(240, 240, 240);
 }
 .cal-events-num {
   margin-top: 20px;
@@ -383,6 +384,7 @@
   text-align: center;
   border: 0px solid;
   padding: 5px 0;
+  font-family: PoplarStd;
 }
 .cal-row-head [class*="cal-cell"] small {
   font-weight: normal;
@@ -431,8 +433,9 @@
   border-radius: 2px;
   background-color: rgb(240, 240, 240);
 }
+
 span[data-cal-date] {
-  font-size: 1.2em;
+  font-size: 14px;
   font-weight: normal;
   opacity: 0.5;
   cursor: pointer;
@@ -441,8 +444,9 @@ span[data-cal-date] {
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
-  margin-top: 15px;
-/*  margin-right: 15px;*/
+  margin-top: 10%;
+  font-family: PoplarStd;
+  margin-right: 10%;
 }
 span[data-cal-date]:hover {
   opacity: 1;

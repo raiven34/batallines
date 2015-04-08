@@ -68,7 +68,7 @@
                         });
 		},
 		onAfterViewLoad: function(view) {
-			$('h3').text(this.getTitle());
+			$('#mes').text(this.getTitle());
 			$('.btn-group button').removeClass('active');
 			$('button[data-calendar-view="' + view + '"]').addClass('active');
 		},

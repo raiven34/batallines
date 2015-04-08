@@ -75,7 +75,7 @@
         
         
         <div class="row marginbotlow">   
-            <img class="col-xs-3 col-lg-3 col-md-3 col-sm-3 col-lg-offset-1 col-xs-offset-1 col-md-offset-1 col-sm-offset-1   destacado sinpadding img-rounded imgcartel"  src="../img/Campanilla.jpg"/>
+            <img class="col-xs-3 col-lg-3 col-md-3 col-sm-3 col-lg-offset-1 col-xs-offset-1 col-md-offset-1 col-sm-offset-1   destacado sinpadding img-rounded imgcartel"  src="../img/HanselyGretel.jpg"/>
             <div class="col-xs-8 col-lg-8 col-md-8 col-sm-8 textoFamiliares">
                 De los creadores de "El Mago de OZ: El Musical" llega esta reinvención en clave de teatro musical del clásico de Lewis Carroll, en el que reviviremos las aventuras de Alicia al caer en la madriguera de conejo. Alicia compartirá cita con el Sombrerero Loco, La Reina de Corazones, el Sr. Conejo y mucho otros personajes rocambolescos.
             </div>
