@@ -316,7 +316,7 @@
   background-color: #c3c3c3;
   width: 12px;
   height: 12px;
-  margin-right: 2px;
+/*  margin-right: 2px;*/
   margin-bottom: 2px;
   -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
@@ -385,6 +385,7 @@
   border: 0px solid;
   padding: 5px 0;
   font-family: PoplarStd;
+  font-size: 12px;
 }
 .cal-row-head [class*="cal-cell"] small {
   font-weight: normal;

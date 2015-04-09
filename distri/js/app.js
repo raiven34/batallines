@@ -96,6 +96,7 @@
 		});
 	});
 
+
 	$('#first_day').change(function(){
 		var value = $(this).val();
 		value = value.length ? parseInt(value) : null;
