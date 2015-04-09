@@ -209,7 +209,7 @@ body {
 }
 @media (max-width: 450px) {
   .menu2{ margin-top: 36%; } 
-  .menu>li>a { font-size: 9px; }
+  .menu>li>a { font-size: 10px; }
   .menu2>li>a { font-size: 7px; }
   .textoMA{ font-size: 6px; }
   .cabeceraMA{ font-size: 7px; }
@@ -224,7 +224,7 @@ body {
   .textocabma2{ font-size: 10px; }
   .textocabma3{ font-size: 7px; }
   .numeros{ font-size: 7px !important; }
-  .mes{ font-size: 20px !important; }
+  .mes{ font-size: 12px !important; }
 }
 .marginbot{
     margin-bottom: 10%;

@@ -53,13 +53,13 @@
                     </ul>
                 </div>
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                    <div class="img-rounded destacado col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbot fondonaranja">
+                    <div class="img-rounded destacado col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbot fondonaranja btn-group">
                         
-                                <div class="btn-group col-xs-12 col-lg-12 col-md-12 col-sm-12">
-                                    <button class="mes col-xs-2 col-lg-2 col-md-2 col-sm-2 btn btn-primary" data-calendar-nav="prev" style="background-color: transparent; border: none; padding: 0px;"><< </button>
-                                    <h3 id="mes" class="mes text-center col-xs-8 col-lg-8 col-md-8 col-sm-8"></h3>
-                                    <button class="mes col-xs-2 col-lg-2 col-md-2 col-sm-2 btn btn-primary" data-calendar-nav="next" style="background-color: transparent; border: none; padding: 0px;"> >></button>  
-                                </div>
+                                
+                                <button class="mes col-xs-2 col-lg-2 col-md-2 col-sm-2 btn btn-primary" data-calendar-nav="prev" style="background-color: transparent; border: none; padding: 0px;"><< </button>
+                                <h3 id="mes" class="mes text-center col-xs-8 col-lg-8 col-md-8 col-sm-8 sinpadding"></h3>
+                                <button class="mes col-xs-2 col-lg-2 col-md-2 col-sm-2 btn btn-primary" data-calendar-nav="next" style="background-color: transparent; border: none; padding: 0px;"> >></button>  
+
 
                                 <div class="row marginbotlow fondocalendario">
                                         <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
@@ -71,7 +71,7 @@
                         
                     </div>
                     <a href="TOYMUSICAL"><img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5"  src="img/toy.jpg"/></a>
-                    <img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5 col-xs-offset-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2" src="img/Abba.jpg"/>
+                    <a href="HOMENAJES"><img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5 col-xs-offset-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2" src="img/Abba.jpg"/></a>
                 </div>
             </div>
         <div class="row destacado marginbotlow backinicioma">
