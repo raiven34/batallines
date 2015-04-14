@@ -330,7 +330,7 @@
   height: 100%;
 }
 .cal-event-list .event.pull-left {
-  margin-top: 3px;
+/*  margin-top: 3%;*/
 }
 .event-important {
   background-color: #ad2121;
@@ -489,7 +489,7 @@ span[data-cal-date]:hover {
   border-top: 0px solid #8c8c8c;
 }
 #cal-slide-content {
-  padding: 20px;
+  padding: 2%;
   color: #ffffff;
   background-image: url("../CALENDARIO/img/dark_wood.png");
   -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
@@ -504,7 +504,7 @@ span[data-cal-date]:hover {
 #cal-slide-content a.event-item {
   color: #ffffff;
   font-weight: normal;
-  line-height: 22px;
+/*  line-height: 22px;*/
 }
 .events-list {
   max-height: 47px;

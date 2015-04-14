@@ -70,8 +70,8 @@
                                 <div class="clearfix"></div>                        
                         
                     </div>
-                    <a href="TOYMUSICAL"><img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5"  src="img/toy.jpg"/></a>
-                    <a href="HOMENAJES"><img class="img-rounded imgdestacado col-xs-5 col-lg-5 col-md-5 col-sm-5 col-xs-offset-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2" src="img/Abba.jpg"/></a>
+                    <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 sinpadding"><a href="TOYMUSICAL"><img class="img-rounded imgdestacado col-xs-11 col-lg-11 col-md-11 col-sm-11"  src="img/toy.jpg"/></a></div>
+                    <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 sinpadding"><a href="HOMENAJES"><img class="img-rounded imgdestacado col-xs-11 col-lg-11 col-md-11 col-sm-11 col-lg-offset-1 col-sm-offset-1 col-xs-offset-1 col-md-offset-1" src="img/Abba.jpg"/></a></div>
                 </div>
             </div>
         <div class="row destacado marginbotlow backinicioma">

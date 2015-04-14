@@ -42,8 +42,9 @@
 
 
         <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 fondovideosfotosma">
+            <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../../img/MA_Logo_spanishWEB.png" />
         <!-- main slider carousel -->
-            <div class="row marginbotlow margintoplow">
+            <div class="row marginbotlow margintoplow itemcarousel">
                 <div class="col-md-12" id="slider">
 
                         <div class="col-md-12" id="carousel-bounding-box">

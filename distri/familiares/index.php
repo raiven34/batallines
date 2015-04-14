@@ -52,7 +52,7 @@
         <div class="row marginbotlow destacado img-rounded">
             
             <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><iframe class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel" src="https://www.youtube.com/embed/l8xdCGmb5sc" frameborder="0" allowfullscreen></iframe></div>
-            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../img/mago.jpg"/></div>
+            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel imgdestacado"  src="../img/Foto_01.jpg"/></div>
             
         </div>
 
@@ -61,14 +61,15 @@
         <div class="row marginbotlow">   
             <img class="col-xs-3 col-lg-3 col-md-3 col-sm-3 col-lg-offset-1 col-xs-offset-1 col-md-offset-1 col-sm-offset-1   destacado sinpadding img-rounded imgcartel"  src="../img/Alicia.jpg"/>
             <div class="col-xs-8 col-lg-8 col-md-8 col-sm-8 textoFamiliares">
-                De los creadores de "El Mago de OZ: El Musical" llega esta reinvención en clave de teatro musical del clásico de Lewis Carroll, en el que reviviremos las aventuras de Alicia al caer en la madriguera de conejo. Alicia compartirá cita con el Sombrerero Loco, La Reina de Corazones, el Sr. Conejo y mucho otros personajes rocambolescos.
+                <p>De los creadores de "El Mago de OZ: El Musical" llega esta reinvención en clave de teatro musical del clásico de Lewis Carroll, en el que reviviremos las aventuras de Alicia al caer en la madriguera de conejo. Alicia compartirá cita con el Sombrerero Loco, La Reina de Corazones, el Sr. Conejo y mucho otros personajes rocambolescos.</p>
+                <a class="linkdossier center-block text-center" href="../Dossieres/Dossier Alicia.pdf">VER DOSSIER - DESCARGA DOSSIER</a>            
             </div>
         </div> 
         
         <div class="row marginbotlow destacado img-rounded">
             
             <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><iframe class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel" src="https://www.youtube.com/embed/bACG4VZ-3nw" frameborder="0" allowfullscreen></iframe></div>
-            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel" height="155" src="../img/mago.jpg"/></div>
+            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel imgdestacado" height="155" src="../img/mago.jpg"/></div>
             
         </div>
         
@@ -77,14 +78,15 @@
         <div class="row marginbotlow">   
             <img class="col-xs-3 col-lg-3 col-md-3 col-sm-3 col-lg-offset-1 col-xs-offset-1 col-md-offset-1 col-sm-offset-1   destacado sinpadding img-rounded imgcartel"  src="../img/HanselyGretel.jpg"/>
             <div class="col-xs-8 col-lg-8 col-md-8 col-sm-8 textoFamiliares">
-                De los creadores de "El Mago de OZ: El Musical" llega esta reinvención en clave de teatro musical del clásico de Lewis Carroll, en el que reviviremos las aventuras de Alicia al caer en la madriguera de conejo. Alicia compartirá cita con el Sombrerero Loco, La Reina de Corazones, el Sr. Conejo y mucho otros personajes rocambolescos.
+                <p>De los creadores de "El Mago de OZ: El Musical" llega esta reinvención en clave de teatro musical del clásico de Lewis Carroll, en el que reviviremos las aventuras de Alicia al caer en la madriguera de conejo. Alicia compartirá cita con el Sombrerero Loco, La Reina de Corazones, el Sr. Conejo y mucho otros personajes rocambolescos.</p>
+                <a class="linkdossier center-block text-center" href="../Dossieres/HANSEL Y GRETEL DOSSIER NUEVO.pdf">VER DOSSIER - DESCARGA DOSSIER</a>                
             </div>
         </div> 
         
         <div class="row marginbotlow destacado img-rounded">
             
             <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><iframe class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel" src="https://www.youtube.com/embed/dmEHHi5Zfq8" frameborder="0" allowfullscreen></iframe></div>
-            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel" height="155" src="../img/mago.jpg"/></div>
+            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel imgdestacado" height="155" src="../img/hanselygretel1.jpg"/></div>
             
         </div>        
      

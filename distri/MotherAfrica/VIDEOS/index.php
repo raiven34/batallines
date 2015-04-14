@@ -42,7 +42,7 @@
 <?php require_once '../../librerias/header.php';?>
         
         <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow fondovideosfotosma">
-                <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../../img/MA_Logo_spanishWEB.jpg" />
+                <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../../img/MA_Logo_spanishWEB.png" />
                 <iframe class="destacado sinpadding img-rounded marginbotlow col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-3 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 videosma" src="https://www.youtube.com/embed/r2EGcGlFFPU" frameborder="0" allowfullscreen></iframe>
                 <iframe class="destacado sinpadding img-rounded marginbotlow col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-3 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 videosma" src="https://www.youtube.com/embed/ZlaaBx3lxH8" frameborder="0" allowfullscreen></iframe>
                 <iframe class="destacado sinpadding img-rounded marginbotlow col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-3 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 videosma" src="https://www.youtube.com/embed/G9KaMeq1wXQ" frameborder="0" allowfullscreen></iframe>

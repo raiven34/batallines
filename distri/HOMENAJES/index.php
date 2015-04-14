@@ -52,7 +52,7 @@
         <div class="row marginbotlow destacado img-rounded">
             
             <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><iframe class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel" src="https://www.youtube.com/embed/KYnA61CS8SA" frameborder="0" allowfullscreen></iframe></div>
-            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../img/mago.jpg"/></div>
+            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel imgdestacado"  src="../img/abba6.jpg"/></div>
             
         </div>
 

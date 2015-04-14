@@ -62,7 +62,7 @@ body {
 }
 .textoContacto{
     font-family: Impact;
-    font-size: 18px;
+    font-size: 20px;
     color: whitesmoke;
     padding: 2%;
 }
@@ -168,6 +168,7 @@ body {
   .mes{ font-size: 35px !important; }
   .event { width: 10px; height: 10px; }
   .cal-cell1{ font-size: 12px !important; }
+  .itemcarousel{ max-height: 500px !important; }
 }
 
 @media (max-width: 670px) {
@@ -190,6 +191,7 @@ body {
   .mes{ font-size: 30px !important; }
   .event { width: 9px; height: 9px; }
   .cal-cell1{ font-size: 10px !important; }
+  .itemcarousel{ max-height: 450px !important; }
 }  
 @media (max-width: 500px) {
   .menu2{ margin-top: 33%; } 
@@ -211,6 +213,7 @@ body {
   .mes{ font-size: 25px !important; }
   .event { width: 8px; height: 8px; }
   .cal-cell1{ font-size: 8px !important; }
+  .itemcarousel{ max-height: 400px !important; }
 }
 @media (max-width: 450px) {
   .menu2{ margin-top: 36%; } 
@@ -226,12 +229,13 @@ body {
   .textomayocita{ font-size: 5px; }
   .textomayofecha{ font-size: 5px; }
   .textocabma{ font-size: 20px; }
-  .textocabma2{ font-size: 10px; }
-  .textocabma3{ font-size: 7px; }
+  .textocabma2{ font-size: 12px; }
+  .textocabma3{ font-size: 9px; }
   .numeros{ font-size: 7px !important; }
-  .mes{ font-size: 12px !important; }
+  .mes{ font-size: 12px !important; margin: 2% 0% 0% 0% !important; }
   .event { width: 7px; height: 7px; }
   .cal-cell1{ font-size: 7px !important; }
+  .itemcarousel{ max-height: 300px !important; }
 }
 .marginbot{
     margin-bottom: 10%;
@@ -246,12 +250,12 @@ body {
     margin-top: 2%;
 }
 .margintophigh{
-    margin-top: 35%;
+    margin-top: 15%;
 }
 .nav-pills>li.active>a:hover{color:black; background-color:transparent}
 .backcontacto{
     background: url(../img/DS.JPG) no-repeat;
-    background-size: 50% 100%;
+    background-size: 58.33% 100%;
 }
 .backmayo{
     background: url(../img/cartelmalogoolaboradores2.png) no-repeat;
@@ -321,6 +325,9 @@ body {
 }
 .fondonaranja{
     background-color: rgb(209, 145, 19);
+}
+.fondonegro{
+    background-color: #000;
 }
 .numeros{
     font-family: PoplarStd;
