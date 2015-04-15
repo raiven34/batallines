@@ -1,6 +1,6 @@
         $('#logomini').hover(function(){
-           $('#logomini').attr('src','/distri/img/logodsamarillomini.png');
+           $('#logomini').attr('src','/img/logodsamarillomini.png');
        });
         $('#logomini').mouseout(function(){
-           $('#logomini').attr('src','/distri/img/logodsblancomini.png');
+           $('#logomini').attr('src','/img/logodsblancomini.png');
        });    

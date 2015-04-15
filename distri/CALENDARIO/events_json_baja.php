@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST["id"])){
     
-    $link=mysql_connect("db571571038.db.1and1.com", "dbo571571038", "plakaplaka");
-    mysql_select_db("db571571038",$link) OR DIE ("Error: No es posible establecer la conexión");
+    $link=mysql_connect("localhost", "distri", "distri");
+    mysql_select_db("distri",$link) OR DIE ("Error: No es posible establecer la conexión");
     mysql_set_charset('utf8');
     $baja = "delete from events where id=" . $_POST["id"];
     $inserta = mysql_query ($baja, $link);

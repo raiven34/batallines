@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/calendar_home.css">
 
     <title>Starter Template for Bootstrap</title>
@@ -36,7 +36,7 @@
 
     <div class="container containerfix">
 
-<?php require_once 'librerias/header.php';?>
+<?php require_once 'librerias/header_home.php';?>
             <div class="row marginbotlow">
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
                     <img class="img-responsive" src="img/LogoDistri.png"/>
@@ -74,8 +74,8 @@
                     <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 sinpadding"><a href="HOMENAJES"><img class="img-rounded imgdestacado col-xs-11 col-lg-11 col-md-11 col-sm-11 col-lg-offset-1 col-sm-offset-1 col-xs-offset-1 col-md-offset-1" src="img/Abba.jpg"/></a></div>
                 </div>
             </div>
-        <div class="row destacado marginbotlow backinicioma">
-            <div class="textoMA col-xs-6 col-lg-6 col-md-6 col-sm-6" style="border-right: 1px solid #fff;"><p class="cabeceraMA">MOTHER AFRICA</p><p>Impresionantes acrobacias, un colorido vestuario, músicos en directo, artistas provenientes de los rincones más profundos 
+        <div class="row marginbotlow backinicioma">
+            <div class="textoMA col-xs-6 col-lg-6 col-md-6 col-sm-6 margintoplow"><p class="cabeceraMA">MOTHER AFRICA</p><p>Impresionantes acrobacias, un colorido vestuario, músicos en directo, artistas provenientes de los rincones más profundos 
 del continente africano...</p><p> La pasión y el entusiasmo  de la cultura africana, se traslada a los escenarios más prestigios de 
                         nuestro país a través de "El Circo de los Sentidos" con su espectáculo MOTHER AFRICA.</p></div>
             <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">

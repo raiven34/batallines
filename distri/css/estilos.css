@@ -137,7 +137,7 @@ body {
     color: wheat;
 }
 .menu2{
-    margin-top: 33%;
+    margin-top: 40%;
 }
 .menu2>li>a{
     font-family: Kalinga;
@@ -151,7 +151,7 @@ body {
     color: wheat;
 }
 @media (max-width: 1200px) {
-    .menu2{ margin-top: 34%; }
+    .menu2{ margin-top: 35%; }
   .menu>li>a { font-size: 23px; }
   .menu2>li>a { font-size: 13px; }
   .textoMA{ font-size: 12px; }
@@ -172,7 +172,7 @@ body {
 }
 
 @media (max-width: 670px) {
-  .menu2{ margin-top: 40%; }  
+  .menu2{ margin-top: 42%; }  
   .menu>li>a { font-size: 16px; }
   .menu2>li>a { font-size: 11px; }
   .textoMA{ font-size: 11px; }
@@ -194,7 +194,7 @@ body {
   .itemcarousel{ max-height: 450px !important; }
 }  
 @media (max-width: 500px) {
-  .menu2{ margin-top: 33%; } 
+  .menu2{ margin-top: 35%; } 
   .menu>li>a { font-size: 12px; }
   .menu2>li>a { font-size: 10px; }
   .textoMA{ font-size: 7px; }
@@ -216,7 +216,7 @@ body {
   .itemcarousel{ max-height: 400px !important; }
 }
 @media (max-width: 450px) {
-  .menu2{ margin-top: 36%; } 
+  .menu2{ margin-top: 40%; } 
   .menu>li>a { font-size: 10px; }
   .menu2>li>a { font-size: 7px; }
   .textoMA{ font-size: 6px; }
@@ -258,12 +258,12 @@ body {
     background-size: 58.33% 100%;
 }
 .backmayo{
-    background: url(../img/cartelmalogoolaboradores2.png) no-repeat;
+    background: url(../img/cartelmalogocolaboradores2.png) no-repeat;
     background-size: 50% 100%;
 }
 .backinicioma{
     background: url(../img/MAInicio.png) no-repeat;
-    background-size: 50% 100%;
+    background-size: 100% 100%;
     background-position: 100% 0%;
 }
 .imgcartel{

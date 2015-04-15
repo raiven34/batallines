@@ -15,9 +15,9 @@
         var today = yyyy+'-'+mm+'-'+dd;
         
 	var options = {
-                events_source: '/distri/CALENDARIO/events.json_1.php',
+                events_source: '/CALENDARIO/events.json_1.php',
 		view: 'month',
-		tmpl_path: '/distri/CALENDARIO/tmpls/',
+		tmpl_path: '/CALENDARIO/tmpls/',
 		tmpl_cache: false,
 		day: today,
 		onAfterEventsLoad: function(events) {

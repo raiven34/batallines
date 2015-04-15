@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST["title"])){
     
-    $link=mysql_connect("db571571038.db.1and1.com", "dbo571571038", "plakaplaka");
-    mysql_select_db("db571571038",$link) OR DIE ("Error: No es posible establecer la conexión");
+    $link=mysql_connect("localhost", "distri", "distri");
+    mysql_select_db("distri",$link) OR DIE ("Error: No es posible establecer la conexión");
     mysql_set_charset('utf8');
     $alta = "insert into events (title,body,url,class,start,end) values('" . $_POST["title"] . "','" . $_POST["body"] . "','" . $_POST["url"] .  "','" . $_POST["class"] . "','" . strtotime($_POST["start"]) . "000','" . strtotime($_POST["end"]) . "000')";
     $inserta = mysql_query ($alta, $link);
