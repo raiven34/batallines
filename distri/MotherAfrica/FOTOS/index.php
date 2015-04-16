@@ -42,9 +42,11 @@
 
 
         <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 fondovideosfotosma">
-            <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../../img/MA_Logo_spanishWEB.png" />
+            <div class="row">
+                <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../../img/MA_Logo_spanishWEB.png" />
+            </div>
         <!-- main slider carousel -->
-            <div class="row marginbotlow margintoplow itemcarousel">
+            <div class="row marginbotlow itemcarousel">
                 <div class="col-md-12" id="slider">
 
                         <div class="col-md-12" id="carousel-bounding-box">
@@ -100,28 +102,28 @@
                                         <img src="../../img/MAfotos/16.JPG" class="itemcarousel">
                                     </div>
                                     <div class="item" data-slide-number="17">
-                                        <img src="../../img/MAfotos/17.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/17.jpg" class="itemcarousel">
                                     </div>
                                     <div class="item" data-slide-number="18">
-                                        <img src="../../img/MAfotos/18.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/18.jpg" class="itemcarousel">
                                     </div>
                                     <div class="item" data-slide-number="19">
-                                        <img src="../../img/MAfotos/19.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/19.jpg" class="itemcarousel">
                                     </div>
                                     <div class="item" data-slide-number="20">
-                                        <img src="../../img/MAfotos/20.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/20.jpg" class="itemcarousel">
                                     </div>
                                     <div class="item" data-slide-number="21">
-                                        <img src="../../img/MAfotos/21.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/21.jpg" class="itemcarousel">
                                     </div>
                                     <div class="item" data-slide-number="22">
-                                        <img src="../../img/MAfotos/22.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/22.jpg" class="itemcarousel">
                                     </div> 
                                     <div class="item" data-slide-number="23">
-                                        <img src="../../img/MAfotos/23.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/23.jpg" class="itemcarousel">
                                     </div> 
                                     <div class="item" data-slide-number="24">
-                                        <img src="../../img/MAfotos/24.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/24.jpg" class="itemcarousel">
                                     </div>                                       
                                 </div>
                                 <!-- main slider carousel nav controls --> <a class="carousel-control left navlateral" href="#myCarousel" data-slide="prev">‹</a>
@@ -187,28 +189,28 @@
                     <img src="../../img/MAfotos/16.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
                   </a></li>
                   <li class="col-xs-1 col-lg-1 col-md-1 col-sm-1 sinpadding"> <a id="carousel-selector-16">
-                    <img src="../../img/MAfotos/17.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+                    <img src="../../img/MAfotos/17.jpg"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
                   </a></li>
                   <li class="col-xs-1 col-lg-1 col-md-1 col-sm-1 sinpadding"> <a id="carousel-selector-17">
-                    <img src="../../img/MAfotos/18.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+                    <img src="../../img/MAfotos/18.jpg"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
                   </a></li>
                   <li class="col-xs-1 col-lg-1 col-md-1 col-sm-1 sinpadding"> <a id="carousel-selector-18">
-                    <img src="../../img/MAfotos/19.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+                    <img src="../../img/MAfotos/19.jpg"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
                   </a></li>
                   <li class="col-xs-1 col-lg-1 col-md-1 col-sm-1 sinpadding"> <a id="carousel-selector-19">
-                    <img src="../../img/MAfotos/20.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+                    <img src="../../img/MAfotos/20.jpg"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
                   </a></li>
                   <li class="col-xs-1 col-lg-1 col-md-1 col-sm-1 sinpadding"> <a id="carousel-selector-20">
-                    <img src="../../img/MAfotos/21.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+                    <img src="../../img/MAfotos/21.jpg"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
                   </a></li>  
                   <li class="col-xs-1 col-lg-1 col-md-1 col-sm-1 sinpadding"> <a id="carousel-selector-21">
-                    <img src="../../img/MAfotos/22.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+                    <img src="../../img/MAfotos/22.jpg"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
                   </a></li>
                   <li class="col-xs-1 col-lg-1 col-md-1 col-sm-1 sinpadding"> <a id="carousel-selector-22">
-                    <img src="../../img/MAfotos/23.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+                    <img src="../../img/MAfotos/23.jpg"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
                   </a></li>  
                   <li class="col-xs-1 col-lg-1 col-md-1 col-sm-1 sinpadding"> <a id="carousel-selector-23">
-                    <img src="../../img/MAfotos/24.JPG"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
+                    <img src="../../img/MAfotos/24.jpg"  class="miniimg margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">
                   </a></li>                   
                     </ul>
 

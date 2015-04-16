@@ -46,7 +46,7 @@
 
                 
                 
-                <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-6 col-lg-offset-6 col-sm-offset-6 col-md-offset-6 sinpadding destacado img-rounded">
+                <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7 col-xs-offset-5 col-lg-offset-5 col-sm-offset-5 col-md-offset-5 sinpadding destacado img-rounded">
                     <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding" src="../img/ma_tourdates1.png"/>
                     <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 sinpadding text-center" style="border-right: 1px solid #fff;">
                         <a href="#" class="textomayofecha col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">08 MAY</a>
@@ -73,7 +73,7 @@
                         <a href="#" class="textomayocita col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">Teatro Principal de Vitoria</a>
                         <a href="#" class="textomayocita col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">Teatro Principal de Vitoria</a>
                         <a href="#" class="textomayocita col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">Teatro Campos Elíseos de Bilbao</a>
-                        <a href="#" class="textomayocita col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">Teatro Campos Elíseos de Bilbao</a>
+                        <a href="#" class="textomayocita col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">Centro de Congresos Lienzo Norte de Ávila</a>
                         <a href="#" class="textomayocita col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">Teatro Principal de Alicante</a>
                         <a href="#" class="textomayocita col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">Teatro Principal de Alicante</a>
                         <a href="#" class="textomayocita col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding">Palacio de Congresos Riojafórum de Logroño</a>
