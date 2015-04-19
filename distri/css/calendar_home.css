@@ -508,7 +508,7 @@ span[data-cal-date]:hover {
 }
 .events-list {
   max-height: 47px;
-  padding-left: 5px;
+/*  padding-left: 5px;*/
 }
 .cal-column {
   border-left: 1px solid #e1e1e1;

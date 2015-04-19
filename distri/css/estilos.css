@@ -158,6 +158,8 @@ body {
   .cabeceraMA{ font-size: 13px; }
 /*  .textoFamiliares{ font-size: 12px; }*/
   .imgcartel{ height: 110px; }
+  .videopromoma{ max-height: 250px; }
+  .videosma{ max-height: 250px;}
 /*  .textoContacto{ font-size: 16px; }*/
   .textomayocita{ font-size: 10px; }
   .textomayofecha{ font-size: 10px; }
@@ -168,7 +170,7 @@ body {
   .mes{ font-size: 35px !important; }
   .event { width: 10px; height: 10px; }
   .cal-cell1{ font-size: 12px !important; }
-  .itemcarousel{ max-height: 500px !important; }
+  .itemcarousel{ max-height: 400px !important; }
 }
 
 @media (max-width: 670px) {
@@ -180,7 +182,8 @@ body {
   .textoFamiliares{ font-size: 11px; }
   .textoContacto{ font-size: 16.1px; }
   .imgcartel{ height: 100px; }
-  .videopromoma{ max-height: 250px; }
+  .videopromoma{ max-height: 200px; }
+  .videosma{ max-height: 200px;}
   .iconolink{ max-height: 45px; }
   .textomayocita{ font-size: 8px; }
   .textomayofecha{ font-size: 8px; }
@@ -191,7 +194,7 @@ body {
   .mes{ font-size: 30px !important; }
   .event { width: 9px; height: 9px; }
   .cal-cell1{ font-size: 10px !important; }
-  .itemcarousel{ max-height: 450px !important; }
+  .itemcarousel{ max-height: 300px !important; }
 }  
 @media (max-width: 500px) {
   .menu2{ margin-top: 35%; } 
@@ -202,7 +205,8 @@ body {
   .textoFamiliares{ font-size: 8px; }
   .textoContacto{ font-size: 7px; }
   .imgcartel{ max-height: 90px; }
-  .videopromoma{ max-height: 200px; }
+  .videopromoma{ max-height: 120px; }
+  .videosma{ max-height: 120px;}
   .iconolink{ max-height: 40px; }
   .textomayocita{ font-size: 7px; }
   .textomayofecha{ font-size: 7px; }
@@ -213,10 +217,10 @@ body {
   .mes{ font-size: 25px !important; }
   .event { width: 8px; height: 8px; }
   .cal-cell1{ font-size: 8px !important; }
-  .itemcarousel{ max-height: 400px !important; }
+  .itemcarousel{ max-height: 200px !important; }
 }
 @media (max-width: 450px) {
-  .menu2{ margin-top: 40%; } 
+  .menu2{ margin-top: 45%; } 
   .menu>li>a { font-size: 10px; }
   .menu2>li>a { font-size: 7px; }
   .textoMA{ font-size: 6px; }
@@ -224,7 +228,8 @@ body {
   .textoFamiliares{ font-size: 7px; }
   .textoContacto{ font-size: 7px; }
   .imgcartel{ max-height: 70px; }
-  .videopromoma{ max-height: 150px; }
+  .videopromoma{ max-height: 80px; }
+  .videosma{ max-height: 80px;}
   .iconolink{ max-height: 40px; }
   .textomayocita{ font-size: 5px; }
   .textomayofecha{ font-size: 5px; }
@@ -234,8 +239,8 @@ body {
   .numeros{ font-size: 7px !important; }
   .mes{ font-size: 12px !important; margin: 2% 0% 0% 0% !important; }
   .event { width: 7px; height: 7px; }
-  .cal-cell1{ font-size: 7px !important; }
-  .itemcarousel{ max-height: 300px !important; }
+  .cal-cell1{ font-size: 7px !important; max-height: 18px !important; }
+  .itemcarousel{ max-height: 150px !important; }
 }
 .marginbot{
     margin-bottom: 10%;
@@ -250,11 +255,11 @@ body {
     margin-top: 2%;
 }
 .margintophigh{
-    margin-top: 15%;
+    margin-top: 12%;
 }
 .nav-pills>li.active>a:hover{color:black; background-color:transparent}
 .backcontacto{
-    background: url(../img/DS.JPG) no-repeat;
+    background: url(../img/DS.png) no-repeat;
     background-size: 58.33% 100%;
 }
 .backmayo{
@@ -289,6 +294,7 @@ body {
 }
 .itemcarousel{
     height: 600px !important;
+    width: 100%;
 }
 .videopromoma{
     height: 300px;

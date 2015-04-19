@@ -10,7 +10,7 @@
     <link rel="icon" href="../../favicon.ico">
     
 
-    <title>Starter Template for Bootstrap</title>
+    <title>http://www.distri-show.com</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
