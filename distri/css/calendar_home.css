@@ -1,7 +1,7 @@
 [class*="cal-cell"] {
   float: left;
   margin-left: 0;
-  min-height: 1px;
+  height: 30px;
 }
 .cal-row-fluid {
   width: 100%;

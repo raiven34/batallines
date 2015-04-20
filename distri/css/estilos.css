@@ -252,6 +252,9 @@ body {
 .marginbotlow{
     margin-bottom: 2%;
 }
+.marginbothigh{
+    margin-bottom: 12%;
+}
 .margintop{
     margin-top: 10%;
 }
@@ -276,7 +279,7 @@ body {
     background-position: 100% 0%;
 }
 .imgcartel{
-    height: 150px;
+    height: 200px;
 }
 .linkdossier{
     color: rgb(197, 185, 60);

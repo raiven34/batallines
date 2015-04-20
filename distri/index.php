@@ -43,6 +43,7 @@
                     <ul class="nav nav-pills nav-stacked menu marginbotlow" style="border-bottom: 2px solid #fff">
                         <li><a href="MotherAfrica">MOTHER AFRICA</a></li>
                         <li><a href="MAYO2015">GIRA MOTHER AFRICA MAYO 2015</a></li>
+                        <li><a href="TOYMUSICAL">MUSICAL TOY STORY</a></li>
                         <li><a href="familiares">MUSICALES FAMILIARES</a></li>
                         <li><a href="HOMENAJES">MUSICALES HOMENAJE</a></li>
                     </ul>
@@ -61,7 +62,7 @@
                                 <button class="mes col-xs-2 col-lg-2 col-md-2 col-sm-2 btn btn-primary" data-calendar-nav="next" style="background-color: transparent; border: none; padding: 0px;"> >></button>  
 
 
-                                <div class="row marginbot ">
+                                <div class="row marginbot">
                                         <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
                                                 <div id="calendar"></div>
                                         </div>
