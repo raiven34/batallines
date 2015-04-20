@@ -46,7 +46,7 @@
           <div class="carousel-inner">
             <div class="active item"><img class="itemcarousel"  src="../img/parte1.png" alt="banner1" /></div>
             <div class="item"><img class="itemcarousel"  src="../img/parte2.png" alt="banner2" /></div>
-            <div class="item"><div class="itemcarousel fondovideosma"><iframe class="videopromoma destacado img-rounded sinpadding marginbotlow margintophigh col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-3 col-lg-offset-3 col-md-offset-3 col-sm-offset-3" src="https://www.youtube.com/embed/bACG4VZ-3nw" frameborder="0" allowfullscreen></iframe></div></div>
+            <div class="item"><div class="itemcarousel fondovideosma"><iframe class="videopromoma destacado img-rounded sinpadding marginbotlow margintophigh col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-3 col-lg-offset-3 col-md-offset-3 col-sm-offset-3" src="https://www.youtube.com/embed/oV5IJp84148" frameborder="0" allowfullscreen></iframe></div></div>
 <!--            <div class="item"><div class="itemcarousel fondoblanco">
                     <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12  text-center textocabma margintoplow"><strong>RICO EN RITMO Y POTENTE EN MÚSICA</strong></div>
                     <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12  text-center textocabma2 margintoplow marginbotlow">Este magnífico espectáculo combina los talentos de diferentes países africanos, para ofrecer al mundo la alegría, energía y suspense de MOTHER AFRICA.</div>
@@ -67,8 +67,8 @@
             </div></div>            -->
             <div class="item"><div class="itemcarousel fondonegro">
                 <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12"  src="../img/parte4.png" alt="banner4" />
-                <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4 col-lg-offset-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 text-left margintoplow"><a href="#" class="linkdossier">Comprar Entradas</a></div>
-                <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4  text-right margintoplow"><a href="../MAYO2015" class="linkdossier">Gira Mayo 2015</a></div>
+                <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4 col-lg-offset-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 text-left margintoplow"><a href="#" class="linkdossier textoFamiliares">Comprar Entradas</a></div>
+                <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4  text-right margintoplow"><a href="../MAYO2015" class="linkdossier textoFamiliares">Gira Mayo 2015</a></div>
             </div></div>
             <div class="item"><img class="itemcarousel"  src="../img/parte5.png" alt="banner5" /></div>
           </div>

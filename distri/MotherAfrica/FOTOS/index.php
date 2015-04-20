@@ -46,84 +46,84 @@
                 <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../../img/MA_Logo_spanishWEB.png" />
             </div>
         <!-- main slider carousel -->
-            <div class="row marginbotlow itemcarousel">
+            <div class="col-xs-10 col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 marginbotlow imgcarousel">
                 <div class="col-md-12" id="slider">
 
                         <div class="col-md-12" id="carousel-bounding-box">
-                            <div id="myCarousel" class="carousel slide destacado">
+                            <div id="myCarousel" class="carousel slide destacado img-rounded">
                                 <!-- main slider carousel items -->
                                 <div class="carousel-inner">
                                     <div class="active item" data-slide-number="1">
-                                        <img src="../../img/MAfotos/1.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/1.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="2">
-                                      <img src="../../img/MAfotos/2.JPG" class="itemcarousel">
+                                      <img src="../../img/MAfotos/2.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="3">
-                                        <img src="../../img/MAfotos/3.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/3.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="4">
-                                        <img src="../../img/MAfotos/4.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/4.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="5">
-                                        <img src="../../img/MAfotos/5.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/5.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="6">
-                                        <img src="../../img/MAfotos/6.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/6.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="7">
-                                        <img src="../../img/MAfotos/7.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/7.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="8">
-                                        <img src="../../img/MAfotos/8.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/8.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="9">
-                                        <img src="../../img/MAfotos/9.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/9.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="10">
-                                        <img src="../../img/MAfotos/10.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/10.JPG" class="imgcarousel">
                                     </div> 
                                     <div class="item" data-slide-number="11">
-                                        <img src="../../img/MAfotos/11.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/11.JPG" class="imgcarousel">
                                     </div> 
                                     <div class="item" data-slide-number="12">
-                                        <img src="../../img/MAfotos/12.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/12.JPG" class="imgcarousel">
                                     </div>    
                                     <div class="item" data-slide-number="13">
-                                        <img src="../../img/MAfotos/13.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/13.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="14">
-                                      <img src="../../img/MAfotos/14.JPG" class="itemcarousel">
+                                      <img src="../../img/MAfotos/14.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="15">
-                                        <img src="../../img/MAfotos/15.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/15.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="16">
-                                        <img src="../../img/MAfotos/16.JPG" class="itemcarousel">
+                                        <img src="../../img/MAfotos/16.JPG" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="17">
-                                        <img src="../../img/MAfotos/17.jpg" class="itemcarousel">
+                                        <img src="../../img/MAfotos/17.jpg" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="18">
-                                        <img src="../../img/MAfotos/18.jpg" class="itemcarousel">
+                                        <img src="../../img/MAfotos/18.jpg" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="19">
-                                        <img src="../../img/MAfotos/19.jpg" class="itemcarousel">
+                                        <img src="../../img/MAfotos/19.jpg" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="20">
-                                        <img src="../../img/MAfotos/20.jpg" class="itemcarousel">
+                                        <img src="../../img/MAfotos/20.jpg" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="21">
-                                        <img src="../../img/MAfotos/21.jpg" class="itemcarousel">
+                                        <img src="../../img/MAfotos/21.jpg" class="imgcarousel">
                                     </div>
                                     <div class="item" data-slide-number="22">
-                                        <img src="../../img/MAfotos/22.jpg" class="itemcarousel">
+                                        <img src="../../img/MAfotos/22.jpg" class="imgcarousel">
                                     </div> 
                                     <div class="item" data-slide-number="23">
-                                        <img src="../../img/MAfotos/23.jpg" class="itemcarousel">
+                                        <img src="../../img/MAfotos/23.jpg" class="imgcarousel">
                                     </div> 
                                     <div class="item" data-slide-number="24">
-                                        <img src="../../img/MAfotos/24.jpg" class="itemcarousel">
+                                        <img src="../../img/MAfotos/24.jpg" class="imgcarousel">
                                     </div>                                       
                                 </div>
                                 <!-- main slider carousel nav controls --> <a class="carousel-control left navlateral" href="#myCarousel" data-slide="prev">‹</a>
@@ -136,7 +136,8 @@
             </div>
             <!--/main slider carousel-->
             <!-- thumb navigation carousel -->
-            <div class="col-md-12 hidden-sm hidden-xs destacado img-rounded marginbotlow" id="slider-thumbs">
+            
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12"><div class="col-xs-12 col-lg-12 col-md-12 col-sm-12"><div class="col-xs-10 col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 hidden-sm hidden-xs destacado img-rounded marginbotlow" id="slider-thumbs">
 
                     <!-- thumb navigation carousel items -->
                   <ul class="list-inline">
@@ -215,7 +216,7 @@
                     </ul>
 
             </div>
-        </div>        
+        </div></div></div>        
      
     </div><!-- /.container -->
 

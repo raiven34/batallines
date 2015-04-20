@@ -86,12 +86,12 @@
                         <label class="col-sm-12 control-label">Tipo de evento</label>
                         <div class="col-sm-12">
                             <select class="form-control" name="class" id="class">
-                                <option value="event-info">Info</option>
+                                <option value="event-info">Azul</option>
                                 <option value="event-success">Verde</option>
-                                <option value="event-inverse">Inverse</option>
-                                <option value="event-important">Important</option>
-                                <option value="event-warning">Warning</option>
-                                <option value="event-special">Special</option>
+                                <option value="event-inverse">Negro</option>
+                                <option value="event-important">Rojo</option>
+                                <option value="event-warning">Amarillo</option>
+                                <option value="event-special">Violeta</option>
                             </select>
                         </div>
                     </div>
