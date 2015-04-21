@@ -130,7 +130,7 @@ body {
     font-family: PoplarStd;
     font-size: 25px;
     color: whitesmoke;
-    padding: 0px 15px;
+    padding: 0px 2%;
 }
 .menu>li>a:hover {
     background-color: transparent;
@@ -143,7 +143,7 @@ body {
     font-family: Kalinga;
     font-size: 14px;
     color: whitesmoke;
-    padding: 0px 15px;
+    padding: 0px 5%;
     border-bottom: 1px solid #666;
 }
 .menu2>li>a:hover {
@@ -157,7 +157,7 @@ body {
   .textoMA{ font-size: 12px; }
   .cabeceraMA{ font-size: 13px; }
 /*  .textoFamiliares{ font-size: 12px; }*/
-  .imgcartel{ height: 110px; }
+  .imgcartel{ max-height: 150px; }
   .videopromoma{ max-height: 250px; }
   .videosma{ max-height: 250px;}
 /*  .textoContacto{ font-size: 16px; }*/
@@ -169,7 +169,7 @@ body {
   .numeros{ font-size: 16px !important; }
   .mes{ font-size: 35px !important; }
   .event { width: 10px; height: 10px; }
-  .cal-cell1{ font-size: 12px !important; }
+  .cal-cell1{ font-size: 12px !important; max-height: 25px !important;  }
   .itemcarousel{ max-height: 400px !important; }
   .imgcarousel{ max-height: 4000px !important; }
 }
@@ -182,7 +182,7 @@ body {
   .cabeceraMA{ font-size: 12px; }
   .textoFamiliares{ font-size: 11px; }
   .textoContacto{ font-size: 16.1px; }
-  .imgcartel{ height: 100px; }
+  .imgcartel{ max-height: 120px; }
   .videopromoma{ max-height: 200px; }
   .videosma{ max-height: 200px;}
   .iconolink{ max-height: 45px; }
@@ -194,19 +194,19 @@ body {
   .numeros{ font-size: 10px !important; }
   .mes{ font-size: 30px !important; }
   .event { width: 9px; height: 9px; }
-  .cal-cell1{ font-size: 10px !important; }
+  .cal-cell1{ font-size: 10px !important; max-height: 20px !important;  }
   .itemcarousel{ max-height: 300px !important; }
   .imgcarousel{ max-height: 300px !important; }
 }  
 @media (max-width: 500px) {
   .menu2{ margin-top: 35%; } 
-  .menu>li>a { font-size: 12px; }
+  .menu>li>a { font-size: 15px; }
   .menu2>li>a { font-size: 10px; }
   .textoMA{ font-size: 7px; }
   .cabeceraMA{ font-size: 8px; }
   .textoFamiliares{ font-size: 8px; }
   .textoContacto{ font-size: 7px; }
-  .imgcartel{ max-height: 90px; }
+  .imgcartel{ max-height: 110px; }
   .videopromoma{ max-height: 120px; }
   .videosma{ max-height: 120px;}
   .iconolink{ max-height: 40px; }
@@ -218,19 +218,19 @@ body {
   .numeros{ font-size: 8px !important; }
   .mes{ font-size: 25px !important; }
   .event { width: 8px; height: 8px; }
-  .cal-cell1{ font-size: 8px !important; }
+  .cal-cell1{ font-size: 8px !important; max-height: 18px !important;  }
   .itemcarousel{ max-height: 250px !important; }
   .imgcarousel{ max-height: 250px !important; }
 }
 @media (max-width: 450px) {
   .menu2{ margin-top: 45%; } 
-  .menu>li>a { font-size: 10px; }
+  .menu>li>a { font-size: 12px; }
   .menu2>li>a { font-size: 7px; }
   .textoMA{ font-size: 6px; }
   .cabeceraMA{ font-size: 7px; }
   .textoFamiliares{ font-size: 7px; }
   .textoContacto{ font-size: 7px; }
-  .imgcartel{ max-height: 70px; }
+  .imgcartel{ max-height: 100px; }
   .videopromoma{ max-height: 80px; }
   .videosma{ max-height: 80px;}
   .iconolink{ max-height: 40px; }
