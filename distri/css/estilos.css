@@ -295,6 +295,10 @@ body {
     background: url(../img/parte3.png) no-repeat;
     background-size: 100% 100%; 
 }
+.fondovideostoy{
+    background: url(../img/parte2toy.png) no-repeat;
+    background-size: 100% 100%; 
+}
 .fondovideosfotosma{
     background: url(../img/FONDOVIDEOSOK.png) no-repeat;
     background-size: 100% 100%; 
@@ -303,7 +307,7 @@ body {
     height: 600px !important;
 }
 .imgcarousel{
-    height: 350px !important;
+    height: 400px !important;
 }
 .videopromoma{
     height: 300px;

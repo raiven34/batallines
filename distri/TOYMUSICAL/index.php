@@ -44,7 +44,7 @@
           <!-- Carousel items -->
           <div class="carousel-inner">
             <div class="active item"><img class="itemcarousel"  src="../img/parte1toy.png" alt="banner1" /></div>
-            <div class="item"><img class="itemcarousel"  src="../img/parte2toy.png" alt="banner2" /></div>
+            <div class="item"><div class="itemcarousel fondovideostoy"><iframe class="videopromoma destacado img-rounded sinpadding marginbotlow margintophigh col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-offset-3 col-lg-offset-3 col-md-offset-3 col-sm-offset-3" src="https://www.youtube.com/embed/Oza_sXR_-j4" frameborder="0" allowfullscreen></iframe></div></div>
             <div class="item"><img class="itemcarousel"  src="../img/parte3toy.png" alt="banner4" /></div>
             <div class="item"><img class="itemcarousel"  src="../img/parte4toy.png" alt="banner5" /></div>
           </div>

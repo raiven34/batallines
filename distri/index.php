@@ -43,7 +43,7 @@
                     <ul class="nav nav-pills nav-stacked menu marginbotlow" style="border-bottom: 2px solid #fff">
                         <li><a href="MotherAfrica">MOTHER AFRICA</a></li>
                         <li><a href="MAYO2015">GIRA MOTHER AFRICA MAYO 2015</a></li>
-                        <li><a href="TOYMUSICAL">MUSICAL TOY STORY</a></li>
+                        <li><a href="TOYMUSICAL">TOY MUSICAL THE STORY</a></li>
                         <li><a href="familiares">MUSICALES FAMILIARES</a></li>
                         <li><a href="HOMENAJES">MUSICALES HOMENAJE</a></li>
                     </ul>
@@ -54,7 +54,7 @@
                     </ul>
                 </div>
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                    <div class="img-rounded destacado col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbot  btn-group">
+                    <div class="img-rounded destacado col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow  btn-group">
                         
                                 
                                 <button class="mes col-xs-2 col-lg-2 col-md-2 col-sm-2 btn btn-primary" data-calendar-nav="prev" style="background-color: transparent; border: none; padding: 0px;"><< </button>
@@ -71,8 +71,8 @@
                                 <div class="clearfix"></div>                        
                         
                     </div>
-                    <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 sinpadding"><a href="TOYMUSICAL"><img class="img-rounded imgdestacado col-xs-11 col-lg-11 col-md-11 col-sm-11"  src="img/toy.jpg"/></a></div>
-                    <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 sinpadding"><a href="HOMENAJES"><img class="img-rounded imgdestacado col-xs-11 col-lg-11 col-md-11 col-sm-11 col-lg-offset-1 col-sm-offset-1 col-xs-offset-1 col-md-offset-1" src="img/Abba.jpg"/></a></div>
+                    <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 sinpadding margintoplow"><a href="TOYMUSICAL"><img class="img-rounded imgdestacado col-xs-11 col-lg-11 col-md-11 col-sm-11"  src="img/toy.jpg"/></a></div>
+                    <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 sinpadding margintoplow"><a href="HOMENAJES"><img class="img-rounded imgdestacado col-xs-11 col-lg-11 col-md-11 col-sm-11 col-lg-offset-1 col-sm-offset-1 col-xs-offset-1 col-md-offset-1" src="img/Abba.jpg"/></a></div>
                 </div>
             </div>
         <div class="row marginbotlow backinicioma">

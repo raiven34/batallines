@@ -43,10 +43,10 @@
 
         <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 fondovideosfotosma">
             <div class="row">
-                <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel"  src="../../img/MA_Logo_spanishWEB.png" />
+                <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12"  src="../../img/MA_Logo_spanishWEBfotos.png" />
             </div>
         <!-- main slider carousel -->
-            <div class="col-xs-10 col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 marginbotlow imgcarousel">
+            <div class="col-xs-8 col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 marginbotlow imgcarousel">
                 <div class="col-md-12" id="slider">
 
                         <div class="col-md-12" id="carousel-bounding-box">
