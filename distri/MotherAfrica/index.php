@@ -67,8 +67,8 @@
             </div></div>            -->
             <div class="item"><div class="itemcarousel fondonegro">
                 <img class="col-xs-12 col-lg-12 col-md-12 col-sm-12"  src="../img/parte4.png" alt="banner4" />
-                <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4 col-lg-offset-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 text-left margintoplow"><a href="#" class="linkdossier textoFamiliares">Comprar Entradas</a></div>
-                <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4  text-right margintoplow"><a href="../MAYO2015" class="linkdossier textoFamiliares">Gira Mayo 2015</a></div>
+                <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4 col-lg-offset-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 text-left"><a href="#" class="linkma textoFamiliares">Comprar Entradas</a></div>
+                <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4  text-right"><a href="../MAYO2015" class="linkma textoFamiliares">Gira Mayo 2015</a></div>
             </div></div>
             <div class="item"><img class="itemcarousel"  src="../img/parte5.png" alt="banner5" /></div>
           </div>
