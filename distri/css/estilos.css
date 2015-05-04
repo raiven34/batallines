@@ -171,7 +171,7 @@ body {
   .event { width: 10px; height: 10px; }
   .cal-cell1{ font-size: 12px !important; max-height: 25px !important;  }
   .itemcarousel{ max-height: 400px !important; }
-  .imgcarousel{ max-height: 4000px !important; }
+  .imgcarousel{ max-height: 400px !important; }
   .linkma{ font-size: 14px !important; }
 }
 
@@ -222,7 +222,7 @@ body {
   .event { width: 8px; height: 8px; }
   .cal-cell1{ font-size: 8px !important; max-height: 18px !important;  }
   .itemcarousel{ max-height: 250px !important; }
-  .imgcarousel{ max-height: 250px !important; }
+  .imgcarousel{ max-height: 200px !important; }
   .linkma{ font-size: 12px !important; }
 }
 @media (max-width: 450px) {
@@ -247,7 +247,7 @@ body {
   .event { width: 7px; height: 7px; }
   .cal-cell1{ font-size: 7px !important; max-height: 18px !important; }
   .itemcarousel{ max-height: 180px !important; }
-  .imgcarousel{ max-height: 180px !important; }
+  .imgcarousel{ max-height: 100px !important; }
   .linkma{ font-size: 9px !important; }
 }
 .marginbot{
