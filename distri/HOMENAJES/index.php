@@ -44,7 +44,7 @@
         <div class="row marginbotlow">   
             <img class="col-xs-4 col-lg-4 col-md-4 col-sm-4  destacado sinpadding img-rounded imgcartel"  src="../img/Abba.jpg"/>
             <div class="col-xs-8 col-lg-8 col-md-8 col-sm-8 textoFamiliares">
-                <p>Adaptación libre del cuento de L.Frank.Baum. 4 temporadas en cartel. Más de 400.000 espectadores y 800 funciones. Premio de Rojas 2012 Mejor Espectáculo Familiar. El espectáculo más valorado durante 2010/2011 según Entradas.com. ¡La historia de siempre, contada somo nunca!</p>
+                <p>Dorothy vivía en la aburrida Kansas con su Tía Emma y sus amigos Hunk, Leo y Oliver hasta que, de pronto, un huracán la transportó al mágico Mundo de Oz. Para volver a su hogar, el Hada Glinda guió a Dorothy por el camino de Baldosas Amarillas hasta Ciudad Esmeralda, donde vive el Mago de Oz, que es capaz de conceder cualquier deseo. Por el camino, encontró a un Espantapájaros sin cerebro, a un Hombre de Hojalata sin corazón y a un León cobarde que se unieron a ella para pedirle al Mago aquello de lo que creían carecer.</p>
                 <a class="linkdossier center-block text-center" href="../Dossieres/Dossier Mago de Oz.pdf">VER DOSSIER - DESCARGA DOSSIER</a>
             </div>
         </div> 

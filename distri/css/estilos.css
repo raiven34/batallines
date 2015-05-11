@@ -160,7 +160,7 @@ body {
   .imgcartel{ max-height: 150px; }
   .videopromoma{ max-height: 250px; }
   .videosma{ max-height: 250px;}
-/*  .textoContacto{ font-size: 16px; }*/
+  .textoContacto{ font-size: 14px; }
   .textomayocita{ font-size: 10px; }
   .textomayofecha{ font-size: 10px; }
   .textocabma{ font-size: 40px; }
@@ -182,7 +182,7 @@ body {
   .textoMA{ font-size: 11px; }
   .cabeceraMA{ font-size: 12px; }
   .textoFamiliares{ font-size: 11px; }
-  .textoContacto{ font-size: 16.1px; }
+  .textoContacto{ font-size: 10px; }
   .imgcartel{ max-height: 120px; }
   .videopromoma{ max-height: 200px; }
   .videosma{ max-height: 200px;}
@@ -232,7 +232,7 @@ body {
   .textoMA{ font-size: 6px; }
   .cabeceraMA{ font-size: 7px; }
   .textoFamiliares{ font-size: 7px; }
-  .textoContacto{ font-size: 7px; }
+  .textoContacto{ font-size: 4px; }
   .imgcartel{ max-height: 100px; }
   .videopromoma{ max-height: 80px; }
   .videosma{ max-height: 80px;}

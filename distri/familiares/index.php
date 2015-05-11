@@ -52,7 +52,7 @@
         <div class="row marginbot destacado img-rounded">
             
             <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><iframe class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel" src="https://www.youtube.com/embed/l8xdCGmb5sc" frameborder="0" allowfullscreen></iframe></div>
-            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><a href="../FotosMagoDeOz"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel imgdestacado"  src="../img/Foto_01.jpg"/></a></div>
+            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><a href="#"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel imgdestacado"  src="../img/Foto_01.jpg"/></a></div>
             
         </div>
 
@@ -86,7 +86,7 @@
         <div class="row marginbot destacado img-rounded">
             
             <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><iframe class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel" src="https://www.youtube.com/embed/dmEHHi5Zfq8" frameborder="0" allowfullscreen></iframe></div>
-            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><a href="../FotosHanselyGretel"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel imgdestacado" height="155" src="../img/hanselygretel1.jpg"/></a></div>
+            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><a href="#"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel imgdestacado" height="155" src="../img/hanselygretel1.jpg"/></a></div>
             
         </div>    
         
@@ -102,7 +102,7 @@
         <div class="row marginbot destacado img-rounded">
             
             <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><iframe class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel" src="https://www.youtube.com/embed/7C2y-hBhgxk" frameborder="0" allowfullscreen></iframe></div>
-            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><a href="../FotosCampanilla"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel imgdestacado" height="155" src="../img/serena.jpg"/></a></div>
+            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 marginbotlow margintoplow"><a href="#"><img class="destacado sinpadding img-rounded marginbotlow margintoplow col-xs-12 col-lg-12 col-md-12 col-sm-12 imgcartel imgdestacado" height="155" src="../img/serena.jpg"/></a></div>
             
         </div>          
      
