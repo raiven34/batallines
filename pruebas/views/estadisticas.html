@@ -1,0 +1,26 @@
+<legend class="text-center margintoplow">Partidos</legend>
+<div class="row placeholders margintoplow" ng-controller="combotemp as vc">
+    <select id="combotemp" class="form-horizontal ng-pristine ng-valid" ng-model="vc.select" ng-options="temporada.temporada for temporada in vc.temporadas" ng-change="vs.cargapartidos(vc.select.temporada)"></select>
+</div>
+
+<accordion close-others="true" class="row">
+    <accordion-group is-open="false" ng-repeat="partido in vs.partidos" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 placeholders sinpadding">
+        <accordion-heading>
+            <input id="jornada" name="jornada" type="text" ng-model="partido.jornada" size="2" ng-disabled="true"/>
+            <input id="local" name="local" type="text" ng-model="partido.local"/>
+            <input id="goleslocal" name="goleslocal" type="text" ng-model="partido.goleslocal" size="2"/>
+            <input id="golesvisitante" name="golesvisitante" type="text" ng-model="partido.golesvisitante" size="2"/>
+            <input id="visitante" name="visitante" type="text" ng-model="partido.visitante"/>
+<!--             <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': vs.open, 'glyphicon-chevron-right': !vs.open}"></i>-->
+        </accordion-heading>
+            <input id="lugar" name="lugar" type="text" ng-model="partido.lugar"/>
+            <input id="fecha" name="fecha" type="text" ng-model="partido.fecha"/>
+            <input id="hora" name="hora" type="text" ng-model="partido.hora"/>
+            <input type="checkbox" ng-model="partido.jugado" ng-true-value="S" ng-false-value="N">
+            
+            
+    </accordion-group>
+</accordion>
+
+<div class="placeholders"><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.actualizapartidos(vs.partidos)">Enviar</button><button type="button" class="btn btn-warning marginbotlow" ng-click="vs.changeView('/admin')">Volver</button></div>
+

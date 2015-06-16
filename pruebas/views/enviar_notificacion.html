@@ -1,0 +1,17 @@
+<div ng-show="vs.trigger" ng-bind="vs.error" ng-class="vs.tipomsg">this is a welcome message</div> 
+<form class="col-xs-12 col-lg-12 col-md-12 col-sm-12 margintoplow placeholders">
+      <fieldset>
+        <legend>Enviar Notificación</legend>
+        <label for="apiKey">Google API Key (with IP locking) :</label><input id="apiKey" name="apiKey" type="text" ng-model="vs.mensaje.apikey" ng-disabled="true"/><br>
+        <label for="idtipo">Tipo:</label><select id="idtipo" name="idtipo"  ng-model="vs.mensaje.tipo" >
+            <option value="0">Mensaje</option>
+            <option value="1">Próximo Partido</option>
+            <option value="2">Actualización</option>    
+        </select><br>  
+        <label for="mensaje">Mensaje:</label><input id="mensaje" name="mensaje" type="text" ng-model="vs.mensaje.message" ng-disabled="vs.mensaje.tipo!=0" required/><br>
+        <label for="jugador">Jugador:</label><select id="jugador" name="jugador"  ng-model="vs.mensaje.registrationIDs" ng-options="usuario.movil_id as usuario.apodo for usuario in vs.usuarios" ></select><br>
+        <button type="button" class="btn btn-primary marginbotlow" ng-click="vs.guardar(vs.mensaje)">Enviar</button>
+        <button type="button" class="btn btn-warning marginbotlow" ng-click="vs.changeView('/admin')">Volver</button>
+      </fieldset>
+
+    </form>

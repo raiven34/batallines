@@ -3,17 +3,17 @@
 ?>
 
 
-      <div class="row" ng-controller="partidoCtrl">
+      <div class="row" ng-controller="partidoCtrl" ng-cloak>
         
           <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" style="background-color: rgb(87, 89, 83)">
             <div class="modal-dialog" style="margin: 80px auto;">
-                <div class="modal-content">
+                <div class="modal-content col-xs-12 col-lg-12 col-md-12 col-sm-12">
                     <div class="modal-header">
 <!--                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>-->
                     <h4 class="modal-title text-center" id="myModalLabel">{{detallepart[0].local}} {{detallepart[0].goleslocal}} - {{detallepart[0].golesvisitante}} {{detallepart[0].visitante}}</h4>
                     </div>
-                    <div class="modal-body">
-                        <div class="text-center">
+                    <div ng-init="cargaModal();" class="modal-body">
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6 col-lg-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-offset-3">
                             <div class="">
                                 <h5>Fecha: {{detallepart[0].fecha}}</h5>
                                 <h5>Hora: {{detallepart[0].hora}}</h5>
@@ -23,13 +23,13 @@
                                 <h5>Incidencias: </h5>
                             </div>
                             <div ng-repeat="detallein in detallepart[1]">                            
-                                <span>{{detallein.jugador}}</span>
-                                <img ng-repeat="i in detallein.incidencias track by $index" src="{{i}}"></span>
+                                <div ><span>{{detallein.jugador}}</span></div>
+                                <img ng-repeat="i in detallein.incidencias track by $index" src="{{i}}" />
                             </div>
                         </div>
                         <div class=""></div>    
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer col-xs-12 col-lg-12 col-md-12 col-sm-12">
 <!--                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>-->
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>

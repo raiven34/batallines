@@ -3,7 +3,7 @@
 ?>
 
 
-      <div id="noticias" class="" ng-controller="noticiasCtrl" ng-init="cargaNoticias()">
+      <div id="noticias" class="" ng-controller="noticiasCtrl" ng-init="cargaNoticias()" ng-cloak>
         <div class="jumbotron text-center" ng-repeat="noticia in noticias | startFrom:currPage*pageSize | limitTo:pageSize" style="padding: 0px 60px 0px 60px">
             <div class="row"><h2>{{noticia.titulo}}</h2></div>
         <div class="row"><img class="img-responsive col-md-offset-4 col-md-4" src="../{{noticia.imagen}}"/></div>

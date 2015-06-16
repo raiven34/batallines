@@ -21,3 +21,38 @@ and open the template in the editor.
 .paddingimg{
     padding: 2px !important;
 }
+.marginbot{
+    margin-bottom: 10%;
+}
+.marginbotlow{
+    margin-bottom: 2%;
+}
+.margintop{
+    margin-top: 10%;
+}
+.margintoplow{
+    margin-top: 2%;
+}
+.margintophigh{
+    margin-top: 12%;
+}
+.panel-default>.panel-heading{
+    background-color: #A9A9A9;
+}
+
+.panel-body{
+    background-color: rgb(255, 236, 142);
+}
+.panel-group .panel+.panel{
+    margin-top: 0px;
+}
+/*.panel{
+    //border: none;
+    background-color: transparent
+}*/
+h4>a{
+    text-decoration: none !important;
+}
+.sinpadding{
+    padding: 0px  !important;
+}

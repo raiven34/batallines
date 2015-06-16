@@ -5,7 +5,7 @@
 
       <div class="row">
 
-        <div class="col-sm-12 col-md-12 main" ng-controller="clienteCtrl" ng-init="cargaTemporadas()">
+        <div class="col-sm-12 col-md-12 main" ng-controller="clienteCtrl" ng-init="cargaTemporadas()" ng-cloak>
             <div class="row placeholders"  >
                 <select id="combotemp" class="form-horizontal" ng-model="myColor" ng-options="temporada.temporada for temporada in temporadas" ng-change="precargaResumenes();cargaCliente(myColor.temporada , 'apodo',true)">
                     

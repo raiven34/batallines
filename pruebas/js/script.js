@@ -9,7 +9,7 @@ var clienteApp = angular.module('clienteApp', ['ngSanitize','factoryModule']);
 	as la prueba para que veas de lo que estamos hablando
 */
 
-function clienteCtrl($scope, $http,serviciotemporadas) {
+function clienteCtrl($scope, $http,servicios) {
         $scope.clientes = [];
         $scope.resumenes =[];
         $scope.cabeceras = [
@@ -98,7 +98,7 @@ function clienteCtrl($scope, $http,serviciotemporadas) {
 //            });
 //        }
         $scope.temporadas=[];
-        serviciotemporadas.recuperatemp().success(function(data){
+        servicios.recuperatemp().success(function(data){
             data.push({"temporada":"Todas"});
             $scope.temporadas=data;
             $scope.myColor = $scope.temporadas[$scope.temporadas.length - 1]; 
@@ -249,7 +249,7 @@ function clienteCtrl($scope, $http,serviciotemporadas) {
 }
 //partidos
 
-function partidoCtrl($scope, $http,serviciotemporadas) {
+function partidoCtrl($scope, $http,servicios) {
         $scope.partidos = [];
         $scope.resumenes =[];
         $scope.detallepart = [
@@ -346,9 +346,12 @@ function partidoCtrl($scope, $http,serviciotemporadas) {
         }
         //$scope.temp = "Todas";
         $scope.cargaModal = function(temp,jor) {
-            
-            //console.log("asdsadasd" + cab);
-            serviciotemporadas.recuperadetallepart(temp,jor).success(function(data){
+            if(!temp || !jor){
+                temp = '2013/2014';
+                jor = 1;
+            }
+            //console.log("aaaaaaaaaaaa");
+            servicios.recuperadetallepart(temp,jor).success(function(data){
                 $scope.detallepart = data;
                 for(i=0;i<$scope.detallepart[1].length;i++){
                     $scope.incidencias=[];
@@ -408,7 +411,7 @@ function partidoCtrl($scope, $http,serviciotemporadas) {
             }
         }
         $scope.temporadas=[];
-        serviciotemporadas.recuperatemp().success(function(data){
+        servicios.recuperatemp().success(function(data){
             data.push({"temporada":"Todas"});
             $scope.temporadas=data;
             $scope.myColor = $scope.temporadas[$scope.temporadas.length - 1]; 
@@ -522,7 +525,7 @@ function partidoCtrl($scope, $http,serviciotemporadas) {
                         $scope.resumenes[1] = ({"total" :$scope.totempatados , "foto" : $scope.imggoles , "tipo" : "Partidos Empatados"});
                         $scope.resumenes[2] = ({"total" :$scope.totperdidos , "foto" : $scope.imggoles , "tipo" : "Partidos Perdidos"});
                      }
-                    console.log($scope.partidos);
+                    
                 
                     
                 });
