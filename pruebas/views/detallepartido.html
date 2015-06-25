@@ -1,0 +1,42 @@
+<div class="table-responsive" >
+    <form>
+            <table ng-init="cargaCliente('','apodo',true)" class="table table-striped">
+              <thead>
+                  <tr class="cabecera_tabla">
+                      <th>Temporada</th>
+                      <th>Jornada</th>                    
+                      <th>Jugador</th>
+                      <th>Goles</th>
+                      <th>Asistencias</th>
+                      <th>Amarillas</th>                    
+                      <th>Rojas</th>
+                      <th>Presentado</th>                      
+                  </tr>
+              </thead>
+              <tbody >
+                <!--<tr ng-repeat="cliente in clientes | startFrom:currPage*pageSize | limitTo:pageSize">-->
+                <tr ng-repeat="jugador in vs.jugadores">
+                    <td class="col-xs-2 col-lg-2 col-md-2 col-sm-2"><input id="temporada" name="temporada" type="text" ng-model="jugador.temporada" ng-disabled="true" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding"/></td>
+                  <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1"><input id="jornada" name="jornada" type="text" ng-model="jugador.jornada" ng-disabled="true" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding"/></td>
+                  <td class="col-xs-2 col-lg-2 col-md-2 col-sm-2"><input id="jugador" name="jugador" type="text" ng-model="jugador.jugador" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding"/></td>
+                  <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1"><input id="goles" name="goles" type="text" ng-model="jugador.goles" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding"/></td>
+                  <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1"><input id="asistencias" name="asistencias" type="text" ng-model="jugador.asistencias" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding"/></td>
+                  <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1"><input id="amarillas" name="amarillas" type="text" ng-model="jugador.amarillas" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding"/></td>
+                  <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1"><input id="rojas" name="rojas" type="text" ng-model="jugador.rojas" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding"/></td>
+                  <td class="col-xs-3 col-lg-3 col-md-3 col-sm-3"><input id="nopresentado" name="nopresentado" type="text" ng-model="jugador.nopresentado" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 sinpadding"/></td>
+                </tr>
+                
+              </tbody>
+            </table>
+    </form>
+<!--    		 <button  class="btn btn-small" ng-disabled="currPage == 0" ng-click="currPage=currPage-1">
+    		 	<i class="icon-backward"></i> Anterior
+		    </button>
+		    <button  class="btn btn-small" ng-disabled="currPage >= clientes.length/pageSize - 1" ng-click="currPage=currPage+1">
+		        <i class=" icon-forward"></i> Siguiente
+		    </button>
+		     reflejaremos el numero de pagina actual de total 
+    		Pagina: {{currPage+1}} de {{totalCliente()}}-->
+
+</div>
+<div class="placeholders"><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.actualizapartidos(vs.partidos)" ng-disabled="!vs.modificado">Enviar</button><button type="button" class="btn btn-warning marginbotlow" ng-click="vs.changeView('/admin/estadisticas')">Volver</button></div>

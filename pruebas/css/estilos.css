@@ -41,7 +41,7 @@ and open the template in the editor.
 }
 
 .panel-body{
-    background-color: rgb(255, 236, 142);
+    background-color: rgb(203, 203, 203);
 }
 .panel-group .panel+.panel{
     margin-top: 0px;
@@ -55,4 +55,7 @@ h4>a{
 }
 .sinpadding{
     padding: 0px  !important;
+}
+.glyphicon{
+    cursor: pointer;
 }

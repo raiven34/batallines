@@ -1,26 +1,30 @@
+<form name="form">
 <legend class="text-center margintoplow">Partidos</legend>
 <div class="row placeholders margintoplow" ng-controller="combotemp as vc">
     <select id="combotemp" class="form-horizontal ng-pristine ng-valid" ng-model="vc.select" ng-options="temporada.temporada for temporada in vc.temporadas" ng-change="vs.cargapartidos(vc.select.temporada)"></select>
 </div>
 
 <accordion close-others="true" class="row">
-    <accordion-group is-open="false" ng-repeat="partido in vs.partidos" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 placeholders sinpadding">
+    <accordion-group is-open="false" ng-repeat="partido in vs.partidos | filter:{ estado:'!d'}" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 placeholders sinpadding">
         <accordion-heading>
-            <input id="jornada" name="jornada" type="text" ng-model="partido.jornada" size="2" ng-disabled="true"/>
-            <input id="local" name="local" type="text" ng-model="partido.local"/>
-            <input id="goleslocal" name="goleslocal" type="text" ng-model="partido.goleslocal" size="2"/>
-            <input id="golesvisitante" name="golesvisitante" type="text" ng-model="partido.golesvisitante" size="2"/>
-            <input id="visitante" name="visitante" type="text" ng-model="partido.visitante"/>
+            
+            <input id="jornada" name="jornada" type="text" ng-model="partido.jornada" size="2" ng-change="vs.actualizaestado(partido)"/>
+            <input id="local" name="local" type="text" ng-model="partido.local" ng-change="vs.actualizaestado(partido)" />
+            <input id="goleslocal" name="goleslocal" type="text" ng-model="partido.goleslocal" size="2" ng-change="vs.actualizaestado(partido)"/>
+            <input id="golesvisitante" name="golesvisitante" type="text" ng-model="partido.golesvisitante" size="2" ng-change="vs.actualizaestado(partido)"/>
+            <input id="visitante" name="visitante" type="text" ng-model="partido.visitante" ng-change="vs.actualizaestado(partido)"/>
+            <i class="glyphicon glyphicon-remove" ng-click="vs.removepartido(partido)"></i>
+            <a ng-href="#/admin/estadisticas/detalle?temporada={{partido.temporada}}&jornada={{partido.jornada}}" class="" ng-click="vs.removepartido(partido)">est</a>
 <!--             <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': vs.open, 'glyphicon-chevron-right': !vs.open}"></i>-->
         </accordion-heading>
-            <input id="lugar" name="lugar" type="text" ng-model="partido.lugar"/>
-            <input id="fecha" name="fecha" type="text" ng-model="partido.fecha"/>
-            <input id="hora" name="hora" type="text" ng-model="partido.hora"/>
-            <input type="checkbox" ng-model="partido.jugado" ng-true-value="S" ng-false-value="N">
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12"><label for="lugar">Lugar: </label><input id="lugar" name="lugar" type="text" ng-model="partido.lugar" ng-change="vs.actualizaestado(partido)" /></div>
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12"><label for="fecha">Fecha: </label><input id="fecha" name="fecha" type="text" ng-model="partido.fecha" ng-change="vs.actualizaestado(partido)" /></div>
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12"><label for="hora">Hora: </label><input id="hora" name="hora" type="text" ng-model="partido.hora" ng-change="vs.actualizaestado(partido)"/></div>
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12"><label for="jugado">Jugado: </label><input type="checkbox" ng-model="partido.jugado" ng-true-value="S" ng-false-value="N" ng-change="vs.actualizaestado(partido)"></div>
             
             
     </accordion-group>
 </accordion>
 
-<div class="placeholders"><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.actualizapartidos(vs.partidos)">Enviar</button><button type="button" class="btn btn-warning marginbotlow" ng-click="vs.changeView('/admin')">Volver</button></div>
-
+<div class="placeholders"><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.enviarpartidos(vs.partidos)" ng-disabled="!vs.modificado">Enviar</button><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.addpartido()">Añadir</button><button type="button" class="btn btn-warning marginbotlow" ng-click="vs.changeView('/admin')">Volver</button></div>
+</form>

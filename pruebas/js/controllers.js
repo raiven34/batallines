@@ -2,31 +2,87 @@
         .controller("navCtrl", function($location){
                 var map = this;
                 map.estoy = function(ruta){
-                    return $location.path() == ruta;
+                    return $location.path().indexOf(ruta)!=-1;
                 }
         })
         .controller("combotemp", function(servicios){
             var vc = this;
             vc.temporadas=[];
             servicios.recuperatemp().success(function(data){
-                data.push({"temporada":"Todas"});
+                //data.push({"temporada":"Todas"});
                 vc.temporadas=data;
-                vc.select = vc.temporadas[vc.temporadas.length - 1]; 
+                //console.log(vc.temporadas);
+                vc.select = vc.temporadas[0]; 
             }); 
-        })        
+        }) 
+        .controller("detallepartido", function($routeParams,servicios,$location){
+            var vs = this;
+            vs.jugadores=[];
+            servicios.recuperajugadorespart($routeParams.temporada,$routeParams.jornada).success(function(data){
+                //data.push({"temporada":"Todas"});
+                vs.jugadores=data;
+                //console.log(vc.jugadores); 
+            }); 
+            vs.changeView = function(url){
+                $location.path(url);
+            }                  
+
+        })         
         .controller("estadisticas", function($location,servicios,$scope){
                 var vs = this;
-                vs.partidos=[];
+                vs.modificado=false;
+                vs.tempactual="";
+                vs.partidos=[];                 
                 vs.cargapartidos = function(temp){
+ 
                     servicios.recuperapartidos(temp).success(function(data){
+                        
+                        for(i=0;i<data.length;i++){
+                            data[i].estado="n";
+                        }
                         vs.partidos=data;
-                        //console.log(vs.partidos);
-                    });  
+                        vs.tempactual = vs.partidos[0].temporada;
+                        
+                    }); 
+                    //console.log(vs.tempactual);
                 }
-                vs.cargapartidos('Todas');
-                vs.actualizapartidos= function(obj){
-                    console.log(obj);
-                }
+
+                vs.cargapartidos('');
+
+                vs.removepartido= function(obj){
+                    if(obj.estado=="a"){
+                        var ind = vs.partidos.indexOf(obj);
+                        vs.partidos.splice(ind, 1);                      
+                    }else{
+                        obj.estado="d";
+                        vs.modificado=true;
+                    }
+                    //vs.partidos.splice(index, 1); 
+                    //console.log(vs.partidos);
+                } 
+                vs.actualizaestado= function(obj){
+                    if(obj.estado!="a"){
+                        obj.estado="m";
+                    }
+                    vs.modificado=true;
+                    //console.log(vs.partidos);
+                }                 
+                vs.addpartido= function(){
+                    vs.partidos.push({"cronica": "", "fecha": "", "goleslocal": "0", "golesvisitante": "0", "hora": "", "jornada": parseInt(vs.partidos[vs.partidos.length -1].jornada) + 1,"jugado": "N", "local": "", "lugar": "", "temporada": vs.tempactual, "visitante": "", "estado":"a"});
+                    vs.modificado=true;
+                    //console.log(vs.partidos);
+                } 
+                vs.enviarpartidos= function(part){
+                    servicios.actualizapartidos(part).success(function(data){
+                        
+//                        for(i=0;i<data.length;i++){
+//                            data[i].estado="n";
+//                        }
+//                        vs.partidos=data;
+//                        vs.tempactual = vs.partidos[0].temporada;
+                        
+                    }); 
+                }                 
                 vs.changeView = function(url){
                     $location.path(url);
                 }      

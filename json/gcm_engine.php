@@ -25,7 +25,7 @@ if(isset($_REQUEST['tipo'])){
     $tipo=0;
 }
 //echo($ids[0]);
-echo($message);
+//echo($message);
 // Set POST variables
 $url = 'https://android.googleapis.com/gcm/send';
 

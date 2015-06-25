@@ -1,4 +1,5 @@
 //Creamos el modulo de nuestra aplicación
+var sel="";
 var clienteApp = angular.module('clienteApp', ['ngSanitize','factoryModule']);
 
 

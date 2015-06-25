@@ -9,15 +9,19 @@
                     temporadas=[];
                     temporadas=$http({
                         url: '../json/json_temporadas.php',
-                        method: 'GET'
+                        method: 'GET',
+                        cache: false
                     })
-                    //temporadas.push({"temporada":"Todas"});
                     return temporadas;
                 },
                 recuperapartidos:function(temp) {
-                    partidos=[];
+                    //console.log(temp);
+                    url="../json/json_recupera_partidos.php?orden=jornada";
+                    if(temp!=''){
+                       url='../json/json_recupera_partidos.php?temporada=' + temp + '&orden=jornada'; 
+                    }
                     partidos=$http({
-                        url: '../json/json_recupera_partidos.php?temporada=' + temp + '&orden=jornada',
+                        url: url,
                         method: 'GET'
                     })
                     //temporadas.push({"temporada":"Todas"});
@@ -33,6 +37,17 @@
                     //console.log(usuarios);
                     return usuarios;
                 },                
+                actualizapartidos:function(obj) {
+                    partidos=[];
+                    partidos=$http({
+                        url: '../json/json_actualiza_partidos.php',
+                        method: 'POST',
+                        data: obj
+                    })
+                    //temporadas.push({"temporada":"Todas"});
+                    //console.log(usuarios);
+                    return partidos;
+                },                
                 recuperadetallepart:function(temporada,jornada) {
                     detalle=[];
                     detalle=$http({
@@ -44,7 +59,19 @@
                     //console.log(detalle);
                     //temporadas.push({"temporada":"Todas"});
                     return detalle;
-                }
+                },
+                recuperajugadorespart:function(temporada,jornada) {
+                    detalle=[];
+                    detalle=$http({
+                        url: '../json/json_recupera_jugadores_partido.php?temporada=' + temporada + '&jornada=' + jornada,
+                        method: 'GET',
+                        cache: true
+                        
+                    })
+                    //console.log(detalle);
+                    //temporadas.push({"temporada":"Todas"});
+                    return detalle;
+                }                
             }
         })
         .factory ('utilidades',  function ($location) {

@@ -20,10 +20,10 @@ angular.module('myApp', ['ngRoute','controllerModule'])
       }
     }
   })
-  .when('/Book/:bookId/ch/:chapterId', {
-    templateUrl: 'chapter.html',
+  .when('/admin/estadisticas/:idjornada', {
+    templateUrl: 'views/detallepartido.html',
     controllerAs:"vs",
-    controller: 'ChapterController'
+    controller: 'detallepartido'
   })
   .when('/admin/enviar_notificacion', {
     templateUrl: 'views/enviar_notificacion.html',
