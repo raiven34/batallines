@@ -18,21 +18,46 @@
         .controller("detallepartido", function($routeParams,servicios,$location){
             var vs = this;
             vs.jugadores=[];
+            vs.respuesta=[{"Modificados":"0","Erroneos":"0","Insertados":"0","Eliminados":"0"}];
             servicios.recuperajugadorespart($routeParams.temporada,$routeParams.jornada).success(function(data){
                 //data.push({"temporada":"Todas"});
+                for(i=0;i<data.length;i++){
+                    data[i].estado="n";
+                }                
                 vs.jugadores=data;
                 //console.log(vc.jugadores); 
             }); 
+            vs.enviardetalle= function(part){
+                servicios.actualizadetallepartidos(part).success(function(data){
+                    vs.respuesta=data;
+                    console.log(vs.respuesta);
+//                        for(i=0;i<data.length;i++){
+//                            data[i].estado="n";
+//                        }
+//                        vs.partidos=data;
+//                        vs.tempactual = vs.partidos[0].temporada;
+
+                });
+                //console.log($scope.form);
+            } 
+            vs.actualizaestado= function(obj){
+                if(obj.estado!="a"){
+                    obj.estado="m";
+                }              
+                //console.log(vs.partidos);
+            }             
             vs.changeView = function(url){
                 $location.path(url);
-            }                  
+            }  
+            
 
         })         
         .controller("estadisticas", function($location,servicios,$scope){
                 var vs = this;
                 vs.modificado=false;
                 vs.tempactual="";
-                vs.partidos=[];                 
+                vs.partidos=[];
+                vs.respuesta=[{"Modificados":"0","Erroneos":"0","Insertados":"0","Eliminados":"0"}];
                 vs.cargapartidos = function(temp){
  
                     servicios.recuperapartidos(temp).success(function(data){
@@ -74,7 +99,8 @@
                 } 
                 vs.enviarpartidos= function(part){
                     servicios.actualizapartidos(part).success(function(data){
-                        
+                        vs.respuesta=data;
+                        //console.log(vs.respuesta[0].Modificados);                        
 //                        for(i=0;i<data.length;i++){
 //                            data[i].estado="n";
 //                        }

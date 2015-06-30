@@ -59,3 +59,15 @@ h4>a{
 .glyphicon{
     cursor: pointer;
 }
+.seleccionado{
+    background-color: #dff0d8 !important;
+}
+.table {
+    margin-bottom: 0px;
+}
+.panel{
+    background-color: #fcf8e3;
+}
+.modificado{
+    color: rgb(213, 138, 2) !important;
+}

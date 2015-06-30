@@ -3,7 +3,9 @@
 <div class="row placeholders margintoplow" ng-controller="combotemp as vc">
     <select id="combotemp" class="form-horizontal ng-pristine ng-valid" ng-model="vc.select" ng-options="temporada.temporada for temporada in vc.temporadas" ng-change="vs.cargapartidos(vc.select.temporada)"></select>
 </div>
-
+<div ng-show="vs.respuesta[0].Modificados!=0" ng-bind="'Modificados: ' + vs.respuesta[0].Modificados" class="bg-success text-center"></div> 
+<div ng-show="vs.respuesta[0].Insertados!=0" ng-bind="'Insertados ' + vs.respuesta[0].Insertados" class="bg-success text-center"></div> 
+<div ng-show="vs.respuesta[0].Eliminados!=0" ng-bind="'Eliminados ' + vs.respuesta[0].Eliminados" class="bg-success text-center"></div> 
 <accordion close-others="true" class="row">
     <accordion-group is-open="false" ng-repeat="partido in vs.partidos | filter:{ estado:'!d'}" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 placeholders sinpadding">
         <accordion-heading>
@@ -26,5 +28,5 @@
     </accordion-group>
 </accordion>
 
-<div class="placeholders"><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.enviarpartidos(vs.partidos)" ng-disabled="!vs.modificado">Enviar</button><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.addpartido()">Añadir</button><button type="button" class="btn btn-warning marginbotlow" ng-click="vs.changeView('/admin')">Volver</button></div>
+<div class="placeholders"><button onclick="$('html,body').animate({scrollTop:0},'slow');return false;" type="button" class="btn btn-primary marginbotlow" ng-click="vs.enviarpartidos(vs.partidos)" ng-disabled="!vs.modificado">Enviar</button><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.addpartido()">Añadir</button><button type="button" class="btn btn-warning marginbotlow" ng-click="vs.changeView('/admin')">Volver</button></div>
 </form>

@@ -1,0 +1,13 @@
+<div class="img-rounded bg-danger text-center" ng-show="vs.respuesta[0].resultado==0">Se haproducido un error.</div>
+<div class="img-rounded bg-success text-center" ng-show="vs.respuesta[0].resultado==1">Login correcto.</div>
+<div class="img-rounded bg-warning text-center" ng-show="vs.respuesta[0].resultado==2">Usuario Incorrecto.</div>
+<form id="form" name="form" class="col-xs-12 col-lg-12 col-md-12 col-sm-12 margintoplow placeholders" novalidate>
+      <fieldset>
+        <legend>Login</legend>
+        <label for="usuario">Usuario:</label><input id="usuario" name="usuario" type="text" ng-model="vs.objlogin[0].usuario" required/><br>
+        <label for="password">Password:</label><input type="password" id="password" name="password"  ng-model="vs.objlogin[0].password" required/><br>
+        <button type="button" class="btn btn-primary marginbotlow" ng-disabled="!form.$valid" ng-click="vs.enviarlogin(vs.objlogin)">Enviar</button>
+
+      </fieldset>
+
+    </form>

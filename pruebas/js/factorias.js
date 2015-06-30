@@ -47,7 +47,18 @@
                     //temporadas.push({"temporada":"Todas"});
                     //console.log(usuarios);
                     return partidos;
-                },                
+                },
+                actualizadetallepartidos:function(obj) {
+                    detalle=[];
+                    detalle=$http({
+                        url: '../json/json_actualiza_detalle_partidos.php',
+                        method: 'POST',
+                        data: obj
+                    })
+                    //temporadas.push({"temporada":"Todas"});
+                    //console.log(usuarios);
+                    return detalle;
+                },                   
                 recuperadetallepart:function(temporada,jornada) {
                     detalle=[];
                     detalle=$http({
