@@ -74,3 +74,18 @@ h4>a{
 .nuevo{
     color: rgb(95, 197, 17) !important;
 }
+.deudor{
+    color: red;
+}
+.cobrador{
+    color: green;
+}
+.liquidado{
+    color: rgb(123, 123, 123);
+}
+.ng-invalid{
+    background-color: #F6ADAD;
+}
+#form{
+    background-color: transparent !important;
+}

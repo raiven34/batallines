@@ -14,12 +14,25 @@
                     
                     return respuesta;
                 },
+               enviargastos:function(obj) {
+                    //console.log(obj);
+                    respuesta=[];
+                    respuesta=$http({
+                        url: 'json/actualiza_gastos.php',
+                        method: 'POST',
+                        data: obj
+                    })
+                    //temporadas.push({"temporada":"Todas"});
+                    
+                    return respuesta;
+                },                
                 recuperagastos:function() {
                     //console.log(obj);
                     respuesta=[];
                     respuesta=$http({
                         url: 'json/recupera_gastos.php',
-                        method: 'GET'
+                        method: 'GET',
+                        cache:false
                     })
                     return respuesta;
                 },

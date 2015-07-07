@@ -36,12 +36,18 @@
             
 
         })
-        .controller("principal", function($routeParams,servicios,$location){
+        .controller("principal", function($routeParams,servicios,$location,$scope){
             var vs = this;
             vs.gastos=[];
             vs.seleccionado=[];
             vs.pagadores=[];
             vs.grupos=[];
+            vs.mensaje=[                    
+                {
+                    mensaje:'',
+                    tipo:''
+                }
+            ];
             servicios.recuperagrupos().success(function(data){
                 vs.grupos=data[0].datos;        
                 //console.log(vs.grupos);
@@ -72,7 +78,7 @@
                 }
             });
             vs.addinterviniente= function(){
-                vs.seleccionado.pagadores.push({"usuario": "Nuevo", "gasto": vs.seleccionado.id, id: "", "importe_pagado": "0", "importe_pagar" : "0", "estado" : "a"});
+                vs.seleccionado.pagadores.push({"usuario": "Nuevo", "gasto": vs.seleccionado.id, id: "", "importe_pagado": 0.00, "importe_pagar" : 0.00, "estado" : "a"});
                 if(vs.seleccionado.estado!="a"){ 
                     vs.seleccionado.estado='m';
                 }
@@ -80,9 +86,9 @@
                 //console.log(vs.seleccionado);
             }
             vs.addgasto= function(){
-                grupo={"id":"-","nombre":"-"};
+                grupo={"id":"","nombre":""};
                 pagadores=[];
-                vs.gastos.push({"id":"","nombre":"-","descripcion":"-","grupo":grupo,"importe":"0","peridiocidad":"0","fecha":"","pagadores": pagadores,"estado":"a"});
+                vs.gastos.push({"id":"","nombre":"","descripcion":"","grupo":grupo,"importe":0.00,"peridiocidad":"0","fecha":"","pagadores": pagadores,"estado":"a"});
                 vs.seleccionado = vs.gastos[vs.gastos.length-1];
                 //vs.modificado=true;
                 //console.log(vs.gastos);
@@ -96,17 +102,48 @@
                     obj.estado="d"; 
                     //vs.modificado=true;
                 }
-                vs.seleccionado.estado='m';
+                if(vs.seleccionado.estado!="a"){ 
+                    vs.seleccionado.estado='m';
+                }
                 //console.log(vs.gastos);
             } 
             vs.igualar= function(){
-                var total = vs.seleccionado.importe;
-                var impigualado= total/vs.seleccionado.pagadores.length;
+                contador=0;
                 for(i=0;i<vs.seleccionado.pagadores.length;i++){
-                    vs.seleccionado.pagadores[i].importe_pagar=impigualado.toFixed(2);
+                    if(vs.seleccionado.pagadores[i].estado!='d'){
+                        contador ++;
+                    }
                 }
-            }            
+                var total = vs.seleccionado.importe;
+                var impigualado= (total/contador).toFixed(2);
+                for(i=0;i<vs.seleccionado.pagadores.length;i++){
+                    vs.seleccionado.pagadores[i].importe_pagar=parseFloat(impigualado);
+                    if(vs.seleccionado.pagadores[i].estado!="a" && vs.seleccionado.pagadores[i].estado!="d"){ 
+                        vs.seleccionado.pagadores[i].estado="m"; 
+                    }
+                }
+                if(vs.seleccionado.estado!="a"){ 
+                    vs.seleccionado.estado='m';
+                }                
+            }  
+          vs.pagar= function(obj){
+                obj.importe_pagado = obj.importe_pagar;
+                if(obj.estado!="a"){ 
+                    obj.estado="m"; 
+                //vs.modificado=true;
+                }
+                if(vs.seleccionado.estado!="a"){ 
+                    vs.seleccionado.estado='m';
+                }
+          }            
             vs.guardar= function(){
+                servicios.enviargastos(vs.gastos).success(function(data){
+                    if(data[0].resultado==0){
+                        $location.path("/login");
+                    }else{
+
+                    }
+                });
                 console.log(vs.gastos);
             }
             vs.duplicagasto= function(obj){
@@ -116,6 +153,9 @@
             vs.modificagasto= function(obj){
                 if(obj.estado!="a"){
                     obj.estado="m";
+                    
+                }
+                if(vs.seleccionado.estado!="a"){ 
                     vs.seleccionado.estado='m';
                 }
                 //console.log(vs.gastos);
@@ -140,8 +180,15 @@
                 $location.path(url);
             }  
             vs.cambiaseleccionado = function(obj){
-                vs.seleccionado=obj;
+                if($scope.form.$valid){
+                    vs.seleccionado=obj;
+                    vs.mensaje.mensaje="";
+                    vs.mensaje.tipo="";
+                }else{
+                    vs.mensaje.mensaje="Datos introducidos Erroneos";
+                    vs.mensaje.tipo="e";
+                }
             }
-
+            
         })                 
  
