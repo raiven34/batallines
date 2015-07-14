@@ -44,8 +44,35 @@ for ($a=0; $a<$tam; $a++) {
                 $datos[0]["Insertados"]=$datos[0]["Insertados"] + 1; 
             }
         }elseif($estado=='m'){
-            $query = "update partidos2 set local='" . $local . "' , fecha='" . $fecha . "' , jornada='" . $jornada . "' , temporada='" . $temporada . "' , visitante='" . $visitante . "',golesvisitante=" . $golesvisitante . ", goleslocal=" . $goleslocal . ", jugado='" . $jugado . "' , lugar='" . $lugar . ", hora='" . $hora . "' where temporada='" . $temporada . "' and jornada=" . $jornada . "";
-            $datos[0]["Modificados"]=$datos[0]["Modificados"] + 1;
+            $query = "update gastos set nombre='" . $nombre . "' , descripcion='" . $descripcion . "' , peridiocidad=" . $peridiocidad . " , grupo=" . $grupoid . " , importe=" . $importe . " where id=" . $id;
+            $modifica = mysql_query ($query, $conexion);
+            if(mysql_error()){
+		$datos[0]["Erroneos"] = $datos[0]["Erroneos"] + 1 ;
+//		echo $query ;
+//                echo mysql_error();
+            }else{
+                $tam2 = count($pagadores);               
+                for ($i=0; $i<$tam2; $i++) {
+                    $pagusuario= $pagadores[$i]->usuario;
+                    $pagid= $pagadores[$i]->id;
+                    $pagimporte_pagado= $pagadores[$i]->importe_pagado;
+                    $pagimporte_pagar= $pagadores[$i]->importe_pagar;
+                    $pagestado= $pagadores[$i]->estado;
+                    
+                    if($pagestado=='a'){
+                        $query2 = "insert into gastos_usuarios (usuario,importe_pagar,importe_pagado,gasto) values('" . $pagusuario . "'," . $pagimporte_pagar .  "," . $pagimporte_pagado . "," . $id . ")";
+                    }elseif ($pagestado=='d') {
+                        $query2 = "delete from gastos_usuarios where id=" . $pagid;
+                    }elseif ($pagestado=='m') {
+                        $query2 = "update gastos_usuarios set usuario='" . $pagusuario . "', importe_pagar=" . $pagimporte_pagar . ",importe_pagado=" . $pagimporte_pagado . " where id=" . $pagid ;
+                    }
+                    $insertapagadores = mysql_query ($query2, $conexion); 
+                    if(mysql_error()){
+                        echo mysql_error();
+                    }
+                }
+                $datos[0]["Modificados"]=$datos[0]["Modificados"] + 1;
+            }
         }elseif($estado=='d'){
             $query = "delete from gastos where id=" . $id;
             $delete = mysql_query ($query, $conexion);
@@ -54,6 +81,12 @@ for ($a=0; $a<$tam; $a++) {
             }else{
                 $datos[0]["Eliminados"]=$datos[0]["Eliminados"] + 1;
             }
+
+            $query2 = "delete from gastos_usuarios where gasto=" . $id;
+            //echo $query2;
+            $deleteapagadores = mysql_query ($query2, $conexion);
+
+                    //falta controlar errores al insertar en gastos_usuarios
         }
         //$inserta = mysql_query ($alta, $conexion);
         //echo $alta;
