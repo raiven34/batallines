@@ -48,7 +48,7 @@
                             <option value="1">Mensual</option>   
                     </select></div>
                     <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12"><label for="nombre">Descripción:</label></div>
-                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow"><textarea class="col-xs-12 col-lg-12 col-md-12 col-sm-12 form-control" id="descripcion" name="descripcion" ng-model="vs.seleccionado.descripcion" ng-change="vs.modificagasto(vs.seleccionado)" ng-pattern="/^[a-zñÑáéíóúÁÉÍÓÚ\d_]{0,100}$/i"></textarea></div>
+                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow"><textarea class="col-xs-12 col-lg-12 col-md-12 col-sm-12 form-control" id="descripcion" name="descripcion" ng-model="vs.seleccionado.descripcion" ng-change="vs.modificagasto(vs.seleccionado)" ng-pattern="/^[a-zñÑáéíóúÁÉÍÓÚ\d\n/_]{0,100}$/i"></textarea></div>
                     <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 placeholders"><button type="button" class="btn btn-danger marginbotlow" ng-click="vs.removegasto(vs.seleccionado)" ng-disabled="!form.$valid">Borrar</button><button type="button" class="btn btn-success marginbotlow" ng-click="vs.duplicagasto(vs.seleccionado)" ng-disabled="!form.$valid">Duplicar</button></div>
 
                 </div>

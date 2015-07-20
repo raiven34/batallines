@@ -57,7 +57,7 @@
                 if(data[0].resultado==0){
                     $location.path("/login");
                 }else{
-                    data[0].datos.push({ usuario : "Nuevo"});  
+                    //data[0].datos.push({ usuario : "Nuevo"});  
                     vs.pagadores=data[0].datos;  
                 }
 
@@ -166,9 +166,19 @@
                         if(vs.seleccionado.resultado==0){
                             $location.path("/login");
                         }
+                    }); 
+                    servicios.recuperapagadores().success(function(data){
+                        if(data[0].resultado==0){
+                            $location.path("/login");
+                        }else{
+                            //data[0].datos.push({ usuario : "Nuevo"});  
+                            vs.pagadores=data[0].datos;  
+                        }
+
+                        //console.log(vs.pagadores);
+
                     });                    
-                });
-                
+                });              
                 console.log(vs.gastos);
             }
             vs.duplicagasto= function(obj){
