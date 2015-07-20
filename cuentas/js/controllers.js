@@ -138,12 +138,37 @@
           }            
             vs.guardar= function(){
                 servicios.enviargastos(vs.gastos).success(function(data){
-                    if(data[0].resultado==0){
-                        $location.path("/login");
-                    }else{
-
+                    if(data[0].Modificados>0){
+                         vs.mensaje.mensaje= data[0].Modificados + " registros modificados; ";
+                         vs.mensaje.tipo="e";
                     }
+                    if(data[0].Insertados>0){
+                         vs.mensaje.mensaje= vs.mensaje.mensaje + data[0].Insertados + " registros insertados; ";
+                         vs.mensaje.tipo="e";
+                    }
+                    if(data[0].Eliminados>0){
+                         vs.mensaje.mensaje= vs.mensaje.mensaje + data[0].Eliminados + " registros eliminados; ";
+                         vs.mensaje.tipo="e";
+                    }   
+                    if(data[0].Erroneos>0){
+                         vs.mensaje.mensaje= vs.mensaje.mensaje + data[0].Erroneos + " registros erroneos; ";
+                         vs.mensaje.tipo="e";
+                    }
+                    servicios.recuperagastos().success(function(data){
+                        for(i=0;i<data.length;i++){
+                            data[i].estado="n";
+                            for(a=0;a<data[i].pagadores.length;a++){
+                                data[i].pagadores[a].estado="n";
+                            } 
+                        }     
+                        vs.gastos=data;
+                        vs.seleccionado=vs.gastos[0];
+                        if(vs.seleccionado.resultado==0){
+                            $location.path("/login");
+                        }
+                    });                    
                 });
+                
                 console.log(vs.gastos);
             }
             vs.duplicagasto= function(obj){

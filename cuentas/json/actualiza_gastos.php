@@ -61,12 +61,15 @@ for ($a=0; $a<$tam; $a++) {
                     
                     if($pagestado=='a'){
                         $query2 = "insert into gastos_usuarios (usuario,importe_pagar,importe_pagado,gasto) values('" . $pagusuario . "'," . $pagimporte_pagar .  "," . $pagimporte_pagado . "," . $id . ")";
+                        $insertapagadores = mysql_query ($query2, $conexion);
                     }elseif ($pagestado=='d') {
                         $query2 = "delete from gastos_usuarios where id=" . $pagid;
+                        $insertapagadores = mysql_query ($query2, $conexion);
                     }elseif ($pagestado=='m') {
                         $query2 = "update gastos_usuarios set usuario='" . $pagusuario . "', importe_pagar=" . $pagimporte_pagar . ",importe_pagado=" . $pagimporte_pagado . " where id=" . $pagid ;
+                        $insertapagadores = mysql_query ($query2, $conexion);
                     }
-                    $insertapagadores = mysql_query ($query2, $conexion); 
+                     
                     if(mysql_error()){
                         echo mysql_error();
                     }
