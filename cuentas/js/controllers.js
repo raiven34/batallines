@@ -140,15 +140,15 @@
                 servicios.enviargastos(vs.gastos).success(function(data){
                     if(data[0].Modificados>0){
                          vs.mensaje.mensaje= data[0].Modificados + " registros modificados; ";
-                         vs.mensaje.tipo="e";
+                         vs.mensaje.tipo="s";
                     }
                     if(data[0].Insertados>0){
                          vs.mensaje.mensaje= vs.mensaje.mensaje + data[0].Insertados + " registros insertados; ";
-                         vs.mensaje.tipo="e";
+                         vs.mensaje.tipo="s";
                     }
                     if(data[0].Eliminados>0){
                          vs.mensaje.mensaje= vs.mensaje.mensaje + data[0].Eliminados + " registros eliminados; ";
-                         vs.mensaje.tipo="e";
+                         vs.mensaje.tipo="s";
                     }   
                     if(data[0].Erroneos>0){
                          vs.mensaje.mensaje= vs.mensaje.mensaje + data[0].Erroneos + " registros erroneos; ";
