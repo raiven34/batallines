@@ -42,12 +42,33 @@
             vs.seleccionado=[];
             vs.pagadores=[];
             vs.grupos=[];
+            vs.total=0;
             vs.mensaje=[                    
                 {
                     mensaje:'',
                     tipo:''
                 }
             ];
+            $('.form_datetime').datetimepicker({
+                language:  'es',
+                weekStart: 1,
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                forceParse: 0,
+                showMeridian: 0
+            })
+            .on('changeDate', function(ev){
+                var ind = vs.gastos.indexOf(vs.seleccionado);
+                //console.log(ev.date);
+                vs.gastos[ind].fecha=$('#fecha').val();                                
+                if(vs.gastos[ind].estado!="a"){ 
+                    vs.gastos[ind].estado='m';
+                }
+                $scope.$apply()
+                //console.log(vs.gastos[ind].fecha);
+            });
             servicios.recuperagrupos().success(function(data){
                 vs.grupos=data[0].datos;        
                 //console.log(vs.grupos);
@@ -73,6 +94,7 @@
                 }     
                 vs.gastos=data;
                 vs.seleccionado=vs.gastos[0];
+                vs.calcula_total();
                 if(vs.seleccionado.resultado==0){
                     $location.path("/login");
                 }
@@ -84,6 +106,14 @@
                 }
                 //vs.modificado=true;
                 //console.log(vs.seleccionado);
+            }
+            vs.calcula_total= function(){
+                vs.total=0;
+                for(i=0;i<vs.gastos.length;i++){
+                    if(vs.gastos[i].estado!='d'){
+                        vs.total=vs.total + vs.gastos[i].importe;
+                    }
+                }
             }
             vs.addgasto= function(){
                 grupo={"id":"","nombre":""};
@@ -124,6 +154,7 @@
                 }
                 if(vs.seleccionado.estado!="a"){ 
                     vs.seleccionado.estado='m';
+                    vs.calcula_total();
                 }                
             }  
           vs.pagar= function(obj){
@@ -134,9 +165,20 @@
                 }
                 if(vs.seleccionado.estado!="a"){ 
                     vs.seleccionado.estado='m';
+                    vs.calcula_total();
+                }
+          } 
+          vs.apagar_todo= function(obj){
+                obj.importe_pagar = vs.seleccionado.importe;
+                if(obj.estado!="a"){ 
+                    obj.estado="m"; 
+                //vs.modificado=true;
+                }
+                if(vs.seleccionado.estado!="a"){ 
+                    vs.seleccionado.estado='m';
                 }
           }            
-            vs.guardar= function(){
+          vs.guardar= function(){
                 servicios.enviargastos(vs.gastos).success(function(data){
                     if(data[0].Modificados>0){
                          vs.mensaje.mensaje= data[0].Modificados + " registros modificados; ";
@@ -192,7 +234,9 @@
                 }
                 if(vs.seleccionado.estado!="a"){ 
                     vs.seleccionado.estado='m';
+                    
                 }
+                vs.calcula_total();
                 //console.log(vs.gastos);
             }
             vs.removegasto= function(obj){
@@ -204,6 +248,7 @@
                         obj.estado="d"; 
                         //vs.modificado=true;
                     }
+                    vs.calcula_total();
                     for(i=vs.gastos.length -1;i>0;i--){
                         if(vs.gastos[i].estado!="d"){
                             existe = i;

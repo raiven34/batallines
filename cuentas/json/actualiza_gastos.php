@@ -18,9 +18,9 @@ for ($a=0; $a<$tam; $a++) {
         $grupoid= $data_back[$a]->grupo->id;
 	if($estado=='a'){
             if($grupoid!=''){
-                $query = "insert into gastos (nombre,descripcion,peridiocidad,grupo,importe) values('" . $nombre . "','" . $descripcion .  "'," . $peridiocidad . "," . $grupoid . "," . $importe . ")";
+                $query = "insert into gastos (nombre,descripcion,peridiocidad,grupo,importe,fecha) values('" . $nombre . "','" . $descripcion .  "'," . $peridiocidad . "," . $grupoid . "," . $importe . ",'" . $fecha . "')";
             }else{
-                $query = "insert into gastos (nombre,descripcion,peridiocidad,importe) values('" . $nombre . "','" . $descripcion .  "'," . $peridiocidad . "," . $importe . ")";
+                $query = "insert into gastos (nombre,descripcion,peridiocidad,importe,fecha) values('" . $nombre . "','" . $descripcion .  "'," . $peridiocidad . "," . $importe . ",'" . $fecha . "')";
             }
             $inserta = mysql_query ($query, $conexion);
             if(mysql_error()){
@@ -44,12 +44,16 @@ for ($a=0; $a<$tam; $a++) {
                 $datos[0]["Insertados"]=$datos[0]["Insertados"] + 1; 
             }
         }elseif($estado=='m'){
-            $query = "update gastos set nombre='" . $nombre . "' , descripcion='" . $descripcion . "' , peridiocidad=" . $peridiocidad . " , grupo=" . $grupoid . " , importe=" . $importe . " where id=" . $id;
+            $query = "update gastos set nombre='" . $nombre . "' , descripcion='" . $descripcion . "' , peridiocidad=" . $peridiocidad;
+            if ($grupoid!=''){
+              $query= $query . " , grupo=" . $grupoid;  
+            }    
+            $query= $query . " , importe=" . $importe . ", fecha='" . $fecha . "' where id=" . $id;
             $modifica = mysql_query ($query, $conexion);
             if(mysql_error()){
 		$datos[0]["Erroneos"] = $datos[0]["Erroneos"] + 1 ;
-//		echo $query ;
-//                echo mysql_error();
+		echo $query ;
+                echo mysql_error();
             }else{
                 $tam2 = count($pagadores);               
                 for ($i=0; $i<$tam2; $i++) {

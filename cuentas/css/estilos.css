@@ -14,7 +14,7 @@ and open the template in the editor.
 
 }
 .cabecera_tabla{
-    background-color: rgb(59, 52, 52);
+    background-color: rgb(59, 52, 52) !important;
     color: white;
     cursor: pointer;
 }
