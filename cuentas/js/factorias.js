@@ -26,11 +26,11 @@
                     
                     return respuesta;
                 },                
-                recuperagastos:function() {
+                recuperagastos:function(usu,estado) {
                     //console.log(obj);
                     respuesta=[];
                     respuesta=$http({
-                        url: 'json/recupera_gastos.php',
+                        url: 'json/recupera_gastos.php?usuario=' + usu + "&estado=" + estado,
                         method: 'GET',
                         cache:false
                     })

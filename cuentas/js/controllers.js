@@ -41,8 +41,13 @@
             vs.gastos=[];
             vs.seleccionado=[];
             vs.pagadores=[];
+            vs.pagadores2=[];
             vs.grupos=[];
             vs.total=0;
+            vs.total_debo=0;
+            vs.total_deben=0;
+            vs.estado_deuda='0';
+            vs.usuario="Todos";
             vs.mensaje=[                    
                 {
                     mensaje:'',
@@ -74,31 +79,42 @@
                 //console.log(vs.grupos);
 
             });             
-            servicios.recuperapagadores().success(function(data){
-                if(data[0].resultado==0){
-                    $location.path("/login");
-                }else{
-                    //data[0].datos.push({ usuario : "Nuevo"});  
-                    vs.pagadores=data[0].datos;  
-                }
+            
+            vs.cargar= function(){
+                    servicios.recuperagastos(vs.usuario,vs.estado_deuda).success(function(data){
+                        for(i=0;i<data.length;i++){
+                            data[i].estado="n";
+                            for(a=0;a<data[i].pagadores.length;a++){
+                                data[i].pagadores[a].estado="n";
+                            } 
+                        }     
+                        vs.gastos=data;
+                        vs.calcula_total();
+                        vs.seleccionado=vs.gastos[0];
+                        if(vs.seleccionado.resultado==0){
+                            $location.path("/login");
+                        }
+                    }); 
+                    servicios.recuperapagadores().success(function(data){
+                        if(data[0].resultado==0){
+                            $location.path("/login");
+                        }else{
+                            //data[0].datos.push({ usuario : "Nuevo"});  
+                            vs.pagadores=data[0].datos; 
+                            vs.pagadores2=[];
+                            for(a=0;a<vs.pagadores.length;a++){
+                                vs.pagadores2.push(vs.pagadores[a]);
+                            }
+                            vs.pagadores2.push({ usuario : "Todos"}); 
+//                            console.log(vs.pagadores);
+                        }
 
-                //console.log(vs.pagadores);
+                        //console.log(vs.pagadores);
 
-            });            
-            servicios.recuperagastos().success(function(data){
-                for(i=0;i<data.length;i++){
-                    data[i].estado="n";
-                    for(a=0;a<data[i].pagadores.length;a++){
-                        data[i].pagadores[a].estado="n";
-                    } 
-                }     
-                vs.gastos=data;
-                vs.seleccionado=vs.gastos[0];
-                vs.calcula_total();
-                if(vs.seleccionado.resultado==0){
-                    $location.path("/login");
-                }
-            });
+                    }); 
+                    
+            }
+            
             vs.addinterviniente= function(){
                 vs.seleccionado.pagadores.push({"usuario": "Nuevo", "gasto": vs.seleccionado.id, id: "", "importe_pagado": 0.00, "importe_pagar" : 0.00, "estado" : "a"});
                 if(vs.seleccionado.estado!="a"){ 
@@ -109,9 +125,20 @@
             }
             vs.calcula_total= function(){
                 vs.total=0;
+                vs.total_deben=0;
+                vs.total_debo=0;
                 for(i=0;i<vs.gastos.length;i++){
                     if(vs.gastos[i].estado!='d'){
                         vs.total=vs.total + vs.gastos[i].importe;
+                        for(a=0;a<vs.gastos[i].pagadores.length;a++){
+                            if(vs.gastos[i].pagadores[a].usuario==vs.usuario){
+                                if(vs.gastos[i].pagadores[a].importe_pagado>vs.gastos[i].pagadores[a].importe_pagar){
+                                    vs.total_deben = vs.total_deben + (vs.gastos[i].pagadores[a].importe_pagado - vs.gastos[i].pagadores[a].importe_pagar);
+                                }else if(vs.gastos[i].pagadores[a].importe_pagado<vs.gastos[i].pagadores[a].importe_pagar){
+                                    vs.total_debo = vs.total_debo + (vs.gastos[i].pagadores[a].importe_pagar - vs.gastos[i].pagadores[a].importe_pagado);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -177,7 +204,17 @@
                 if(vs.seleccionado.estado!="a"){ 
                     vs.seleccionado.estado='m';
                 }
-          }            
+          } 
+          vs.pagar_todo= function(obj){
+                obj.importe_pagado = vs.seleccionado.importe;
+                if(obj.estado!="a"){ 
+                    obj.estado="m"; 
+                //vs.modificado=true;
+                }
+                if(vs.seleccionado.estado!="a"){ 
+                    vs.seleccionado.estado='m';
+                }
+          }           
           vs.guardar= function(){
                 servicios.enviargastos(vs.gastos).success(function(data){
                     if(data[0].Modificados>0){
@@ -196,30 +233,7 @@
                          vs.mensaje.mensaje= vs.mensaje.mensaje + data[0].Erroneos + " registros erroneos; ";
                          vs.mensaje.tipo="e";
                     }
-                    servicios.recuperagastos().success(function(data){
-                        for(i=0;i<data.length;i++){
-                            data[i].estado="n";
-                            for(a=0;a<data[i].pagadores.length;a++){
-                                data[i].pagadores[a].estado="n";
-                            } 
-                        }     
-                        vs.gastos=data;
-                        vs.seleccionado=vs.gastos[0];
-                        if(vs.seleccionado.resultado==0){
-                            $location.path("/login");
-                        }
-                    }); 
-                    servicios.recuperapagadores().success(function(data){
-                        if(data[0].resultado==0){
-                            $location.path("/login");
-                        }else{
-                            //data[0].datos.push({ usuario : "Nuevo"});  
-                            vs.pagadores=data[0].datos;  
-                        }
-
-                        //console.log(vs.pagadores);
-
-                    });                    
+                    vs.cargar();
                 });              
                 console.log(vs.gastos);
             }
@@ -269,6 +283,7 @@
                     vs.mensaje.tipo="e";
                 }
             }
+            vs.cargar();
             
         })                 
  

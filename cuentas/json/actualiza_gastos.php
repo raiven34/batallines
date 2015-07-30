@@ -52,8 +52,8 @@ for ($a=0; $a<$tam; $a++) {
             $modifica = mysql_query ($query, $conexion);
             if(mysql_error()){
 		$datos[0]["Erroneos"] = $datos[0]["Erroneos"] + 1 ;
-		echo $query ;
-                echo mysql_error();
+//		echo $query ;
+//                echo mysql_error();
             }else{
                 $tam2 = count($pagadores);               
                 for ($i=0; $i<$tam2; $i++) {
