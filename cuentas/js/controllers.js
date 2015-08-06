@@ -48,6 +48,10 @@
             vs.total_deben=0;
             vs.estado_deuda='0';
             vs.usuario="Todos";
+            vs.currPage = 0;
+            vs.pageSize = 10;
+            vs.predicate = 'id';
+            vs.reverse = true;
             vs.mensaje=[                    
                 {
                     mensaje:'',
@@ -79,7 +83,13 @@
                 //console.log(vs.grupos);
 
             });             
-            
+            vs.totalpaginas = function() {
+                    return Math.ceil(vs.gastos.length / vs.pageSize);
+            };
+            vs.order = function(predicate) {
+                vs.reverse = (vs.predicate === predicate) ? !vs.reverse : false;
+                vs.predicate = predicate;
+            };          
             vs.cargar= function(){
                     servicios.recuperagastos(vs.usuario,vs.estado_deuda).success(function(data){
                         for(i=0;i<data.length;i++){
@@ -183,7 +193,19 @@
                     vs.seleccionado.estado='m';
                     vs.calcula_total();
                 }                
-            }  
+            }
+            vs.liquidar= function(){
+                for(i=0;i<vs.seleccionado.pagadores.length;i++){
+                    vs.seleccionado.pagadores[i].importe_pagado = vs.seleccionado.pagadores[i].importe_pagar;
+                    if(vs.seleccionado.pagadores[i].estado!="a" && vs.seleccionado.pagadores[i].estado!="d"){ 
+                        vs.seleccionado.pagadores[i].estado="m"; 
+                    }
+                }
+                if(vs.seleccionado.estado!="a"){ 
+                  vs.seleccionado.estado='m';
+                  vs.calcula_total();
+                }
+            }             
           vs.pagar= function(obj){
                 obj.importe_pagado = obj.importe_pagar;
                 if(obj.estado!="a"){ 
@@ -285,5 +307,11 @@
             }
             vs.cargar();
             
-        })                 
+        })
+        .filter('startFrom', function() {
+	return function(input, start) {
+		start = +start;
+		return input.slice(start);
+	}
+        });
  

@@ -18,6 +18,16 @@ and open the template in the editor.
     color: white;
     cursor: pointer;
 }
+.cabecera_pagar{
+    background-color: #EA4444 !important;
+    color: white;
+    
+}
+.cabecera_deben{
+    background-color: green !important;
+    color: white;
+    
+}
 .paddingimg{
     padding: 2px !important;
 }

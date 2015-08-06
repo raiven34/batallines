@@ -12,17 +12,17 @@
                 <table class="table table-striped">
                   <thead>
                       <tr class="cabecera_tabla">
-                          <th>Id</th>
-                          <th>Nombre</th>                    
-                          <th>Fecha</th>
-                          <th>Grupo</th>  
-                          <th>Importe</th>
+                          <th ng-click="vs.order('id')">Id</th>
+                          <th ng-click="vs.order('nombre')">Nombre</th>                    
+                          <th ng-click="vs.order('fecha')">Fecha</th>
+                          <th ng-click="vs.order('grupo.nombre')">Grupo</th>  
+                          <th ng-click="vs.order('importe')">Importe</th>
 
                       </tr>
                   </thead>
                   <tbody >
                     <!--<tr ng-repeat="cliente in clientes | startFrom:currPage*pageSize | limitTo:pageSize">-->
-                    <tr style="cursor: pointer;" ng-repeat="gasto in vs.gastos | filter:{ estado:'!d'}" ng-click="vs.cambiaseleccionado(gasto)" ng-class="{'seleccionado': vs.seleccionado==gasto,'modificado': gasto.estado=='m','nuevo' : gasto.estado=='a'}">
+                    <tr style="cursor: pointer;" ng-repeat="gasto in vs.gastos | filter:{ estado:'!d'} | startFrom:vs.currPage*vs.pageSize | limitTo:vs.pageSize | orderBy:vs.predicate:vs.reverse" ng-click="vs.cambiaseleccionado(gasto)" ng-class="{'seleccionado': vs.seleccionado==gasto,'modificado': gasto.estado=='m','nuevo' : gasto.estado=='a'}">
                       <td class="col-xs-2 col-lg-2 col-md-2 col-sm-2">{{gasto.id}}</td>
                       <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1">{{gasto.nombre}}</td>
                       <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1">{{gasto.fecha}}</td>
@@ -37,14 +37,14 @@
                         <td></td>
                         <td>{{vs.total | number:2}}€</td>
                     </tr>
-                    <tr class="cabecera_tabla" ng-show="vs.usuario!='Todos' && vs.estado_deuda!=1">
+                    <tr class="cabecera_deben" ng-show="vs.usuario!='Todos' && vs.estado_deuda!=1">
                         <td>TOTAL ME DEBEN</td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td>{{vs.total_deben | number:2}}€</td>
                     </tr>
-                    <tr class="cabecera_tabla" ng-show="vs.usuario!='Todos' && vs.estado_deuda!=2">
+                    <tr class="cabecera_pagar" ng-show="vs.usuario!='Todos' && vs.estado_deuda!=2">
                         <td>TOTAL DEBO</td>
                         <td></td>
                         <td></td>
@@ -53,6 +53,13 @@
                     </tr>                     
                   </tbody>
                 </table>
+                <button  class="btn btn-small" ng-disabled="vs.currPage == 0" ng-click="vs.currPage=vs.currPage-1">
+                    <i class="icon-backward"></i> <a onclick="$('html,body').animate({scrollTop:0},'slow');return false;">Anterior</a>
+                </button>
+                <button  class="btn btn-small" ng-disabled="vs.currPage >= vs.gastos.length/vs.pageSize - 1" ng-click="vs.currPage=vs.currPage+1">
+                    <i class=" icon-forward"></i> <a  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">Siguiente</a>
+                </button> 
+                Pagina: {{vs.currPage+1}} de {{vs.totalpaginas()}}  
     </div>
     <div class="placeholders"><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.addgasto()" ng-disabled="!form.$valid">Añadir</button><button type="button" class="btn btn-danger marginbotlow" ng-click="vs.removegasto(vs.seleccionado)" ng-disabled="!form.$valid">Borrar</button><button type="button" class="btn btn-success marginbotlow" ng-click="vs.duplicagasto(vs.seleccionado)" ng-disabled="!form.$valid">Duplicar</button></div>
 
@@ -122,7 +129,7 @@
                                   </tbody>
                                 </table>
                     </div>  
-                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 placeholders margintoplow"><button type="button" class="btn btn-primary" ng-click="vs.addinterviniente()">Añadir</button><button type="button" class="btn btn-success" ng-click="vs.igualar()">Igualar</button></div>
+                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 placeholders margintoplow"><button type="button" class="btn btn-primary" ng-click="vs.addinterviniente()">Añadir</button><button type="button" class="btn btn-success" ng-click="vs.igualar()">Igualar</button><button type="button" class="btn btn-success" ng-click="vs.liquidar()">Liquidar</button></div>
                 </div>
             </div>
           
