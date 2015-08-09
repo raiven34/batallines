@@ -99,3 +99,9 @@ h4>a{
 #form{
     background-color: transparent !important;
 }
+.sortorder:after {
+content: '\25b2';
+}
+.sortorder.reverse:after {
+content: '\25bc';
+}

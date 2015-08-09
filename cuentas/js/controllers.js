@@ -43,11 +43,13 @@
             vs.pagadores=[];
             vs.pagadores2=[];
             vs.grupos=[];
+            vs.grupos2=[];
             vs.total=0;
             vs.total_debo=0;
             vs.total_deben=0;
             vs.estado_deuda='0';
             vs.usuario="Todos";
+            vs.grupo="0";
             vs.currPage = 0;
             vs.pageSize = 10;
             vs.predicate = 'id';
@@ -78,11 +80,7 @@
                 $scope.$apply()
                 //console.log(vs.gastos[ind].fecha);
             });
-            servicios.recuperagrupos().success(function(data){
-                vs.grupos=data[0].datos;        
-                //console.log(vs.grupos);
-
-            });             
+            
             vs.totalpaginas = function() {
                     return Math.ceil(vs.gastos.length / vs.pageSize);
             };
@@ -91,7 +89,7 @@
                 vs.predicate = predicate;
             };          
             vs.cargar= function(){
-                    servicios.recuperagastos(vs.usuario,vs.estado_deuda).success(function(data){
+                    servicios.recuperagastos(vs.usuario,vs.estado_deuda,vs.grupo).success(function(data){
                         for(i=0;i<data.length;i++){
                             data[i].estado="n";
                             for(a=0;a<data[i].pagadores.length;a++){
@@ -121,7 +119,17 @@
 
                         //console.log(vs.pagadores);
 
-                    }); 
+                    });
+                    servicios.recuperagrupos().success(function(data){
+                        vs.grupos=data[0].datos;
+                        vs.grupos2=[];
+                        for(a=0;a<vs.grupos.length;a++){
+                                    vs.grupos2.push(vs.grupos[a]);
+                        }
+                        vs.grupos2.push({ id : "0" , nombre : 'Todos'}); 
+                        //console.log(vs.grupos);
+
+                    });                     
                     
             }
             

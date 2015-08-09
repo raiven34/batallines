@@ -4,7 +4,9 @@ if ( ISSET($_SESSION["usuario"]) && ISSET($_SESSION["password"]) ){
 
     require_once '../../conexion.php';
     $query="select *, (select nombre from grupos where id=grupo) as nombre_grupo from gastos";
+    $haywhere=FALSE;
     if(isset($_REQUEST['usuario']) && $_REQUEST['usuario']!='Todos'){
+        $haywhere=TRUE;
         if(isset($_REQUEST['estado']) && $_REQUEST['estado']!=0){
             if($_REQUEST['estado']==1){
                 $query= $query . " where id in(select gasto from  gastos_usuarios where usuario='" . $_REQUEST['usuario'] ."'  and importe_pagar>importe_pagado)"  ;  
@@ -14,7 +16,15 @@ if ( ISSET($_SESSION["usuario"]) && ISSET($_SESSION["password"]) ){
         }else{
             $query= $query . " where id in(select gasto from  gastos_usuarios where usuario='" . $_REQUEST['usuario'] ."')"  ;  
         }
+
 //    echo $query;
+    }
+    if(isset($_REQUEST['grupo']) && $_REQUEST['grupo']!=0){
+        if($haywhere){
+            $query= $query . " and grupo=" . $_REQUEST['grupo'];
+        }  else {
+            $query= $query . " where grupo=" . $_REQUEST['grupo'];
+        }
     }
     $res = mysql_query($query, $conexion) or die(mysql_error());
 
