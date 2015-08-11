@@ -7,6 +7,21 @@
                             <option value="2">Me Deben</option>
     </select>
     <select id="grupo" name="grupo" ng-options="grupo.id as grupo.nombre for grupo in vs.grupos2" ng-model="vs.grupo" ng-change="vs.cargar();vs.currPage=0"></select>
+    <select id="estado" name="mes" ng-model="vs.mes" ng-change="vs.cargar();vs.currPage=0">       
+                            <option value="0">Todos</option>
+                            <option value="01">Enero</option>
+                            <option value="02">Febrero</option>
+                            <option value="03">Marzo</option>
+                            <option value="04">Abril</option>
+                            <option value="05">Mayo</option>
+                            <option value="06">Junio</option>
+                            <option value="07">Julio</option>
+                            <option value="08">Agosto</option>
+                            <option value="09">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
+    </select>    
 </div>
 <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 margintoplow">
     <div class="table-responsive img-rounded marginbotlow" style="border: 1px solid #A6A6A6;">

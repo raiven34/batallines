@@ -49,6 +49,7 @@
             vs.total_deben=0;
             vs.estado_deuda='0';
             vs.usuario="Todos";
+            vs.mes="0";
             vs.grupo="0";
             vs.currPage = 0;
             vs.pageSize = 10;
@@ -89,7 +90,7 @@
                 vs.predicate = predicate;
             };          
             vs.cargar= function(){
-                    servicios.recuperagastos(vs.usuario,vs.estado_deuda,vs.grupo).success(function(data){
+                    servicios.recuperagastos(vs.usuario,vs.estado_deuda,vs.grupo,vs.mes).success(function(data){
                         for(i=0;i<data.length;i++){
                             data[i].estado="n";
                             for(a=0;a<data[i].pagadores.length;a++){

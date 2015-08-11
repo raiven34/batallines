@@ -24,8 +24,18 @@ if ( ISSET($_SESSION["usuario"]) && ISSET($_SESSION["password"]) ){
             $query= $query . " and grupo=" . $_REQUEST['grupo'];
         }  else {
             $query= $query . " where grupo=" . $_REQUEST['grupo'];
+            $haywhere=TRUE;
         }
     }
+    if(isset($_REQUEST['mes']) && $_REQUEST['mes']!=0){
+        if($haywhere){
+            $query= $query . " and fecha like('%-" . $_REQUEST['mes'] . "-%')";
+        }  else {
+            $query= $query . " where fecha like('%-" . $_REQUEST['mes'] . "-%')";
+            
+        }
+    }
+//    echo $query;
     $res = mysql_query($query, $conexion) or die(mysql_error());
 
         if(mysql_affected_rows()>0){
