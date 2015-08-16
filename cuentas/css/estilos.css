@@ -84,6 +84,9 @@ h4>a{
 .nuevo{
     color: rgb(95, 197, 17) !important;
 }
+.remove{
+    color: rgb(255, 0, 0) !important;
+}
 .deudor{
     color: red;
 }

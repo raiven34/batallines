@@ -294,12 +294,12 @@
                         //vs.modificado=true;
                     }
                     vs.calcula_total();
-                    for(i=vs.gastos.length -1;i>0;i--){
-                        if(vs.gastos[i].estado!="d"){
-                            existe = i;
-                        }
-                    }
-                    vs.seleccionado = vs.gastos[existe];
+//                    for(i=vs.gastos.length -1;i>0;i--){
+//                        if(vs.gastos[i].estado!="d"){
+//                            existe = i;
+//                        }
+//                    }
+//                    vs.seleccionado = vs.gastos[existe];
             }            
             vs.changeView = function(url){
                 $location.path(url);
