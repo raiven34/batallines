@@ -29,7 +29,7 @@ for ($a=0; $a<$tam; $a++) {
 //                echo mysql_error();
             }else{
                 $tam2 = count($pagadores);
-                $queryid="select id from gastos where nombre='" . $nombre ."'";
+                $queryid="select id from gastos order by id desc limit 0,1";
                 $resid= mysql_query ($queryid, $conexion);
                 $rowid = mysql_fetch_array($resid);
                 for ($i=0; $i<$tam2; $i++) {

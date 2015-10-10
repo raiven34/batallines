@@ -33,53 +33,66 @@
                           <th ng-click="vs.order('fecha')">Fecha<span class="sortorder" ng-show="vs.predicate === 'fecha'" ng-class="{reverse:vs.reverse}"></span></th>
                           <th ng-click="vs.order('grupo.nombre')">Grupo<span class="sortorder" ng-show="vs.predicate === 'grupo.nombre'" ng-class="{reverse:vs.reverse}"></span></th>  
                           <th ng-click="vs.order('importe')">Importe<span class="sortorder" ng-show="vs.predicate === 'importe'" ng-class="{reverse:vs.reverse}"></span></th>
-
+                          <th ng-click="vs.order('estado_fac')">Estado<span class="sortorder" ng-show="vs.predicate === 'estado_fac'" ng-class="{reverse:vs.reverse}"></span></th>
                       </tr>
                   </thead>
                   <tbody >
                     <!--<tr ng-repeat="cliente in clientes | startFrom:currPage*pageSize | limitTo:pageSize">-->
                     <tr style="cursor: pointer;" ng-repeat="gasto in vs.gastos  | orderBy:vs.predicate:vs.reverse | startFrom:vs.currPage*vs.pageSize | limitTo:vs.pageSize" ng-click="vs.cambiaseleccionado(gasto)" ng-class="{'seleccionado': vs.seleccionado==gasto,'modificado': gasto.estado=='m','nuevo' : gasto.estado=='a','remove' : gasto.estado=='d'}">
-                      <td class="col-xs-2 col-lg-2 col-md-2 col-sm-2">{{gasto.id}}</td>
-                      <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1">{{gasto.nombre}}</td>
-                      <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1">{{gasto.fecha}}</td>
-                      <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1">{{gasto.grupo.nombre}}</td>
+                      <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1">{{gasto.id}}</td>
+                      <td class="col-xs-3 col-lg-3 col-md-3 col-sm-3">{{gasto.nombre}}</td>
+                      <td class="col-xs-3 col-lg-3 col-md-3 col-sm-3">{{gasto.fecha}}</td>
+                      <td class="col-xs-3 col-lg-3 col-md-3 col-sm-3">{{gasto.grupo.nombre}}</td>
                       <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1">{{gasto.importe | number:2}} €</td>
-                      
+                      <td class="col-xs-1 col-lg-1 col-md-1 col-sm-1"><i class="glyphicon" ng-class="{'glyphicon-ok-sign': gasto.estado_fac=='p','glyphicon-remove-sign': gasto.estado_fac=='n'}"></i></td>
                     </tr>
                     <tr class="cabecera_tabla">
-                        <td>TOTAL FACTURAS</td>
+                        <td>TOTAL</td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td>{{vs.total | number:2}}€</td>
+                        <td></td>
                     </tr>
                     <tr class="cabecera_deben" ng-show="vs.usuario!='Todos' && vs.estado_deuda!=1">
-                        <td>TOTAL ME DEBEN</td>
+                        <td>ME DEBEN</td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td>{{vs.total_deben | number:2}}€</td>
+                        <td></td>
                     </tr>
                     <tr class="cabecera_pagar" ng-show="vs.usuario!='Todos' && vs.estado_deuda!=2">
-                        <td>TOTAL DEBO</td>
+                        <td>DEBO</td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td>{{vs.total_debo | number:2}}€</td>
-                    </tr>                     
+                        <td></td>
+                    </tr>
+                    <tr class="cabecera_tabla" ng-show="vs.usuario!='Todos' && vs.estado_deuda==0">
+                        <td>BALANCE</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>{{vs.total_deben - vs.total_debo | number:2}}€</td>
+                        <td></td>
+                    </tr>                    
                   </tbody>
                 </table>
-                <div class="placeholders">
-                        <button  class="btn btn-small" ng-disabled="vs.currPage == 0" ng-click="vs.currPage=vs.currPage-1">
-                            <i class="icon-backward"></i> <a onclick="$('html,body').animate({scrollTop:0},'slow');return false;">Anterior</a>
-                        </button>
-                        <button  class="btn btn-small" ng-disabled="vs.currPage >= vs.gastos.length/vs.pageSize - 1" ng-click="vs.currPage=vs.currPage+1">
-                            <i class=" icon-forward"></i> <a  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">Siguiente</a>
-                        </button> 
-                        Pagina: {{vs.currPage+1}} de {{vs.totalpaginas()}}  
-                </div>
     </div>
-    <div class="placeholders"><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.addgasto()" ng-disabled="!form.$valid">Añadir</button><button type="button" class="btn btn-danger marginbotlow" ng-click="vs.removegasto(vs.seleccionado)" ng-disabled="!form.$valid">Borrar</button><button type="button" class="btn btn-success marginbotlow" ng-click="vs.duplicagasto(vs.seleccionado)" ng-disabled="!form.$valid">Duplicar</button></div>
+    <div class="placeholders">
+            <i class="glyphicon glyphicon-backward" ng-disabled="vs.currPage == 0" ng-click="vs.currPage=0"></i>
+            <button  class="btn btn-small" ng-disabled="vs.currPage == 0" ng-click="vs.currPage=vs.currPage-1">
+                <i class="icon-backward"></i> <a onclick="$('html,body').animate({scrollTop:0},'slow');return false;">Anterior</a>
+            </button>
+            <button  class="btn btn-small" ng-disabled="vs.currPage >= vs.gastos.length/vs.pageSize - 1" ng-click="vs.currPage=vs.currPage+1">
+                <i class=" icon-forward"></i> <a  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">Siguiente</a>
+            </button> 
+            <i class="glyphicon glyphicon-forward" ng-click="vs.currPage=vs.totalpaginas() - 1"></i>
+            Pagina: {{vs.currPage+1}} de {{vs.totalpaginas()}}  
+    </div>
+    <div class="placeholders"><button type="button" class="btn btn-primary marginbotlow" ng-click="vs.addgasto()" ng-disabled="!form.$valid">Añadir</button><button type="button" class="btn btn-danger marginbotlow" ng-click="vs.removegasto(vs.seleccionado)" ng-disabled="!form.$valid">Borrar</button><button type="button" class="btn btn-success marginbotlow" ng-click="vs.duplicagasto(vs.seleccionado)" ng-disabled="!form.$valid">Duplicar</button><button type="button" class="btn btn-info marginbotlow" ng-click="vs.liquidar(vs.seleccionado)" ng-disabled="!form.$valid">Liquidar</button></div>
 
     <form id="form" name="form"> 
         <div class="row margintoplow">
@@ -93,15 +106,15 @@
                                                 <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                         </div>
                     </div>                    
-                    <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 marginbotlow"><label for="nombre">Nombre:</label><input id="nombre" name="nombre" type="text" class="form-control" ng-model="vs.seleccionado.nombre" ng-change="vs.modificagasto(vs.seleccionado)" ng-pattern="/^[a-zñÑáéíóúÁÉÍÓÚ\d_ ]{4,30}$/i" required/></div>
-                    <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4 marginbotlow"><label for="nombre">Importe(€):</label><input id="importe" name="importe" type="number" class="form-control" ng-model="vs.seleccionado.importe" ng-maxlength="9" ng-change="vs.modificagasto(vs.seleccionado)" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" required/><span class="help-block">Is a valid decimal? {{form.importe.$valid}}</span></div>
-                    <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 marginbotlow"><label for="nombre">Grupo:</label><select id="pagador" name="pagador" class="form-control"  ng-model="vs.seleccionado.grupo" ng-options="grupo as grupo.nombre for grupo in vs.grupos track by grupo.id" ng-change="vs.modificagasto(vs.seleccionado)"></select></div>
-                    <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 marginbotlow"><label for="nombre">Peridiocidad:</label><select id="peridiocidad" name="peridiocidad" class="form-control"  ng-model="vs.seleccionado.peridiocidad" ng-change="vs.modificagasto(vs.seleccionado)">       
+                    <div class="col-xs-12 col-lg-3 col-md-3 col-sm-12 marginbotlow"><label for="nombre">Nombre:</label><input id="nombre" name="nombre" type="text" class="form-control" ng-model="vs.seleccionado.nombre" ng-change="vs.modificagasto(vs.seleccionado)" ng-pattern="/^[a-zñÑáéíóúÁÉÍÓÚ\d_ ]{4,30}$/i" required/></div>
+                    <div class="col-xs-12 col-lg-4 col-md-4 col-sm-12 marginbotlow"><label for="nombre">Importe(€):</label><input id="importe" name="importe" type="number" class="form-control" ng-model="vs.seleccionado.importe" ng-maxlength="9" ng-change="vs.modificagasto(vs.seleccionado)" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" required/><span class="help-block" ng-show="!form.importe.$valid">Introduzca un valor numerico</span></div>
+                    <div class="col-xs-12 col-lg-2 col-md-2 col-sm-12 marginbotlow"><label for="nombre">Grupo:</label><select id="pagador" name="pagador" class="form-control"  ng-model="vs.seleccionado.grupo" ng-options="grupo as grupo.nombre for grupo in vs.grupos track by grupo.id" ng-change="vs.modificagasto(vs.seleccionado)"></select></div>
+                    <div class="col-xs-12 col-lg-3 col-md-3 col-sm-12 marginbotlow"><label for="nombre">Peridiocidad:</label><select id="peridiocidad" name="peridiocidad" class="form-control"  ng-model="vs.seleccionado.peridiocidad" ng-change="vs.modificagasto(vs.seleccionado)">       
                             <option value="0">Ninguna</option>
                             <option value="1">Mensual</option>   
                     </select></div>
                     <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12"><label for="nombre">Descripción:</label></div>
-                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow"><textarea class="col-xs-12 col-lg-12 col-md-12 col-sm-12 form-control" id="descripcion" name="descripcion" ng-model="vs.seleccionado.descripcion" ng-change="vs.modificagasto(vs.seleccionado)" ng-pattern="/^[a-zñÑáéíóúÁÉÍÓÚ\d\n/_ ]{0,100}$/i"></textarea></div>
+                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow"><textarea class="col-xs-12 col-lg-12 col-md-12 col-sm-12 form-control" id="descripcion" name="descripcion" ng-model="vs.seleccionado.descripcion" ng-change="vs.modificagasto(vs.seleccionado)" ng-pattern="/^[a-zñÑáéíóúÁÉÍÓÚ,.;\d\n/_ ]{0,100}$/i"></textarea></div>
                     
 
                 </div>

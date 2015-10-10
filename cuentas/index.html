@@ -60,7 +60,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right" ng-controller="navCtrl as nav">
-            <li><a href="#/principal">Principal</a></li>
+            <li><a href="#/principal" ng-class="{menuselect: nav.estoy('/principal')}">Principal</a></li>
             <li><a href="#/login">Grupos</a></li>
             <li><a href="#/login">Ingresar</a></li>
           </ul>

@@ -9,7 +9,7 @@
                         url: 'json/login.php',
                         method: 'POST',
                         data: obj
-                    })
+                    });
                     //temporadas.push({"temporada":"Todas"});
                     
                     return respuesta;

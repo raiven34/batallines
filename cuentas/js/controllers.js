@@ -93,10 +93,14 @@
                     servicios.recuperagastos(vs.usuario,vs.estado_deuda,vs.grupo,vs.mes).success(function(data){
                         for(i=0;i<data.length;i++){
                             data[i].estado="n";
+                            data[i].estado_fac="p";
                             for(a=0;a<data[i].pagadores.length;a++){
                                 data[i].pagadores[a].estado="n";
+                                if(data[i].pagadores[a].importe_pagado != data[i].pagadores[a].importe_pagar){
+                                    data[i].estado_fac="n";
+                                }
                             } 
-                        }     
+                        }
                         vs.gastos=data;
                         vs.calcula_total();
                         vs.seleccionado=vs.gastos[0];
@@ -142,6 +146,14 @@
                 //vs.modificado=true;
                 //console.log(vs.seleccionado);
             }
+            vs.actualiza_estado= function(){
+                vs.seleccionado.estado_fac="p";
+                for(a=0;a<vs.seleccionado.pagadores.length;a++){
+                    if(vs.seleccionado.pagadores[a].importe_pagado != vs.seleccionado.pagadores[a].importe_pagar){
+                        vs.seleccionado.estado_fac="n";
+                    }                  
+                }
+            }
             vs.calcula_total= function(){
                 vs.total=0;
                 vs.total_deben=0;
@@ -164,7 +176,7 @@
             vs.addgasto= function(){
                 grupo={"id":"","nombre":""};
                 pagadores=[];
-                vs.gastos.push({"id":"","nombre":"","descripcion":"","grupo":grupo,"importe":0.00,"peridiocidad":"0","fecha":"","pagadores": pagadores,"estado":"a"});
+                vs.gastos.push({"id":"","nombre":"","descripcion":"","grupo":grupo,"importe":0.00,"peridiocidad":"0","fecha":"","pagadores": pagadores,"estado":"a","estado_fac":"n"});
                 vs.seleccionado = vs.gastos[vs.gastos.length-1];
                 //vs.modificado=true;
                 //console.log(vs.gastos);
@@ -204,6 +216,7 @@
                 }                
             }
             vs.liquidar= function(){
+                vs.seleccionado.estado_fac='p';
                 for(i=0;i<vs.seleccionado.pagadores.length;i++){
                     vs.seleccionado.pagadores[i].importe_pagado = vs.seleccionado.pagadores[i].importe_pagar;
                     if(vs.seleccionado.pagadores[i].estado!="a" && vs.seleccionado.pagadores[i].estado!="d"){ 
@@ -225,6 +238,7 @@
                     vs.seleccionado.estado='m';
                     vs.calcula_total();
                 }
+                vs.actualiza_estado();
           } 
           vs.apagar_todo= function(obj){
                 obj.importe_pagar = vs.seleccionado.importe;
@@ -235,6 +249,7 @@
                 if(vs.seleccionado.estado!="a"){ 
                     vs.seleccionado.estado='m';
                 }
+                vs.actualiza_estado();
           } 
           vs.pagar_todo= function(obj){
                 obj.importe_pagado = vs.seleccionado.importe;
@@ -245,6 +260,7 @@
                 if(vs.seleccionado.estado!="a"){ 
                     vs.seleccionado.estado='m';
                 }
+                vs.actualiza_estado();
           }           
           vs.guardar= function(){
                 servicios.enviargastos(vs.gastos).success(function(data){
@@ -281,7 +297,8 @@
                     vs.seleccionado.estado='m';
                     
                 }
-                vs.calcula_total();
+                vs.calcula_total(); 
+                vs.actualiza_estado();
                 //console.log(vs.gastos);
             }
             vs.removegasto= function(obj){
@@ -303,7 +320,7 @@
             }            
             vs.changeView = function(url){
                 $location.path(url);
-            }  
+            }           
             vs.cambiaseleccionado = function(obj){
                 if($scope.form.$valid){
                     vs.seleccionado=obj;
