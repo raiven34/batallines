@@ -4,7 +4,7 @@ $datos[] = array("resultado" => "0","datos" =>"") ;
 if ( ISSET($_SESSION["usuario"]) && ISSET($_SESSION["password"]) ){ 
 
     require_once '../../conexion.php';
-    $query="select distinct(nombre) from gastos";
+    $query="select distinct(nombre) from gastos order by nombre";
     $res = mysql_query($query, $conexion) or die(mysql_error());
 
         if(mysql_affected_rows()>0){

@@ -198,6 +198,7 @@
                 pagadores=[];
                 vs.gastos.push({"id":"","nombre":"","descripcion":"","grupo":grupo,"importe":0.00,"peridiocidad":"0","fecha":"","pagadores": pagadores,"estado":"a","estado_fac":"n"});
                 vs.seleccionado = vs.gastos[vs.gastos.length-1];
+                vs.currPage=vs.totalpaginas()-1;
                 //vs.modificado=true;
                 //console.log(vs.gastos);
             } 
@@ -307,6 +308,7 @@
             vs.duplicagasto= function(obj){
                 vs.gastos.push({"id":"","nombre": obj.nombre + '_copia',"descripcion":obj.descripcion,"grupo":obj.grupo,"importe":obj.importe,"peridiocidad":obj.peridiocidad,"fecha":"","pagadores": obj.pagadores,"estado":"a"});
                 vs.seleccionado = vs.gastos[vs.gastos.length-1];
+                vs.currPage=vs.totalpaginas()-1;
             }            
             vs.modificagasto= function(obj){
                 if(obj.estado!="a"){

@@ -32,7 +32,7 @@ if ( ISSET($_SESSION["usuario"]) && ISSET($_SESSION["password"]) ){
             $query= $query . " and fecha like('%-" . $_REQUEST['mes'] . "-%')";
         }  else {
             $query= $query . " where fecha like('%-" . $_REQUEST['mes'] . "-%')";
-            
+            $haywhere=TRUE;           
         }
     }
     if(isset($_REQUEST['nombre']) && $_REQUEST['nombre']!='Todos'){
@@ -40,7 +40,7 @@ if ( ISSET($_SESSION["usuario"]) && ISSET($_SESSION["password"]) ){
             $query= $query . " and nombre='" . $_REQUEST['nombre'] . "'";
         }  else {
             $query= $query . " where nombre='" . $_REQUEST['nombre'] . "'";
-            
+            $haywhere=TRUE;
         }
     }    
 //    echo $query;
