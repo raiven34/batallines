@@ -1,6 +1,7 @@
-<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow panel placeholders" ng-show="vs.mensaje.mensaje!=''" ng-class="{'ng-invalid': vs.mensaje.tipo=='e','ng-valid': vs.mensaje.tipo=='s'}" ng-bind="vs.mensaje.mensaje"></div>
-<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow placeholders">
+<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow panel placeholders" ng-show="vs.mensaje.mensaje" ng-class="{'ng-invalid': vs.mensaje.tipo=='e','ng-valid': vs.mensaje.tipo=='s'}" ng-bind="vs.mensaje.mensaje"></div>
+<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow placeholders alert alert-info">
     <label for="pagador">Interviniente1:</label><select id="pagador" name="pagador"  ng-model="vs.usuario" ng-options="pag.usuario as pag.usuario for pag in vs.pagadores2" ng-change="vs.cargar();vs.currPage=0"></select>
+    <label for="nombre">Nombre:</label><select id="nombre" name="nombre"  ng-model="vs.nombre" ng-options="usu.nombre as usu.nombre for usu in vs.nombres2" ng-change="vs.cargar();vs.currPage=0"></select>
     <label for="estado">Estado:</label><select id="estado" name="estado" ng-model="vs.estado_deuda" ng-change="vs.cargar();vs.currPage=0">       
                             <option value="0">Todos</option>
                             <option value="1">A Pagar</option>
@@ -100,7 +101,7 @@
                 <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 panel panel-danger">
                     <h3>Detalle</h3>
                     <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow">
-                        <div class="input-group date form_datetime col-lg-offset-4 col-xs-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-4 col-lg-4 col-md-4 col-sm-4" data-date="" data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input1">
+                        <div class="input-group date form_datetime col-lg-offset-4 col-xs-offset-1 col-md-offset-4 col-sm-offset-4 col-xs-10 col-lg-4 col-md-4 col-sm-4" data-date="" data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input1">
                             <input id="fecha" name="fecha" class="form-control" size="16" type="text" value="" ng-model="vs.seleccionado.fecha">
                             <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                                                 <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>

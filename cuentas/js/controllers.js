@@ -42,6 +42,8 @@
             vs.seleccionado=[];
             vs.pagadores=[];
             vs.pagadores2=[];
+            vs.nombres=[];
+            vs.nombres2=[];
             vs.grupos=[];
             vs.grupos2=[];
             vs.total=0;
@@ -49,6 +51,7 @@
             vs.total_deben=0;
             vs.estado_deuda='0';
             vs.usuario="Todos";
+            vs.nombre="Todos";
             vs.mes="0";
             vs.grupo="0";
             vs.currPage = 0;
@@ -90,7 +93,7 @@
                 vs.predicate = predicate;
             };          
             vs.cargar= function(){
-                    servicios.recuperagastos(vs.usuario,vs.estado_deuda,vs.grupo,vs.mes).success(function(data){
+                    servicios.recuperagastos(vs.usuario,vs.estado_deuda,vs.grupo,vs.mes,vs.nombre).success(function(data){
                         for(i=0;i<data.length;i++){
                             data[i].estado="n";
                             data[i].estado_fac="p";
@@ -125,6 +128,23 @@
                         //console.log(vs.pagadores);
 
                     });
+                    servicios.recuperanombres().success(function(data){
+                        if(data[0].resultado==0){
+                            $location.path("/login");
+                        }else{
+                            //data[0].datos.push({ usuario : "Nuevo"});  
+                            vs.nombres=data[0].datos; 
+                            vs.nombres2=[];
+                            for(a=0;a<vs.nombres.length;a++){
+                                vs.nombres2.push(vs.nombres[a]);
+                            }
+                            vs.nombres2.push({ nombre : "Todos"}); 
+//                            console.log(vs.pagadores);
+                        }
+
+                        //console.log(vs.pagadores);
+
+                    });                    
                     servicios.recuperagrupos().success(function(data){
                         vs.grupos=data[0].datos;
                         vs.grupos2=[];

@@ -35,6 +35,14 @@ if ( ISSET($_SESSION["usuario"]) && ISSET($_SESSION["password"]) ){
             
         }
     }
+    if(isset($_REQUEST['nombre']) && $_REQUEST['nombre']!='Todos'){
+        if($haywhere){
+            $query= $query . " and nombre='" . $_REQUEST['nombre'] . "'";
+        }  else {
+            $query= $query . " where nombre='" . $_REQUEST['nombre'] . "'";
+            
+        }
+    }    
 //    echo $query;
     $res = mysql_query($query, $conexion) or die(mysql_error());
 

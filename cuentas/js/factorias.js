@@ -26,11 +26,11 @@
                     
                     return respuesta;
                 },                
-                recuperagastos:function(usu,estado,grupo,mes) {
+                recuperagastos:function(usu,estado,grupo,mes,nombre) {
                     //console.log(obj);
                     respuesta=[];
                     respuesta=$http({
-                        url: 'json/recupera_gastos.php?usuario=' + usu + "&estado=" + estado + "&grupo=" + grupo + "&mes=" + mes,
+                        url: 'json/recupera_gastos.php?usuario=' + usu + "&estado=" + estado + "&grupo=" + grupo + "&mes=" + mes + "&nombre=" + nombre,
                         method: 'GET',
                         cache:false
                     })
@@ -53,7 +53,16 @@
                         method: 'GET'
                     })
                     return respuesta;
-                }                 
+                },
+                recuperanombres:function() {
+                    //console.log(obj);
+                    respuesta=[];
+                    respuesta=$http({
+                        url: 'json/recupera_nombres.php',
+                        method: 'GET'
+                    })
+                    return respuesta;
+                }                
             }
         })
         .factory ('utilidades',  function ($location) {
