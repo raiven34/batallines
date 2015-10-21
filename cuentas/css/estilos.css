@@ -117,3 +117,6 @@ content: '\25bc';
 .menuselect{
    color: #FFF !important; 
 }
+.alert{
+   margin-bottom: 0px; 
+}

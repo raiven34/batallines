@@ -17,10 +17,10 @@ angular.module('myApp', ['ngRoute','controllerModule'])
     controllerAs:"vs",
     controller: 'principal'
   })
-  .when('/admin/enviar_notificacion', {
-    templateUrl: 'views/enviar_notificacion.html',
+  .when('/graficas', {
+    templateUrl: 'views/graficas.html',
     controllerAs:"vs",
-    controller: 'notificacion'
+    controller: 'graficas'
   })
   .when('/admin/estadisticas', {
     templateUrl: 'views/estadisticas.html',

@@ -36,6 +36,22 @@
                     })
                     return respuesta;
                 },
+                recuperagastosfac:function(filtro,tipo) {
+                    //console.log(obj);
+                    var url="json/recupera_gastos_graf.php?";
+                    if(tipo==0){
+                         url= url + "grupo=" + filtro;
+                    }else{
+                         url= url + "nombre=" + filtro;
+                    }
+                    respuesta=[];
+                    respuesta=$http({
+                        url: url ,
+                        method: 'GET',
+                        cache:false
+                    })
+                    return respuesta;
+                },                
                 recuperapagadores:function() {
                     //console.log(obj);
                     respuesta=[];

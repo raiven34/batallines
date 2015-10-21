@@ -1,0 +1,18 @@
+<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12  sinpadding text-center alert alert-warning">
+    <select id="tipo" name="tipo" ng-model="vs.tipo" ng-change="vs.reseteagraf();vs.actualizagraf(0,'Todos')">       
+                            <option value="0">Grupos</option>
+                            <option value="1">Nombres</option>                            
+    </select>
+
+</div>
+<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow placeholders alert alert-info" ng-show="vs.tipo==0">
+    <select style="color:#6b9dfa;" id="grupo" name="grupo" ng-options="grupo.id as grupo.nombre for grupo in vs.grupos" ng-model="vs.grupo" ng-change="vs.actualizagraf(0,vs.grupo);"></select>
+    <select style="color:rgba(233,226,37,1);" id="grupo" name="grupo1" ng-options="grupo.id as grupo.nombre for grupo in vs.grupos2" ng-model="vs.grupo1" ng-change="vs.actualizagraf(1,vs.grupo1);"></select>
+    <select style="color:rgba(243,62,62,1);" id="grupo" name="grupo2" ng-options="grupo.id as grupo.nombre for grupo in vs.grupos3" ng-model="vs.grupo2" ng-change="vs.actualizagraf(2,vs.grupo2);"></select>
+</div>
+<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 marginbotlow placeholders alert alert-info" ng-show="vs.tipo==1">
+    <select style="color:#6b9dfa;" id="grupo" name="grupo" ng-options="nombre.nombre as nombre.nombre for nombre in vs.nombres" ng-model="vs.nombre" ng-change="vs.actualizagraf(0,vs.nombre);"></select>
+    <select style="color:rgba(233,226,37,1);" id="grupo" name="grupo1" ng-options="nombre.nombre as nombre.nombre for nombre in vs.nombres2" ng-model="vs.nombre1" ng-change="vs.actualizagraf(1,vs.nombre1);"></select>
+    <select style="color:rgba(243,62,62,1);" id="grupo" name="grupo2" ng-options="nombre.nombre as nombre.nombre for nombre in vs.nombres3" ng-model="vs.nombre2" ng-change="vs.actualizagraf(2,vs.nombre2);"></select>
+</div>
+<canvas id="chart-area" width="600" height="300"></canvas>

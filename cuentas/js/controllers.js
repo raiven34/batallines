@@ -5,7 +5,130 @@
                     return $location.path().indexOf(ruta)!=-1;
                 }
         })
+        .controller("graficas", function($routeParams,servicios,$location,servicios){
+                var vs = this;
+                vs.ctx = document.getElementById("chart-area").getContext("2d");
+                vs.datos=[0,0,0,0,0,0,0,0,0,0,0,0];
+                vs.datos2=[0,0,0,0,0,0,0,0,0,0,0,0];
+                vs.datos3=[0,0,0,0,0,0,0,0,0,0,0,0];
+                vs.tipo="0"
+                vs.nombre="Todos";
+                vs.nombre1="Ninguno";
+                vs.nombre2="Ninguno";
+                vs.grupo="0";
+                vs.grupo1="x";
+                vs.grupo2="x";
+                vs.cargar= function(){                   
+                    
+                    servicios.recuperagastosfac(vs.grupo,vs.tipo).success(function(data){
+                        for(i=0;i<data.length;i++){
+                            vs.datos[data[i].mes - 1] = parseFloat(data[i].total).toFixed(2);
+                        }
+                        var lineChartData = {
+                                labels : ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
+                                datasets : [
+                                        {
+                                                label: "Primera serie de datos",
+                                                fillColor : "rgba(151,187,205,0.2)",
+                                                strokeColor : "#6b9dfa",
+                                                pointColor : "#1e45d7",
+                                                pointStrokeColor : "#fff",
+                                                pointHighlightFill : "#fff",
+                                                pointHighlightStroke : "rgba(220,220,220,1)",
+                                                data : vs.datos
+                                        },
+                                        {
+                                                label: "Segunda serie de datos",
+                                                fillColor : "rgba(233,226,37,0.2)",
+                                                strokeColor : "rgba(233,226,37,1)",
+                                                pointColor : "rgba(233,226,37,1)",
+                                                pointStrokeColor : "#fff",
+                                                pointHighlightFill : "#fff",
+                                                pointHighlightStroke : "rgba(151,187,205,1)",
+                                                data : vs.datos2
+                                        },
+                                        {
+                                                label: "tercera serie de datos",
+                                                fillColor : "rgba(243,62,62,0.2)",
+                                                strokeColor : "rgba(243,62,62,1)",
+                                                pointColor : "rgba(243,50,50,1)",
+                                                pointStrokeColor : "#fff",
+                                                pointHighlightFill : "#fff",
+                                                pointHighlightStroke : "rgba(243,62,62,1)",
+                                                data : vs.datos3
+                                        }                                        
+                                ]
 
+                        };
+                        
+                        window.myPie = new Chart(vs.ctx).Line(lineChartData, {responsive:true,bezierCurveTension:0});
+                    });
+                    servicios.recuperagrupos().success(function(data){
+                        vs.grupos=data[0].datos;
+                        vs.grupos2=[];
+                        vs.grupos3=[];
+                        for(a=0;a<vs.grupos.length;a++){
+                                    vs.grupos2.push(vs.grupos[a]);
+                                    vs.grupos3.push(vs.grupos[a]);
+                        }
+                        vs.grupos.push({ id : "0" , nombre : 'Todos'});
+                        vs.grupos2.push({ id : "0" , nombre : 'Todos'});
+                        vs.grupos3.push({ id : "0" , nombre : 'Todos'});
+                        vs.grupos.push({ id : "x" , nombre : 'Ninguno'});
+                        vs.grupos2.push({ id : "x" , nombre : 'Ninguno'});
+                        vs.grupos3.push({ id : "x" , nombre : 'Ninguno'});
+                        //console.log(vs.grupos);
+
+                    });
+
+                    servicios.recuperanombres().success(function(data){
+                        vs.nombres=data[0].datos;
+                        vs.nombres2=[];
+                        vs.nombres3=[];
+                        for(a=0;a<vs.nombres.length;a++){
+                                    vs.nombres2.push(vs.nombres[a]);
+                                    vs.nombres3.push(vs.nombres[a]);
+                        }
+                        vs.nombres.push({nombre : 'Todos'});
+                        vs.nombres2.push({nombre : 'Todos'});
+                        vs.nombres3.push({nombre : 'Todos'});
+                        vs.nombres.push({nombre : 'Ninguno'});
+                        vs.nombres2.push({nombre : 'Ninguno'});
+                        vs.nombres3.push({nombre : 'Ninguno'});
+                        //console.log(vs.nombres);
+
+                    });                       
+                    
+                };
+                vs.actualizagraf= function(linea,filtro){
+                    for(i=0;i<window.myPie.datasets[linea].points.length;i++){
+                        window.myPie.datasets[linea].points[i].value = 0;
+                    }                    
+                    if(filtro!='x' && filtro!='Ninguna'){                    
+                        servicios.recuperagastosfac(filtro,vs.tipo).success(function(data){
+                            for(i=0;i<data.length;i++){
+                                window.myPie.datasets[linea].points[data[i].mes - 1].value = parseFloat(data[i].total).toFixed(2);
+                            }
+                            window.myPie.update();
+                        });
+                    }
+                };
+                vs.reseteagraf= function(){
+                    vs.nombre="Todos";
+                    vs.nombre1="Ninguno";
+                    vs.nombre2="Ninguno";
+                    vs.grupo="0";
+                    vs.grupo1="x";
+                    vs.grupo2="x";                    
+                    for(a=0;a<window.myPie.datasets.length;a++){
+                        for(i=0;i<window.myPie.datasets[a].points.length;i++){
+                            window.myPie.datasets[a].points[i].value = 0;
+                        } 
+                    }
+                };
+                vs.cargar();
+
+        })
         .controller("login", function($routeParams,servicios,$location){
             var vs = this;
             vs.objlogin=[                    
